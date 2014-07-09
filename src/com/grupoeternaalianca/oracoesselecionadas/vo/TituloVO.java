@@ -4,9 +4,15 @@ public class TituloVO {
 	private int id;
 	private String titulo;
 	private String categoria;
+	private int idOracao;
 	
 	
-	
+	public int getIdOracao() {
+		return idOracao;
+	}
+	public void setIdOracao(int idOracao) {
+		this.idOracao = idOracao;
+	}
 	public int getId() {
 		return id;
 	}

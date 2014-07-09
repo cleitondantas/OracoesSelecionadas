@@ -1,27 +1,37 @@
 package com.grupoeternaalianca.oracoesselecionadas.vo;
 
 public class OracaoVO {
-	private static String titulo;
-	private static  String texto;
-	private static int idNumero;
+	private int id;
+	private  String titulo;
+	private  String texto;
+	private  int idNumero;
 	
-	
-	public int getIdNumero() {
-		return idNumero;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getTitulo() {
+		return titulo;
+	}
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
 	}
 	public String getTexto() {
 		return texto;
 	}
-	public void setIdNumero(int idNumero) {
-		OracaoVO.idNumero = idNumero;
-	}
 	public void setTexto(String texto) {
-		OracaoVO.texto = texto;
+		this.texto = texto;
 	}
-	public static String getTitulo() {
-		return titulo;
+	public int getIdNumero() {
+		return idNumero;
 	}
-	public static void setTitulo(String titulo) {
-		OracaoVO.titulo = titulo;
+	public void setIdNumero(int idNumero) {
+		this.idNumero = idNumero;
 	}
+	
+	
+
+
 }

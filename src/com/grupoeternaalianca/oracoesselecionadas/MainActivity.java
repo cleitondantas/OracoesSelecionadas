@@ -31,8 +31,9 @@ public class MainActivity extends ActionBarActivity{
             getSupportFragmentManager().beginTransaction().add(R.id.container, new PlaceholderFragment()).commit();
         }
     	persistenceDao.openOrCreateDB(openDB());
-    	persistenceDao.registraNovoDado( openDB());
-
+    	if(! persistenceDao.verificaBancoExistente(openDB())){
+    		persistenceDao.criaConteudo(openDB(),this);
+    	}
 		for (TituloVO titulos : persistenceDao.buscaTitulos(openDB())){
 			itens.add("Oração " + titulos.getTitulo());
 		}
@@ -47,7 +48,7 @@ public class MainActivity extends ActionBarActivity{
 				public void onItemClick(AdapterView<?> p1, View p2, int p3, long p4){
 					String posicao = listView.getAdapter().getItem(p3).toString();
 					Toast.makeText(MainActivity.this, posicao, Toast.LENGTH_LONG).show();
-					chamaTelaTextOracao(p3);	
+					chamaTelaTextOracao(0);	//Teste
 				}
 			});
     }
@@ -76,7 +77,7 @@ public class MainActivity extends ActionBarActivity{
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         if (id == R.id.action_settings){
-		
+      
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -90,9 +91,7 @@ public class MainActivity extends ActionBarActivity{
         }
 
         @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-								 Bundle savedInstanceState)
-		{
+        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
             return rootView;
         }
