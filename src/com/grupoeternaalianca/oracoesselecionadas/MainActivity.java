@@ -43,11 +43,10 @@ public class MainActivity extends ActionBarActivity{
 
 		listView.setAdapter(ad);
 		listView.setOnItemClickListener(new OnItemClickListener(){
-
 				@Override
 				public void onItemClick(AdapterView<?> p1, View p2, int p3, long p4){
-					String posicao = listView.getAdapter().getItem(p3).toString();
-					Toast.makeText(MainActivity.this, posicao, Toast.LENGTH_LONG).show();
+					String texto = listView.getAdapter().getItem(p3).toString();
+					Toast.makeText(MainActivity.this, texto, Toast.LENGTH_LONG).show();
 					chamaTelaTextOracao(0);	//Teste
 				}
 			});
@@ -100,9 +99,7 @@ public class MainActivity extends ActionBarActivity{
 	public SQLiteDatabase openDB(){
 		try{
 			bancoDados = openOrCreateDatabase(DATABASE_NAME, MODE_WORLD_READABLE, null);
-			Toast.makeText(MainActivity.this, "OpenDB", Toast.LENGTH_SHORT).show();
 		}catch (Exception e){
-			Toast.makeText(MainActivity.this, "Erro ao Criar Banco " + e,Toast.LENGTH_SHORT).show();
 		}
 		return bancoDados;
 	}

@@ -13,9 +13,10 @@ import com.grupoeternaalianca.oracoesselecionadas.vo.TituloVO;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.support.v7.app.ActionBarActivity;
 
 
-public class PersistenceDao{
+public class PersistenceDao extends ActionBarActivity{
 	private static final String COLUMN_ID = "ID";
 	private static final String TABLE_NOTES = "TITULOS";
 	private static final String TABLE_ORACAO = "ORACAO";
@@ -65,8 +66,9 @@ public class PersistenceDao{
 	 * Metodo Busca os titulos e Lista para ler na view
 	 */
 	public OracaoVO buscaOracao(SQLiteDatabase bancoDados,String idOracao){
-			cursor = bancoDados.query(TABLE_ORACAO, new String[]{COLUMN_IDORACAO}, COLUMN_IDORACAO +" = "+ idOracao ,null,null,null,null);
+			cursor = bancoDados.query(TABLE_ORACAO, new String[]{COLUMN_ID,COLUMN_TITLE,COLUMN_ORACAO,COLUMN_IDORACAO},null,null,null,null,null);
 			OracaoVO oracao = new OracaoVO();
+			
 			while(cursor.moveToNext()){
 				oracao = new OracaoVO();
 				oracao.setId(Integer.parseInt(cursor.getString(cursor.getColumnIndex(COLUMN_ID))));

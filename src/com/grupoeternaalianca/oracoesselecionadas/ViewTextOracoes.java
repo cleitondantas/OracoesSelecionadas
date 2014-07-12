@@ -1,16 +1,20 @@
 package com.grupoeternaalianca.oracoesselecionadas;
 
-import com.grupoeternaalianca.oracoesselecionadas.dao.PersistenceDao;
-import com.grupoeternaalianca.oracoesselecionadas.vo.OracaoVO;
-
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.widget.TextView;
 
+import com.grupoeternaalianca.oracoesselecionadas.dao.PersistenceDao;
+import com.grupoeternaalianca.oracoesselecionadas.vo.OracaoVO;
+
 public class ViewTextOracoes extends ActionBarActivity{
+	private PersistenceDao persistenceDao = new PersistenceDao();
 	private TextView tvTextOracao=null;
 	private TextView tvTituloOracao=null;
+	public static SQLiteDatabase bancoDados = null;
+	private static final String DATABASE_NAME = "ORACOES_SELECIONADAS_DB";
 	 @Override
 	    protected void onCreate(Bundle savedInstanceState) {
 		 super.onCreate(savedInstanceState);
@@ -18,18 +22,23 @@ public class ViewTextOracoes extends ActionBarActivity{
 		  Intent intent = getIntent();
 		  Bundle extras = intent.getExtras();
 		  
-		 PersistenceDao persistenceDao = new PersistenceDao();
-		 MainActivity main = new MainActivity();
 		 
-		OracaoVO oracao = persistenceDao.buscaOracao(main.openDB(),String.valueOf(extras.getInt("idOracao")));
 		 
+		OracaoVO oracao = new OracaoVO();
+		oracao = persistenceDao.buscaOracao(openDB(),String.valueOf(extras.getInt("idOracao")));
 		  tvTituloOracao = (TextView) findViewById(R.id.tvTitulo);
 		  tvTextOracao = (TextView) findViewById(R.id.tvOracao);
 		  
 		  tvTituloOracao.setText(oracao.getTitulo());
 		  tvTextOracao.setText(oracao.getTexto());
 	 }
-	 
+		public SQLiteDatabase openDB(){
+			try{
+				bancoDados = openOrCreateDatabase(DATABASE_NAME, MODE_WORLD_READABLE, null);
+			}catch (Exception e){
+			}
+			return bancoDados;
+		}
 
 	 
 }
