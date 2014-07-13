@@ -47,7 +47,7 @@ public class MainActivity extends ActionBarActivity{
 				public void onItemClick(AdapterView<?> p1, View p2, int p3, long p4){
 					String texto = listView.getAdapter().getItem(p3).toString();
 					Toast.makeText(MainActivity.this, texto, Toast.LENGTH_LONG).show();
-					chamaTelaTextOracao(p3);	//Teste
+					chamaTelaTextOracao(0);	//Teste
 				}
 			});
     }
