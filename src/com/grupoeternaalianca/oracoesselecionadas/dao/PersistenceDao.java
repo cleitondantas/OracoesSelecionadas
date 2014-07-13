@@ -62,7 +62,6 @@ public class PersistenceDao extends ActionBarActivity{
 			bancoDados.close();
 		return tituloOracoes;
 	}
-	
 	/**
 	 * Metodo Busca os titulos e Lista para ler na view
 	 */
