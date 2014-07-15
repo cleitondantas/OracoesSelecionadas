@@ -21,9 +21,6 @@ public class ViewTextOracoes extends ActionBarActivity{
 		 setContentView(R.layout.vieworacoes);
 		  Intent intent = getIntent();
 		  Bundle extras = intent.getExtras();
-		  
-		 
-		 
 		OracaoVO oracao = new OracaoVO();
 		oracao = persistenceDao.buscaOracao(openDB(),String.valueOf(extras.getInt("idOracao")));
 		  tvTituloOracao = (TextView) findViewById(R.id.tvTitulo);

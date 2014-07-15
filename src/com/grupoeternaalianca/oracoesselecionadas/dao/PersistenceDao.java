@@ -66,7 +66,7 @@ public class PersistenceDao extends ActionBarActivity{
 	 * Metodo Busca os titulos e Lista para ler na view
 	 */
 	public OracaoVO buscaOracao(SQLiteDatabase bancoDados,String idOracao){
-			cursor = bancoDados.query(TABLE_ORACAO, new String[]{COLUMN_ID,COLUMN_TITLE,COLUMN_ORACAO,COLUMN_IDORACAO},null,null,null,null,null);
+			cursor = bancoDados.query(TABLE_ORACAO, new String[]{COLUMN_ID,COLUMN_TITLE,COLUMN_ORACAO,COLUMN_IDORACAO},"IDORACAO = "+idOracao ,null,null,null,null);
 			OracaoVO oracao = new OracaoVO();
 			
 			while(cursor.moveToNext()){
