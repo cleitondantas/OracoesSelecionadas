@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.grupoeternaalianca.oracoesselecionadas.dao.PersistenceDao;
 import com.grupoeternaalianca.oracoesselecionadas.vo.OracaoVO;
+import android.text.*;
 
 public class ViewTextOracoes extends ActionBarActivity{
 	private PersistenceDao persistenceDao = new PersistenceDao();
@@ -26,8 +27,8 @@ public class ViewTextOracoes extends ActionBarActivity{
 		  tvTituloOracao = (TextView) findViewById(R.id.tvTitulo);
 		  tvTextOracao = (TextView) findViewById(R.id.tvOracao);
 		  
-		  tvTituloOracao.setText(oracao.getTitulo());
-		  tvTextOracao.setText(oracao.getTexto());
+		  tvTituloOracao.setText(Html.fromHtml(oracao.getTitulo()));
+		  tvTextOracao.setText(Html.fromHtml(oracao.getTexto()));
 	 }
 		public SQLiteDatabase openDB(){
 			try{
