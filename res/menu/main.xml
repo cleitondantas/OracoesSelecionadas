@@ -2,7 +2,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.grupoeternaalianca.oracoesselecionadas.MainActivity" >
-
+    <item
+        android:id="@+id/buscar"
+        android:title="@string/title_buscar"
+        android:icon="@drawable/ic_action_search"
+        app:showAsAction="withText|ifRoom"/>
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
