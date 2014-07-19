@@ -38,7 +38,6 @@
 					android:textAppearance="?android:attr/textAppearanceSmall"
 					android:textSize="19sp"
 					android:shadowRadius="1.0"
-					android:textAlignment="center"
 					android:shadowColor="#8A8A8A"
 					android:textColorHighlight="#3F91EC"
 					android:textIsSelectable="true"
@@ -47,7 +46,6 @@
 					android:textColorLink="#361AED"
 					android:layout_marginLeft="10dp"
 					android:layout_marginRight="10dp"/>
-
 			</LinearLayout>
 
 		</ScrollView>
