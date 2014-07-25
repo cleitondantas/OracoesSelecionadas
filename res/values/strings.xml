@@ -10,5 +10,6 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="title_buscar">Buscar</string>
+     <string name="action_settings">action_settings</string>
 
 </resources>
