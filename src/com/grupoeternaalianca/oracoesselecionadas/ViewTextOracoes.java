@@ -28,7 +28,7 @@ public class ViewTextOracoes extends ActionBarActivity{
 		  tvTextOracao = (TextView) findViewById(R.id.tvOracao);
 		  
 		  tvTituloOracao.setText(Html.fromHtml(oracao.getTitulo()));
-		  tvTextOracao.setText(Html.fromHtml(oracao.getTexto()));
+		  tvTextOracao.setText(Html.fromHtml(oracao.getTexto().replace(".", ".<br/>").replace("!", "!<br/>")));
 	 }
 		public SQLiteDatabase openDB(){
 			try{
