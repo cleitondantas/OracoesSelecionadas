@@ -1,16 +1,26 @@
+INSERT or replace INTO GRUPO (TITULO,IDGRUPO) VALUES ('Comuns',1);
+INSERT or replace INTO GRUPO (TITULO,IDGRUPO) VALUES ('Terço',2);
+INSERT or replace INTO GRUPO (TITULO,IDGRUPO) VALUES ('Cura',3);
+INSERT or replace INTO GRUPO (TITULO,IDGRUPO) VALUES ('Intercessão',4);
+INSERT or replace INTO GRUPO (TITULO,IDGRUPO) VALUES ('Libertação',5);
+INSERT or replace INTO GRUPO (TITULO,IDGRUPO) VALUES ('Ladainha',6);
+INSERT or replace INTO GRUPO (TITULO,IDGRUPO) VALUES ('Renuncia',7);
+INSERT or replace INTO GRUPO (TITULO,IDGRUPO) VALUES ('Terço',8);
+
+
 INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Pai Nosso','1',0);
 INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Ave Maria','1',1);
 INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Creio','1',2);
 INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Cura Para Uma Morte Feliz','2',3);
 INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Oração de Purificação','2',4);
 
-INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('Pai Nosso','<b>Pai nosso que estás nos céus,</b><br/> santificado seja o Vosso nome. Venha a nós o Vosso Reino.<br/> Seja feita a Vossa vontade,<br/> assim na Terra como no Céu.<br/> O pão nosso de cada dia nos dai hoje.<br/> Perdoai as nossas ofensas assim como nós perdoamos a quem nos tem ofendido.<br/> E não nos deixeis cair em tentação,<br/> mas livrai-nos do mal.',0);
+INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('Pai Nosso','Pai nosso que estás nos céus,santificado seja o Vosso nome. Venha a nós o Vosso Reino. Seja feita a Vossa vontade,assim na Terra como no Céu. O pão nosso de cada dia nos dai hoje. Perdoai as nossas ofensas assim como nós perdoamos a quem nos tem ofendido. E não nos deixeis cair em tentação, mas livrai-nos do mal.',0);
 
-INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('<b>Ave Maria</b>','<b>Ave Maria cheia de graça,</b><br/> o Senhor é convosco,<br/> bendita sois Vós entre as mulheres,<br> e bendito é o fruto do vosso ventre, Jesus.<br/> Santa Maria, Mãe de Deus,<br/> rogai por nós pecadores,<br/> agora e na hora da nossa morte.<br/> Amém',1);
+INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('Ave Maria','Ave Maria cheia de graça, o Senhor é convosco, bendita sois Vós entre as mulheres, e bendito é o fruto do vosso ventre, Jesus. Santa Maria, Mãe de Deus, rogai por nós pecadores, agora e na hora da nossa morte. Amém',1);
 
-INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('Creio','Creio em Deus Pai Todo-Poderoso,<br/> criador do céu e da terra.<br/> E em Jesus Cristo, seu único Filho Nosso Senhor,<br/> que foi concebido pelo poder do Espírito Santo,<br/> nasceu da Virgem Maria , padeceu sob Pôncio Pilatos,<br> foi crucificado, morto e sepultado,<br/> desceu a mansão dos mortos,<br/> ressucitou ao terceiro dia, subiu aos Céus,<br/> está sentado à direita de Deus Pai todo-poderoso,<br/> donde há de vir a julgar os vivos e mortos.<br/> Creio no Espírito Santo. Na Santa Igreja Católica,<br/> na comunhão dos santos,<br/> na remissão dos pecados, na ressurreição da carne,<br/> na vida eterna. Amém.,',2);
+INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('Creio','Creio em Deus Pai Todo-Poderoso, criador do céu e da terra. E em Jesus Cristo, seu único Filho Nosso Senhor, que foi concebido pelo poder do Espírito Santo, nasceu da Virgem Maria , padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado, desceu a mansão dos mortos, ressucitou ao terceiro dia, subiu aos Céus, está sentado à direita de Deus Pai todo-poderoso, donde há de vir a julgar os vivos e mortos. Creio no Espírito Santo. Na Santa Igreja Católica, na comunhão dos santos, na remissão dos pecados, na ressurreição da carne, na vida eterna. Amém.,',2);
 
-INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('<b>Cura Para Uma Morte Feliz</b>','
+INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('Cura Para Uma Morte Feliz','
 Senhor Jesus, clamo a Vossa intercessão junto ao Pai, por todas as pessoas na história de minha família que morreram cedo, não amadas, não choradas, sem oração e sem amoroso enterro cristão.
 E a todos os que experimentaram mortes terríveis, dolorosas e horríveis - mortes por violência,por acidente, envenenamento, tiros, fogo, explosões, facadas, enforcamento, afogamento, atos de guerra ou morte por animais.
 Ergo agora até Vós, Senhor, meus antepassados que morreram mortes de suicídio, Senhor, cessa agora no Vosso poder † toda transmissão de tendência para mortes anormais e feias.
@@ -32,3 +42,4 @@ Não seja o dragão o meu guia!
 Retira-te satanás,<br/> nunca me aconselhes coisas vãs <br/>é mau o que tu ofereces.
 bebe tu mesmo o teu veneno!<b/>
 ',4);
+

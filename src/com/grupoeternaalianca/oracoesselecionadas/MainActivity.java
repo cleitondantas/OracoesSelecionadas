@@ -66,7 +66,7 @@ import java.util.*;
 				public void onItemClick(AdapterView<?> p1, View p2, int p3, long p4){
 					String texto = listView.getAdapter().getItem(p3).toString();
 					Toast.makeText(MainActivity.this, texto, Toast.LENGTH_LONG).show();
-					chamaTelaTextOracao(p3);	//Teste
+					chamaTelaTextOracao(p3);
 				}
 			});
     }
@@ -166,8 +166,7 @@ import java.util.*;
         }
 
         @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                Bundle savedInstanceState) {
+        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
             TextView textView = (TextView) rootView.findViewById(R.id.section_label);
             textView.setText(Integer.toString(getArguments().getInt(ARG_SECTION_NUMBER)));
@@ -177,8 +176,7 @@ import java.util.*;
         @Override
         public void onAttach(Activity activity) {
             super.onAttach(activity);
-            ((MainActivity) activity).onSectionAttached(
-                    getArguments().getInt(ARG_SECTION_NUMBER));
+            ((MainActivity) activity).onSectionAttached( getArguments().getInt(ARG_SECTION_NUMBER));
         }
     }
 }

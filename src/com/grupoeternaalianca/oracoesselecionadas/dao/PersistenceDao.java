@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.grupoeternaalianca.oracoesselecionadas.R;
+import com.grupoeternaalianca.oracoesselecionadas.vo.GrupoVO;
 import com.grupoeternaalianca.oracoesselecionadas.vo.OracaoVO;
 import com.grupoeternaalianca.oracoesselecionadas.vo.TituloVO;
 
@@ -20,7 +21,10 @@ public class PersistenceDao extends ActionBarActivity{
 	private static final String COLUMN_ID = "ID";
 	private static final String TABLE_NOTES = "TITULOS";
 	private static final String TABLE_ORACAO = "ORACAO";
+	private static final String TABLE_GRUPO = "GRUPO";
 	
+	private static final String COLUMN_IDGRUPO = "IDGRUPO";
+	private static final String COLUMN_TITULO = "TITULO";
 	private static final String COLUMN_TITLE = "TITULO";
 	private static final String COLUMN_GRUPO = "GRUPO";
 	private static final String COLUMN_ORACAO = "ORACAO";
@@ -32,6 +36,8 @@ public class PersistenceDao extends ActionBarActivity{
 			bancoDados.execSQL(sql);
 			String sql2 = "CREATE TABLE IF NOT EXISTS " + TABLE_ORACAO + "(" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_TITLE + " TEXT, " + COLUMN_ORACAO + " TEXT, " + COLUMN_IDORACAO + " INTEGER);";
 			bancoDados.execSQL(sql2);
+			String sql3 = "CREATE TABLE IF NOT EXISTS " + TABLE_GRUPO + "(" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_TITULO + " TEXT, "+COLUMN_IDGRUPO + " INTEGER);";
+			bancoDados.execSQL(sql3);
 			bancoDados.close();
 	}
 	
@@ -51,7 +57,6 @@ public class PersistenceDao extends ActionBarActivity{
 			cursor = bancoDados.query(TABLE_NOTES, new String[]{COLUMN_ID,COLUMN_TITLE,COLUMN_GRUPO}, null,null,null,null,null);
 			TituloVO titulo =null;
 			while(cursor.moveToNext()){
-				
 				titulo = new TituloVO();
 				titulo.setId(Integer.parseInt(cursor.getString(cursor.getColumnIndex(COLUMN_ID))));
 				titulo.setCategoria(cursor.getString(cursor.getColumnIndex(COLUMN_GRUPO)));
@@ -62,6 +67,26 @@ public class PersistenceDao extends ActionBarActivity{
 			bancoDados.close();
 		return tituloOracoes;
 	}
+	
+	/**
+	 * Metodo Busca os Grupos
+	 */
+	public List<GrupoVO> buscaGrupos(SQLiteDatabase bancoDados){
+			ArrayList<GrupoVO> grupoVOs = new ArrayList<GrupoVO>();
+			cursor = bancoDados.query(TABLE_NOTES, new String[]{COLUMN_ID,COLUMN_TITULO,COLUMN_IDGRUPO}, null,null,null,null,null);
+			GrupoVO grupovo =null;
+			while(cursor.moveToNext()){
+				grupovo = new GrupoVO();
+				grupovo.setId(Integer.parseInt(cursor.getString(cursor.getColumnIndex(COLUMN_ID))));
+				grupovo.setTitulo(cursor.getString(cursor.getColumnIndex(COLUMN_TITULO)));
+				grupovo.setIdgrupo(Integer.parseInt(cursor.getString(cursor.getColumnIndex(COLUMN_IDGRUPO))));
+				grupoVOs.add(grupovo);
+				
+			}
+			bancoDados.close();
+		return grupoVOs;
+	}
+	
 	/**
 	 * Metodo Busca os titulos e Lista para ler na view
 	 */
