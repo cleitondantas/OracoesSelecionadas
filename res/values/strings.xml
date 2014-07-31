@@ -3,9 +3,14 @@
 
     <string name="app_name">Orações Selecionadas</string>
 
-    <string name="title_section1">Favoritos</string>
-    <string name="title_section2">Categorias</string>
-    <string name="title_section3">Section 3</string>
+    <string name="title_section1">Listar tudo</string>
+    <string name="title_section2">Terço</string>
+    <string name="title_section3">Cura</string>
+    <string name="title_section4">Intercessão</string>
+    <string name="title_section5">Libertação</string>
+    <string name="title_section6">Ladainha</string>
+    <string name="title_section7">Renuncia</string>
+
     <string name="opcoes">Menu de opções</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

@@ -29,6 +29,7 @@ public class PersistenceDao extends ActionBarActivity{
 	private static final String COLUMN_GRUPO = "GRUPO";
 	private static final String COLUMN_ORACAO = "ORACAO";
 	private static final String COLUMN_IDORACAO = "IDORACAO";
+	
 	private Cursor cursor;
 	
 	public void openOrCreateDB(SQLiteDatabase bancoDados){
@@ -132,4 +133,5 @@ public class PersistenceDao extends ActionBarActivity{
             }
         }
     }
+    
 }

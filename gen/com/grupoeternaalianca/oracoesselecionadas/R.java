@@ -1267,15 +1267,19 @@ containing a value of this type.
         /**  Description of a share target (both in the list of such or the default share button) in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] 
          */
         public static final int abc_shareactionprovider_share_with_application=0x7f0b000b;
-        public static final int action_settings=0x7f0b0015;
+        public static final int action_settings=0x7f0b0019;
         public static final int app_name=0x7f0b000d;
-        public static final int navigation_drawer_close=0x7f0b0013;
-        public static final int navigation_drawer_open=0x7f0b0012;
-        public static final int opcoes=0x7f0b0011;
-        public static final int title_buscar=0x7f0b0014;
+        public static final int navigation_drawer_close=0x7f0b0017;
+        public static final int navigation_drawer_open=0x7f0b0016;
+        public static final int opcoes=0x7f0b0015;
+        public static final int title_buscar=0x7f0b0018;
         public static final int title_section1=0x7f0b000e;
         public static final int title_section2=0x7f0b000f;
         public static final int title_section3=0x7f0b0010;
+        public static final int title_section4=0x7f0b0011;
+        public static final int title_section5=0x7f0b0012;
+        public static final int title_section6=0x7f0b0013;
+        public static final int title_section7=0x7f0b0014;
     }
     public static final class style {
         /** 

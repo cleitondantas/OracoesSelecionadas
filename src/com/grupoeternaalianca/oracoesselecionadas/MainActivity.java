@@ -36,7 +36,8 @@ import java.util.*;
 	private ListView listView;
 	private ArrayAdapter<String> ad;
 	private List<String> itens = new ArrayList<String>();
-
+	public List<GrupoVO> grupovoList =null;
+	public static String listaTitulo[];
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -50,6 +51,7 @@ import java.util.*;
     	persistenceDao.openOrCreateDB(openDB());
     	if(! persistenceDao.verificaBancoExistente(openDB())){
     		persistenceDao.criaConteudo(openDB(),this);
+    		persistenceDao.buscaGrupos(openDB());
     	}
     	int i=1;
 		for (TituloVO titulos : persistenceDao.buscaTitulos(openDB())){
@@ -138,7 +140,7 @@ import java.util.*;
         actionBar.setDisplayShowTitleEnabled(true);
         actionBar.setTitle(mTitle);
     }
-
+    
 //-----------------------------------------------------Classe     PlaceholderFragment
     /**
      * A placeholder fragment containing a simple view.

@@ -1,18 +1,14 @@
 package com.grupoeternaalianca.oracoesselecionadas;
 
-import com.grupoeternaalianca.oracoesselecionadas.dao.PersistenceDao;
-
 import android.support.v7.app.ActionBarActivity;
 import android.app.Activity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.ActionBarDrawerToggle;
-import android.support.v4.app.TaskStackBuilder;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
@@ -37,12 +33,9 @@ public class NavigationDrawerFragment extends Fragment {
     private NavigationDrawerCallbacks mCallbacks;
 
     private ActionBarDrawerToggle mDrawerToggle;
-    private static final String DATABASE_NAME = "ORACOES_SELECIONADAS_DB";
-    public static SQLiteDatabase bancoDados = null;
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerListView;
     private View mFragmentContainerView;
-    private PersistenceDao persistenceDao = new PersistenceDao();
     private int mCurrentSelectedPosition = 0;
     private boolean mFromSavedInstanceState;
     private boolean mUserLearnedDrawer;
@@ -86,7 +79,12 @@ public class NavigationDrawerFragment extends Fragment {
         });
         mDrawerListView.setAdapter(new ArrayAdapter<String>( getActionBar().getThemedContext(),android.R.layout.simple_list_item_1, android.R.id.text1,new String[]{
                         getString(R.string.title_section1),
-                        
+                        getString(R.string.title_section2),
+                        getString(R.string.title_section3),
+                        getString(R.string.title_section4),
+                        getString(R.string.title_section5),
+                        getString(R.string.title_section6),
+                        getString(R.string.title_section7),  
                 }
         ));
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
