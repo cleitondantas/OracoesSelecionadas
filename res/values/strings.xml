@@ -3,7 +3,7 @@
 
     <string name="app_name">Orações Selecionadas</string>
 
-    <string name="title_section1">Listar tudo</string>
+    <string name="title_section1">Todas Orações</string>
     <string name="title_section2">Terço</string>
     <string name="title_section3">Cura</string>
     <string name="title_section4">Intercessão</string>
@@ -15,6 +15,6 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="title_buscar">Buscar</string>
-     <string name="action_settings">action_settings</string>
+     <string name="action_settings">Settings</string>
 
 </resources>

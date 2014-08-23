@@ -29,9 +29,12 @@ public class PersistenceDao extends ActionBarActivity{
 	private static final String COLUMN_GRUPO = "GRUPO";
 	private static final String COLUMN_ORACAO = "ORACAO";
 	private static final String COLUMN_IDORACAO = "IDORACAO";
-	
 	private Cursor cursor;
 	
+	/**
+	 * Cria o banco de dados se não existe
+	 * @param bancoDados
+	 */
 	public void openOrCreateDB(SQLiteDatabase bancoDados){
 			String sql = "CREATE TABLE IF NOT EXISTS " + TABLE_NOTES + "(" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_TITLE + " TEXT, " + COLUMN_GRUPO + " TEXT, " + COLUMN_IDORACAO + " INTEGER);";
 			bancoDados.execSQL(sql);
@@ -42,6 +45,12 @@ public class PersistenceDao extends ActionBarActivity{
 			bancoDados.close();
 	}
 	
+	/**
+	 * Verifica a existencia do banco de dados
+	 * 
+	 * @param bancoDados
+	 * @return
+	 */
 	public boolean verificaBancoExistente(SQLiteDatabase bancoDados){
 		cursor = bancoDados.query(TABLE_NOTES, new String[]{COLUMN_ID,COLUMN_TITLE,COLUMN_GRUPO}, null,null,null,null,null);
 		if(cursor.getCount()>2){
@@ -104,6 +113,7 @@ public class PersistenceDao extends ActionBarActivity{
 			bancoDados.close();
 		return oracao;
 	}
+	
 	/**
 	 * Metodo Cria o conteudo do banco de dados apartir das linas do arquivo de SQL 	
 	 * @param bd

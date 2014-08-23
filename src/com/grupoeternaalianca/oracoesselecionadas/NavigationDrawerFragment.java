@@ -20,7 +20,6 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 /**
  * Fragment used for managing interactions for and presentation of a navigation drawer.
@@ -172,7 +171,7 @@ public class NavigationDrawerFragment extends Fragment {
 
     private void selectItem(int position) {
         mCurrentSelectedPosition = position;
-        Toast.makeText(getActivity(), String.valueOf(position), Toast.LENGTH_LONG).show();
+       
         if (mDrawerListView != null) {
             mDrawerListView.setItemChecked(position, true);
         }

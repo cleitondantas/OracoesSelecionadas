@@ -1,5 +1,6 @@
 package com.grupoeternaalianca.oracoesselecionadas;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.*;
 import android.database.sqlite.*;
@@ -17,16 +18,9 @@ import com.grupoeternaalianca.oracoesselecionadas.vo.*;
 
 import java.util.*;
 
- public class MainActivity extends ActionBarActivity implements NavigationDrawerFragment.NavigationDrawerCallbacks{
-	
-    /**
-     * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
-     */
+ @SuppressLint("ShowToast")
+public class MainActivity extends ActionBarActivity implements NavigationDrawerFragment.NavigationDrawerCallbacks{
     private NavigationDrawerFragment mNavigationDrawerFragment;
-
-    /**
-     * Used to store the last screen title. For use in {@link #restoreActionBar()}.
-     */
     private CharSequence mTitle;
 	
 	private PersistenceDao persistenceDao = new PersistenceDao();
@@ -44,8 +38,6 @@ import java.util.*;
         setContentView(R.layout.activity_main);
         getActionBar().setDisplayShowTitleEnabled(true);
         mNavigationDrawerFragment = (NavigationDrawerFragment) getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);   
-        
-        // Set up the drawer.
         mNavigationDrawerFragment.setUp(  R.id.navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout));
         
     	persistenceDao.openOrCreateDB(openDB());
@@ -55,14 +47,13 @@ import java.util.*;
     	}
     	int i=1;
 		for (TituloVO titulos : persistenceDao.buscaTitulos(openDB())){
-		
 			itens.add(	i++ +") " + titulos.getTitulo());
 		}
 		
         listView = (ListView)findViewById(R.id.listView1);
 		ad = new ArrayAdapter<String>(this, R.layout.small, R.id.small, itens);
-
 		listView.setAdapter(ad);
+		
 		listView.setOnItemClickListener(new OnItemClickListener(){
 				@Override
 				public void onItemClick(AdapterView<?> p1, View p2, int p3, long p4){
@@ -83,21 +74,14 @@ import java.util.*;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
-
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-	{
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+    public boolean onOptionsItemSelected(MenuItem item){
         int id = item.getItemId();
         if (id == R.id.action_settings){
-      
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -108,15 +92,16 @@ import java.util.*;
 		try{
 			bancoDados = openOrCreateDatabase(DATABASE_NAME, MODE_WORLD_READABLE, null);
 		}catch (Exception e){
+			Toast.makeText(MainActivity.this, (CharSequence) e, Toast.LENGTH_LONG).show();
 		}
 		return bancoDados;
 	}
 
     @Override
     public void onNavigationDrawerItemSelected(int position) {
-        // update the main content by replacing fragments
+    	  Toast.makeText(this, "Posicao "+String.valueOf(position), Toast.LENGTH_LONG).show();
         FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction() .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))  .commit();
+        fragmentManager.beginTransaction() .replace(R.id.container, PlaceholderFragment.newInstance(position + 1)).commit();
     }
 
     public void onSectionAttached(int number) {
@@ -132,8 +117,7 @@ import java.util.*;
                 break;
         }
     }
-    
-    
+
     public void restoreActionBar() {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
