@@ -26,7 +26,7 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
 	private PersistenceDao persistenceDao = new PersistenceDao();
 	public static SQLiteDatabase bancoDados = null;
 	private static final String DATABASE_NAME = "ORACOES_SELECIONADAS_DB";
-	
+	private boolean controlaList =false;
 	private ListView listView;
 	private ArrayAdapter<String> ad;
 	private List<String> itens = new ArrayList<String>();
@@ -45,14 +45,7 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
     		persistenceDao.criaConteudo(openDB(),this);
     		persistenceDao.buscaGrupos(openDB());
     	}
-    	int i=1;
-		for (TituloVO titulos : persistenceDao.buscaTitulos(openDB())){
-			itens.add(	i++ +") " + titulos.getTitulo());
-		}
-		
-        listView = (ListView)findViewById(R.id.listView1);
-		ad = new ArrayAdapter<String>(this, R.layout.small, R.id.small, itens);
-		listView.setAdapter(ad);
+    	criaListView(null);
 		
 		listView.setOnItemClickListener(new OnItemClickListener(){
 				@Override
@@ -63,6 +56,26 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
 				}
 			});
     }
+
+	private void criaListView(String numeroGrupo) {
+		int i=1;
+		itens.clear();
+		if(numeroGrupo == null || numeroGrupo.equalsIgnoreCase("0")){
+			for (TituloVO titulos : persistenceDao.buscaTitulos(openDB())){
+				itens.add(	i++ +") " + titulos.getTitulo());
+			}
+		}else{
+			for (TituloVO titulos : persistenceDao.buscaTitulos(openDB())){
+				if(titulos.getCategoria().equalsIgnoreCase(numeroGrupo)){
+					itens.add(	i++ +") " + titulos.getTitulo());
+				}
+			}
+		}
+        listView = (ListView)findViewById(R.id.listView1);
+		ad = new ArrayAdapter<String>(this, R.layout.small, R.id.small, itens);
+		listView.setAdapter(ad);
+
+	}
 
 	public void chamaTelaTextOracao(int idOracao){
 		Intent intent = new Intent(this, ViewTextOracoes.class);
@@ -81,7 +94,7 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
         int id = item.getItemId();
-        if (id == R.id.action_settings){
+        if (id == R.id.action_settings){;
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -99,8 +112,12 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
 
     @Override
     public void onNavigationDrawerItemSelected(int position) {
-    	  Toast.makeText(this, "Posicao "+String.valueOf(position), Toast.LENGTH_LONG).show();
-        FragmentManager fragmentManager = getSupportFragmentManager();
+    	if(controlaList){
+    		criaListView(String.valueOf(position));
+    	}else{
+    		controlaList=true;
+    	}
+    	FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction() .replace(R.id.container, PlaceholderFragment.newInstance(position + 1)).commit();
     }
 

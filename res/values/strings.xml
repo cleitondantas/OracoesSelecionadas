@@ -4,12 +4,17 @@
     <string name="app_name">Orações Selecionadas</string>
 
     <string name="title_section1">Todas Orações</string>
-    <string name="title_section2">Terço</string>
+    <string name="title_section2">Comuns</string>
     <string name="title_section3">Cura</string>
-    <string name="title_section4">Intercessão</string>
-    <string name="title_section5">Libertação</string>
-    <string name="title_section6">Ladainha</string>
-    <string name="title_section7">Renuncia</string>
+    <string name="title_section4">Libertação</string>
+    <string name="title_section5">Intercessão</string>
+    <string name="title_section6">Renuncia</string>
+    <string name="title_section7">Ladainha</string>
+    <string name="title_section8">Santos</string>
+    <string name="title_section9">Terço</string>
+    <string name="title_section10">A Maria</string>
+
+    
 
     <string name="opcoes">Menu de opções</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
