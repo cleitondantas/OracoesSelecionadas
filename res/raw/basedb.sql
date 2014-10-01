@@ -4,7 +4,7 @@ INSERT or replace INTO GRUPO (TITULO,IDGRUPO) VALUES ('Libertação',3);
 INSERT or replace INTO GRUPO (TITULO,IDGRUPO) VALUES ('Intercessão',4);
 INSERT or replace INTO GRUPO (TITULO,IDGRUPO) VALUES ('Renuncia',5);
 INSERT or replace INTO GRUPO (TITULO,IDGRUPO) VALUES ('Ladainha',6);
-INSERT or replace INTO GRUPO (TITULO,IDGRUPO) VALUES ('Santos',7);
+INSERT or replace INTO GRUPO (TITULO,IDGRUPO) VALUES ('Anjos e Santos',7);
 INSERT or replace INTO GRUPO (TITULO,IDGRUPO) VALUES ('Terço',8);
 INSERT or replace INTO GRUPO (TITULO,IDGRUPO) VALUES ('A Maria',9);
 
@@ -21,6 +21,20 @@ INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Consagração a 
 INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Ladainha do Imaculado Coração de Maria','9',10);
 INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Ato de Consagração ao Imaculado Coração de Maria','9',11);
 INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Ato de Consagração aos Sagrados Corações','9',12);
+INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Consagração Monfortina ao Imaculado Coração de Maria','9',13);
+INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Ladainha Sagrada Família','6',14);
+INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Terço das Lágrimas de Sangue de Maria Rosa Mística','8',15);
+INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Reparação das blasfêmias contra o Imaculado Coração de Maria','9',16);
+INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Oração a Nossa Senhora do Desterro','7',17);
+INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Oração a Nossa Senhora Desatadora dos Nós','9',18);
+INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Oração São Camilo','7',19);
+INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Coroa de São José','7',20);
+INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Rosário de São Miguel Arcanjo','8',21);
+INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Oração dos Santos Anjos','1',22);
+INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Súplicas ardentes aos Santos Anjos','7',23);
+INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Ladainha de São Rafael Arcanjo','6',24);
+INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Oração a São Rafael Arcanjo','7',25);
+INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Oração a São José','7',26);
 
 INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('Pai Nosso','Pai nosso que estás nos céus,santificado seja o Vosso nome. Venha a nós o Vosso Reino. Seja feita a Vossa vontade,assim na Terra como no Céu. O pão nosso de cada dia nos dai hoje. Perdoai as nossas ofensas assim como nós perdoamos a quem nos tem ofendido. E não nos deixeis cair em tentação, mas livrai-nos do mal.',0);
 
@@ -404,8 +418,8 @@ Oh! Maria, Mãe de Deus e nossa Mãe,
  Deixai Vosso Coração agir. conto com Ele, confio nEle e a Ele me entrego. Queremos empenhar-nos,
  ó gloriosa Mãe de Deus e nossa Mãe, para que o Reino de Cristo, vosso Filho, seja uma presença em nossas almas na terra como no céu.
  Queremos oferecer cinqüenta rosas pela reza do terço, meditando sobre os mistérios do Santo Rosário. Amém.
-
 ',11);
+
 INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('Ato de Consagração aos Sagrados Corações','
 
 Sagrados corações de Jesus e Maria, a Vós me consagro,
@@ -422,4 +436,668 @@ Coração Sagrado de Jesus em Vós confio!
 Coração Imaculado de Maria, sede nossa salvação!
 ',12);
 
+INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('Consagração Monfortina ao Imaculado Coração de Maria','
 
+Oh! Sabedoria eterna e encarnada, amabilíssimo e adorável Jesus, verdadeiro Deus e verdadeiro homem, Filho único do Eterno Pai e de Maria sempre Virgem! Eu Vos adoro profundamente no seio e nos esplendores de Vosso Pai,
+ durante a eternidade, e no seio virginal de Maria, Vossa digníssima Mãe, no tempo da Vossa Encarnação. Dou-Vos graças por Vos terdes aniquilado a Vós mesmo,
+ tomando a forma de um escravo para libertar-me da cruel escravidão do demônio. Eu Vos louvo e glorifico por terdes querido submeter-Vos em tudo a Maria, Vossa santa Mãe,
+ a fim de tornar-me, por Ela, Vosso fiel escravo. Mas eis que, ingrato e infiel como sou, não tenho cumprido as promessas e votos que tão solenemente Vos fiz no meu batismo;
+ não tenho cumprido os meus deveres e não mereço ser chamado Vosso filho e nem Vosso escravo. E como nada há em mim que não mereça a Vossa repulsa e a Vossa cólera,
+ já não ouso aproximar-me, sozinho, da vossa santíssima e augustíssima Majestade. Recorro, pois, à intercessão e a misericórdia de Vossa Santa Mãe que me destes para Medianeira junto de Vós;
+ é por intermédio dEla que espero obter de Vós a contrição e o perdão dos meus pecados, a aquisição e a conservação da Sabedoria. Eu Vos saúdo, pois, oh! Maria Imaculada,
+ tabernáculo vivo da Divindade, onde a Sabedoria eterna escondida quer ser adorada pelos Anjos e pelos homens Eu Vos saúdo, oh! Rainha do céu e da terra, a cujo império está sujeito tudo o que existe abaixo de Deus. Eu Vos saúdo,
+ oh! Refúgio seguro dos pecadores, cuja misericórdia a ninguém jamais faltou. Atendei aos desejos que tenho da divina Sabedoria e recebei,
+ para isso, os votos e ofertas que a minha baixeza Vos apresenta. Eu, (Nome)., pecador infiel, renovo e ratifico hoje nas Vossas mãos,
+ as promessas do meu batismo. Renuncio para sempre a satanás, às suas pompas e suas obras e dou-me inteiramente a Jesus Cristo, Sabedoria encarnada,
+ para segui-Lo, carregando a minha cruz todos os dias da minha vida, e para Lhe ser mais fiel do que fui no passado. Escolho-Vos, hoje, oh! Maria,
+ na presença de toda a corte celeste, para minha Mãe e Senhora; entrego-Vos e consagro-Vos, na qualidade de escravo, o meu corpo e a minha alma,
+ os meus bens interiores e exteriores e até o próprio valor das minhas boas obras passadas
+ , presentes e futuras, deixando-Vos pleno e total direito de dispor de mim e de tudo o que me pertence, sem exceção alguma,
+ segundo o Vosso agrado e para maior glória de Deus, no tempo e na eternidade. Recebei, oh! Virgem benigna, esta pequena oferta da minha escravidão,
+ em união e em honra da submissão que a Sabedoria eterna quis ter da Vossa maternidade; em homenagem ao poder que ambos tendes sobre este verme e miserável pecador,
+ e em ação de graças pelos privilégios com que a Santíssima Trindade Vos favoreceu. Prometo que, de hoje em diante, desejo, como Vosso verdadeiro escravo,
+ procurar a Vossa honra e obedecer-Vos em tudo. Oh! Mãe admirável, apresentai-me ao Vosso querido Filho na qualidade de escravo eterno a fim de que,
+ tendo-me resgatado por Vós, por Vós me receba. Oh! Mãe de misericórdia, concedei-me a graça de alcançar a verdadeira Sabedoria de Deus e de colocar-me,
+ por isso, no número daqueles que amais, ensinais, guiais, alimentais e protegeis como vossos filhos e escravos. oh! Virgem fiel, tornai-me em tudo um tão perfeito discípulo,
+ imitador e escravo da Sabedoria encarnada, Jesus Cristo,
+ Vosso Filho, que eu chegue, por Vossa intercessão e segundo o Vosso exemplo, à plenitude da Sua idade na terra e da Sua glória no Céu. Assim seja.
+',13);
+
+INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('Ladainha Sagrada Família','
+
+
+Jesus, Salvador do mundo,
+
+Jesus, Filho de Maria e irmão nosso,
+
+Jesus, tesouro e delicia da Sagrada Família,
+
+Tende piedade de nós.
+
+Santa Maria, Rainha dos céus,
+
+Santa Maria, Mãe de Jesus e nossa doce Mãe,
+
+Santa Maria, ornamento e alegria da Sagrada Família,
+
+São José, pai legal de Jesus,
+
+São José, Casto esposo de Maria,
+
+São José, guia e amparo da Sagrada Família, rogai por nós.
+
+Sagrada Família, de baixo da proteção nos temos consagrado a Deus,
+
+Sagrada Família, que temos tomado por modelo,
+
+Sagrada Família, predileta do pai celestial,
+
+Sagrada Família, conduzida pelo Espírito Santo,
+
+Sagrada Família, santificada pela presença do Filho de Deus,
+
+Sagrada Família, terror do inferno,
+
+Sagrada Família, asilo de todas as virtudes,
+
+Sagrada Família, Santuário da Divina Trindade,
+
+Sagrada Família, precioso Tabernáculo de Deus vivo,
+
+Sagrada Família, escondida e ignorada sobre a terra,
+
+Sagrada Família, pobre e laboriosa,
+
+Sagrada Família, modelo de paciência e resignação,
+
+Sagrada Família, alegria nas tribulações,
+
+Sagrada Família, venerada pelos pastores,
+
+Sagrada Família, honrada pelos Magos,
+
+Sagrada Família, por Herodes perseguida,
+
+Sagrada Família, pelos judeus depreciada,
+
+Sagrada Família, desejada pelos Patriarcas,
+
+Sagrada Família, pelos anjos respeitada,
+
+Sagrada Família, modelo de todos os Santos,
+
+Sagrada Família, ornamento da celestial Jerusalém, esteja sempre conosco.
+
+Sede-nos propicia,
+
+socorrei-nos em todos os perigos da alma e corpo,
+
+Sede nosso refúgio contra os males que nos cercam,
+
+Sede nossa força nos combates e provas,
+
+Sede nos forte muro contra os ataques do inimigo de nossa saúde,
+
+Sede nossa esperança nesta vida e nosso consolo na hora da morte,
+
+Sede eficaz protetora daqueles que Vos invocam com verdadeira confiança,
+
+Sede medianeira dos que morrem no Senhor e advogada dos pecadores perante o Soberano Jesus,
+
+Sede liberadora das almas detidas no purgatório e saúde dos que esperam em Vos,
+
+Sede sempre sustento dos débeis e ajuda dos imperfeitos,
+
+Sede sempre protetora de nossa Família e de toda a sociedade,
+
+Sede sempre espelho dos cristãos, modelo dos justos,
+
+Sede sempre consoladora dos aflitos e refúgio de vossos devotos,
+
+Sede sempre apoio e defesa dos que se tem consagrado a vosso serviço,
+
+Vos rogamos, ouvi-nos.
+
+V. Sagrada Família, sede glorificada em todos os séculos.
+
+R. Reinai para sempre em todos os corações.
+
+Oração:Divino Salvador, bendigo todas nossas obras, recompensai de uma maneira digna de Vós a todos os que trabalham por vossa Glória, concedei a paz e a vida eterna a nossos irmãos mortos.
+
+concedei também a vossos operários as graças que lhes são necessárias para a conversão dos pecadores, santificação dos justos e aumento de vossa cristã Família, a fim de que sejais conhecido e glorificado por todas as criaturas com Maria e José, e reinais em todos os Corações agora e sempre,
+
+Oh! Vós que viveis e reinais com Deus Pai, em unidade do Espírito Santo, por todos os séculos. Amém.
+
+',14);
+
+INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('Terço das Lágrimas de Sangue de Maria Rosa Mística','
+Rezai o terço das lágrimas de sangue todos os dias e espalhai-o, para que o mundo se converta e tenha paz.
+
+"O inimigo foge onde ele é rezado"( Palavras da querida Mãe de Deus ).
+
+Oração:Jesus crucificado: Prostrado aos vossos pés, oferecemo-vos as lágrimas de sangue daquela que com grande amor compadecente vos acompanhou no caminho da cruz, tão doloroso.
+
+Bom mestre, fazei que tomemos a peito os ensinaimentos das lágrimas de sangue da vossa Santíssima Mãe, para que cumpramos vossa santa vontade na terra assim que sejamos dignos de glorificar-vos eternamente no céu. Amém.
+
+Sete mistérios: Meditar nas Sete Dores de Nossa Senhora.
+
+Primeira Dor:
+
+Apresentação de meu Filho no templo.
+
+Segunda Dor:
+
+A fuga para o Egito.
+
+Terceira Dor:
+
+Perda do Menino Jesus.
+
+Quarta Dor:
+
+Doloroso encontro no caminho do Calvário.
+
+Quinta Dor:
+
+Aos pés da Cruz.
+
+Sexta Dor:
+
+Uma lança atravessa o Coração de Jesus.
+
+Sétima Dor:
+
+Jesus é sepultado.
+
+Nas contas grandes:
+
+Oh! Jesus, olhai para as lágrimas de sangue daquela que mais Vos amou no mundo e Vos ama mais intensamente no céu.
+
+Em vez da Ave-Maria, reza-se sete vezes:
+
+Oh! Jesus, atendei às nossas súplicas: em virtude das lágrimas de sangue da Vossa Mãe Santíssima.
+
+No final do terço reza-se três vezes:
+
+Oh! Jesus, olhai para as lágrimas de sangue daquela que mais Vos amou no mundo e Vos ama mais intensamente no céu.
+
+Oh! Maria, Mãe do amor, das dores e da misericórdia, nós vos pedimos, uni as vossas súplicas com as nossas, para que Jesus, Vosso Divino Filho, a quem nós nos dirigimos, atenda os nossos pedidos, em nome das Vossas lágrimas de sangue, concedendo-nos com as graças pedidas a coroa da vida eterna. Amém.
+
+As Vossas lágrimas de sangue, oh! Mãe Dolorosa, fazem fracassar a soberania do inferno!
+
+Por vossa maNossa Senhoraidão divina, oh! Jesus algemado, preservai o mundo da catástrofe eminente!
+',15);
+
+INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('Reparação das blasfêmias contra o Imaculado Coração de Maria','
+
+
+Oh! Maria, minha Mãe Santíssima, desejando desagravar-Vos das ofensas que o Vosso Coração Doloroso e Imaculado recebe, e em especial das blasfêmias que se dirigem contra Vós, ofereço-Vos estes pobres louvores com o fim de Vos consolar por tantos filhos ingratos que não Vos amam, e consolar o Coração Santíssimo de Jesus, Vosso Filho e Senhor nosso, a quem tanto ofendem e entristecem as injúrias feitas contra Vós.
+
+Dignai-Vos, Mãe Dulcíssima, receber este meu pobre e humilde obséquio; fazei que Vos ame e me sacrifique por Vós, cada vez mais; e olhai com olhos de misericórdia para tantos infelizes a fim de que não tardem em acolher-se, arrependidos, ao Vosso colo maternal. Amém.
+
+Bendito seja Deus!
+
+Bendita a excelsa Mãe de Deus, Maria Santíssima!
+
+Bendita a Sua Santa e Imaculada Conceição!
+
+Bendita a Sua gloriosa Assunção!
+
+Bendito seja o Nome de Maria, Virgem e Mãe!
+
+Bendito o Seu Imaculado e Doloroso Coração!
+
+Bendita a Sua Pureza Virginal!
+
+Bendita a Sua Divina Maternidade!
+
+Bendita a Sua Mediação Universal!
+
+Benditas as Suas Lágrimas e as Suas Dores!
+
+Benditas as graças com que o Senhor A coroou Rainha dos Céus e da Terra!
+
+Glória a Maria Santíssima, Filha Primogênita do Pai!
+
+Glória a Maria Santíssima, Mãe Imaculada do Filho!
+
+Glória a Maria Santíssima, Esposa Virginal do Espírito Santo!
+
+Virgem Santíssima, minha boa e terna Mãe, eu Vos amo pelos que não Vos amam; eu Vos louvo pelos que Vos blasfemam;
+
+Entrego-me totalmente a Vós, pelos que não querem reconhecer-Vos por sua Mãe. Ave-Maria.
+
+Oh! Maria concebida sem pecado, rogai por nós que recorremos a Vós.
+
+Coração Imaculado de Maria, sede a nossa salvação!
+
+Ato de Reparação ao Imaculado Coração de Maria
+
+Oh! Imaculado Coração de Maria, traspassado de dor pelas injúrias com que os pecadores ultrajam vosso Santíssimo nome e vossas excelsas prerrogativas! Aqui tendes, prostrado a vossos pés, um indigno filho vosso que, agoniado pelo peso de suas próprias culpas, vem arrependido e choroso, e com animo de ressarcir as injúrias que, a modo de penetrantes flechas, dirigem contra Vós homens insolentes e malvados. Desejo reparar, com este ato de amor e Consagração que faço diante de vosso amantíssimo Coração, todas as blasfêmias que se lançam contra vosso augusto nome, todos os agravos que se inferem a vossas excelsas prerrogativas e todas as ingratidões com que os homenscorrespondem a vosso maternal amor e inesgotável misericórdia. Aceitai,Oh! Coração Imaculado!, esta pequena demonstração de meu filial carinho e justo reconhecimento, junto com o firme propósito que faço de ser-vos fiel daqui em adiante, de sair para defender vossa honra quando a veja ultrajada e de propagar vosso culto e vossas glórias. Concedei-me, Oh! Coração amabilíssimo!, que viva e cresça incessantemente em vosso santo amor, até ve-lo consumado na glória. Amém.
+
+Rezar três Ave-Marias em honra do poder, sabedoria e misericórdia do Imaculado Coração de Maria, menosprezado pelos homens
+
+Terminar com as seguintes jaculatórias:
+
+Oh! Coração Imaculado de Maria, compadecei-vos de nós!
+
+Refúgio dos pecadores, rogai por nós.
+
+Oh! doce Coração de Maria, sede a minha salvação!
+
+Ave-Maria, Pai-Nosso e glória pelas intenções do Santo Papa.
+
+Ato de desagravo ao Imaculado Coração de Maria
+
+Oh! Coração Doloroso e Imaculado de Maria, transpassado de dor pelas injúrias com que os pecadores ultrajam vosso santo nome e vossas excelsas prerrogativas; Eis prostrado aos vossos pés vosso indigno filho, que, oprimido pelo peso das próprias culpas, vem arrependido com ânimo de reparar as injúrias que, à maneira de penetrantes setas dirigem contra vós os homensousados e perversos. Desejo reparar com esse ato de amor e submissão que faço perante o vosso coração amantíssimo, todas as blasfêmias que proferem contra o vosso Augusto nome, todas as ofensas que fazem às vossas excelsas virtudes e todas as ingratidões com que os homenscorrespondem ao vosso maternal amor e inesgotável misericórdia. Aceitai, oh! Coração Imaculado, esta demonstração de meu fiel carinho e justo reconhecimento, com o firme propósito que faço de ser-vos fiel todos os dias de minha vida, de defender vossa honra quando a veja ultrajada e de propagar com entusiasmo vosso culto e vossas glórias.
+Rezar três Ave-Marias em honra ao poder, sabedoria e misericórdia do puríssimo Coração de Maria, desprezado pelos homens
+
+',16);
+INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('Oração a Nossa Senhora do Desterro','
+Ó Bem-aventurada Virgem Maria, Mãe de Nosso Senhor Jesus Cristo,
+ Rainha do céu e da terra, advogada dos pecadores, auxiliadora dos cristãos,
+ desterradora das indigências, das calamidades, dos inimigos corporais e espirituais,
+ dos maus pensamentos, das cenas terríveis do dia do juízo, das pragas, das bruxarias, dos malfeitores, 
+ ladrões, arrombamentos, assaltantes e assassinos. Minha amada mãe, eu prostrado agora aos vossos pés,
+ cheio de arrependimento das minhas pesadas culpas, por vosso intermédio, imploro perdão ao boníssimo Deus.
+ Rogai ao vosso Divino Jesus, por nossas famílias, para que Ele desterre de nossas vidas todos estes males,
+ nos dê perdão de nossos pecados e que nos enriqueça de Sua divina graça e misericórdia. Cobrí-nos com o vosso manto maternal e desterrai de todos nós,
+ todos os males e maldições. Afugentai de nós a peste e os desassossegos. Possamos por vosso intermédio obter a cura de todas as doenças,
+ encontrar as portas do céu abertas e ser felizes por toda a eternidade. Amém.
+Reza-se 7 Pai nossos, 7 Ave Marias e 1 Credo ao Sagrado Coração de Jesus e pelas 7 dores de Maria Santíssima.
+- Nossa Senhora do Desterro, rogai por nós!
+',17);
+INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('Oração a Nossa Senhora Desatadora dos Nós','
+
+Virgem Maria, Mãe do belo amor, 
+Mãe que jamais deixa de vir 
+em socorro a um filho aflito, 
+Mãe cujas mãos não param nunca 
+de servir seus amados filhos, 
+pois são movidas pelo amor divino 
+e a imensa misericórdia 
+que existem em teu coração, 
+volta o teu olhar compassivo sobre mim 
+e vê o emaranhado de nós 
+que há em minha vida. 
+Tu bem conheces o meu desespero, 
+a minha dor e o quanto estou amarrado 
+por causa destes nós. 
+Maria, Mãe que Deus 
+encarregou de desatar os nós 
+da vida dos seus filhos, 
+confio hoje a fita da minha vida em tuas mãos. 
+Ninguém, nem mesmo o maligno 
+poderá tirá-la do teu precioso amparo. 
+Em tuas mãos não há nó 
+que não poderá ser desfeito. 
+Mãe poderosa, por tua graça 
+e teu poder intercessor 
+junto a Teu Filho e Meu Libertador, Jesus, 
+recebe hoje em tuas mãos este nó......... 
+Peço-te que o desates para a glória de Deus, 
+e por todo o sempre. 
+Vós sois a minha esperança. 
+Ó Senhora minha, 
+sois a minha única consolação dada por Deus, 
+a fortaleza das minhas débeis forças, 
+a riqueza das minhas misérias, a liberdade, 
+com Cristo, das minhas cadeias. 
+Ouve minha súplica. 
+Guarda-me, guia-me, 
+protege-me, ó seguro refúgio!
+Maria, Desatadora dos Nós, roga por mim.
+',18);
+
+INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('Oração São Camilo','
+Piedosíssimo São Camilo que, chamado por Deus para ser o amigo dos pobres enfermos, consagrastes a vida inteira a assisti-los e confortá-los, contemplai do Céu os que vos invocam, confiados no vosso auxílio.
+Doenças da alma e do corpo fazem de nossa pobre existência um acúmulo de misérias que tornam triste e doloroso este exílio terreno.
+Aliviai-nos em nossas enfermidades, obtende-nos a santa resignação às disposições divinas, e na hora inevitável da morte confortai o nosso coração com as esperanças imortais da beatífica eternidade. Assim seja.
+Glória ao Pai. (três vezes)
+São Camilo de Léllis, rogai por mim. (três vezes)
+',19);
+
+INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('Coroa de São José','
+Para implorar seu auxílio em qualquer necessidade
+Louvemos de todo o coração o Senhor Deus nosso, honrando e recomendando-nos com muito fervor a São José, escolhido para a dignidade mais alta e excelente, depois da divina maternidade. Por todos os séculos dos séculos.
+Louvemos e demos graças à Trindade generosíssima, por ter adornado o glorioso Patriarca São José, mais que nenhum outro santo, com seus celestes dons divinos e carismas. Por todos os séculos dos séculos.
+Louvemos e demos graças à Trindade bondosíssima, por ter constituído o glorioso São José sobre sua família, e havê-lo instituído em nosso favor, fiel administrador de todos os seus bens. Por todos os séculos dos séculos.
+Louvado, exaltado e glorificado seja o Pai Eterno, por ter escolhido o excelso São José para que junto ao Filho de Deus, fizesse suas vezes na terra, e por lhe ter dado um coração amoroso e paternal para com o divino Filho, e supliquemos-lhe com grande fervor e profundíssima humildade, nos conceda benignamente o que tanto desejamos. Amém. Pai-Nosso, Ave-Maria, Glória
+Louvado, exaltado e glorificado seja o Filho Unigênito, por ter recebido o excelso São José por seu Pai adotivo, e infundido em seu coração um cuidado amoroso e diligente para zelar por sua vida, alimentá-lo, vesti-lo e defendê-lo; E supliquemos-lhe confiantemente nos conceda a graça de que tanto necessitamos. Amém. Pai-Nosso, Ave-Maria, Glória
+Louvado, exaltado e glorificado seja o Espírito Divino, que no egrégio São José deu à Virgem Imaculada um esposo castíssimo, muito semelhante à celeste Senhora, e fiel custódio da sua virgindade, enchendo ao mesmo tempo o coração do ilustre Patriarca de muito amor e grande estima do tesouro que lhe tinha confiado; E roguemos-lhe e até importunemo-lo humildemente e com afeto de filhos, para conseguir a graça de que tanto precisamos, que tanto desejamos, e pela qual tanto suspiramos. Amém. Pai-Nosso, Ave-Maria, Glória
+Oração:Oh! glorioso São José, a quem o Pai Eterno comunicou sua paternidade, o Filho divino honrou com esta mesma qualidade e o Espírito Santo escolheu para ser esposo de sua mesma Esposa; Eu vos felicito e vos dou mil parabéns, porque fostes levantado a tão alta dignidade e adornado de tantas graças. Mas lembrai-vos oh! glorioso Santo, que de alguma maneira também sois nosso pai, porque o sois de Jesus, nosso irmão maior. Não esqueçais ainda que sois verdadeiro esposo de nossa Mãe muita amada e por esse mesmo título também pai dos filhinhos daquele Coração Imaculado. Ora, cheios de confiança filial, erguemos hoje os olhos e os fitamos nesse vosso rosto bondosíssimo, e a Vós bradamos na presente necessidade, bem assim como os pintinhos constantemente bradam por suas mães, e ainda com muito mais razão, porque não há amor de mãe, por extremosa que seja, que iguale nem se possa comparar ao amor que Vós nos tendes. Lançai, pois, um olhar amoroso para os que assim vos contemplam, e para os que a Vós clamam do fundo de seus corações. Compadeçam-se essas entranhas, já de si tão ternas, das necessidades em que nos encontramos. Oh! Pai amado, que nossas obras digam com o nome que levais, que significa acréscimo; desempenhai dignamente o título de Padroeiro e Protetor universal, que vos dá a Igreja. Fazei conosco segundo a multidão de vossas misericórdias, e sejam as obras garantia de vossos ofícios: fazei, enfim, como quem sois. Olhai, Pai misericordiosíssimo, que não mudastes de condição, que o vosso poder estende-se a todas as nossas necessidades; eia, zelai por vossa honra. E se tudo isto não bastar, vo-lo pedimos pelo grande amor que tivestes a vossa amada Esposa e ao bom Jesus, de cuja divina presença desejamos gozar convosco, por toda a eternidade, na celeste Jerusalém. Amém.
+',20);
+
+INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('Rosário de São Miguel Arcanjo','
+[* O Rosário de São Miguel Arcanjo,é um rosário especifico de 9 contas]
+<br/>
+Reza-se as 9 saudações (um Pai Nosso + três Ave-Marias cada), deixando para por fim as 4 contas, um Pai Nosso para cada Arcanjo, e seu Anjo da guarda, que seguem a medalha, toma-se a primeira conta grande da coroinha e reza-se a primeira saudação.) by Clevinho Maia
+ <br/>
+Método para rezar :
+* Usando o pequeno Rosário de São Miguel Arcanjo de 9 contas, na conta pequena junto à medalha, reza-se:
+<br/>
+V. Deus vinde em nosso auxílio.
+R. Senhor socorrei-nos e salvai-nos.
+<br/>
+V.Glória ao Pai e ao Filho e ao Espírito Santo.
+R. Assim como era no princípio, agora e sempre. Amém.
+<br/>
+* Depois, deixando para o final as quatro contas que se seguem, toma-se a primeira conta grande do Rosário e reza-se a primeira saudação, Glória ao Pai e um Pai nosso, e nas três contas pequenas, três Ave-Marias, como segue:
+<br/>
+Primeira saudação:
+Saudamos o primeiro coro dos Anjos, pedindo pela intercessão de São Miguel Arcanjo e do coro celeste dos Serafins, para que o Senhor nos torne dignos de sermos abrasados de uma perfeita caridade. Amém.
+(um Pai Nosso, três Ave Maria, Glória ao Pai)
+<br/>
+Segunda saudação:
+Saudamos o segundo coro dos Anjos, pedindo pela intercessão de São Miguel Arcanjo e do coro celeste dos Querubins para que o Senhor nos conceda a graça de fugirmos do pecado e procurarmos a perfeição cristã. Amém.
+(um Pai Nosso, três Ave Maria, Glória ao pai)
+<br/>
+Terceira saudação:
+Saudamos o terceiro coro dos Anjos, pedindo pela intercessão de São Miguel Arcanjo e do coro celeste dos Tronos, para que Deus derrame em nosso coração o espírito de verdadeira e sincera humildade. Amém.
+(um Pai Nosso, três Ave Maria, Glória ao pai)
+<br/>
+Quarta saudação:
+Saudamos o quarto coro dos Anjos, pedindo pela intercessão de São Miguel Arcanjo e do coro celestes das Dominações, para que o Senhor nos conceda a graça de dominar nossos sentidos e de nos corrigir das nossas más paixões. Amém.[www.arcanjomiguel.net]
+(um Pai Nosso, três Ave Maria, Glória ao Pai)
+<br/>
+Quinta saudação:
+Saudamos o quinto coro dos Anjos pedindo pela intercessão de São Miguel Arcanjo e do coro celeste das Potestades, para que o Senhor se digne proteger nossa alma contra as ciladas e as tentações do demônio. Amém.[www.arcanjomiguel.net]
+(um Pai Nosso, três Ave Maria, Gloria ao Pai)
+<br/>
+Sexta saudação:
+Saudamos o sexto coro dos Anjos pedindo pela intercessão de São Miguel e do coro admirável das Virtudes, para que o Senhor não nos deixe cair em tentação, mas nos livre de todo mal. Amém.
+(um Pai Nosso, 3 Ave Maria, Glória ao Pai)
+<br/>
+Sétima saudação:
+Saudamos o sétimo coro dos Anjos, pedindo pela intercessão de São Miguel Arcanjo e do coro dos Principados, para que o Senhor encha nossa alma do espírito de uma verdadeira e sincera obediência. Amém. (um Pai Nosso, três Ave Maria, Gloria ao Pai)
+<br/>
+Oitava saudação:
+Saudamos o oitavo coro dos Anjos, pedindo pela intercessão de São Miguel Arcanjo e do coro celeste dos Arcanjos, para que o Senhor nos conceda o dom da perseverança na fé e nas boas obras, a fim de que possamos chegar a possuir a glória eterna do paraíso. Amém.
+(um Pai Nosso, três Ave Maria, Glória ao Pai)
+<br/>
+Nona saudação:
+Saudamos o nono coro dos Anjos pedindo pela intercessão de São Miguel Arcanjo e do coro celeste de todos os Anjos, para que sejamos guardados por eles nesta vida mortal, para sermos conduzidos por eles à glória eterna do céu. Amém.[www.arcanjomiguel.net]
+(um Pai Nosso, três Ave Maria, Glória ao Pai)
+<br/>
+Reza-se no fim:
+Um Pai Nosso em honra de São Miguel.
+Um Pai Nosso em honra de São Gabriel.
+Um Pai Nosso em honra de São Rafael.
+Um Pai Nosso em honra ao nosso Anjo da Guarda.
+<br/>
+Antífona: Gloriosíssimo São Miguel, chefe e príncipe dos exércitos celestes, fiel guardião das almas, vencedor dos espíritos rebeldes, amado da casa de Deus, nosso admirável guia depois de Cristo, vós cuja excelência e virtude são eminentíssimas, dignai-Vos livrar-nos de todos os males, nós todos que recorremos a vós com confiança, e fazei, pela vossa incomparável proteção, que adiantemos cada dia mais na fidelidade e perseverança em servir a Deus.[www.arcanjomiguel.net]
+<br/>
+- Rogai por nós, ó bem-aventurado São Miguel, príncipe da Igreja de Cristo.
+- Para que sejamos dignos de Suas promessas.
+<br/>
+<br/>
+Oremos:
+<br/>
+Deus todo poderoso e eterno, que, por um prodígio de bondade e misericórdia para a salvação dos homens escolhestes para príncipe de Vossa Igreja o gloriosíssimo São Miguel Arcanjo, tornai-nos dignos, nós vo-lo pedimos, de sermos preservados de todos os nossos inimigos, a fim de que na hora de nossa morte nenhum deles nos possa inquietar, mas que nos seja dado sermos introduzidos por ele na presença da Vossa poderosa e augusta Majestade, pelos merecimentos de Jesus Cristo, Nosso Senhor. Amém Créditos:http://www.arcanjomiguel.net
+Clevinho Maia (Combatentes de São Miguel Arcanjo)
+<br/>
+Promessas de São Miguel Arcanjo da recitação do Rosário
+<br/>
+<br/>
+O glorioso São Miguel Arcanjo prometeu:
+<br/>
+A quem o honrasse desta maneira antes da Sagrada Comunhão seria acompanhado à Sagrada Mesa por um Anjo de cada um dos nove Coros;
+A quem rezasse todos os dias essas nove saudações teria a sua assistência e a dos Santos Anjos durante a sua vida e que depois da morte livraria do Purgatório a essa pessoa e aos seus parentes.
+<br/>
+Através da recitação deste Rosário obter-se-ão ainda muitas graças nas calamidades públicas, sobretudo nas da Igreja Católica Apostólica Romana (de que São Miguel Arcanjo é o padroeiro perpétuo), e as indulgências que lhe foram atribuídas pelo Papa Pio IX.  
+<br/>
+Origem da devoção Santo Rosário de São Miguel Arcanjo
+De acordo com a tradição a origem desta devoção está relacionada com uma aparição e revelação privada do próprio Arcanjo, São Miguel a uma religiosa carmelita portuguesa, Antónia dAstónaco, no ano de 1750, este Santo Arcanjo declarou-lhe que desejava que se fizessem em sua honra nova saudações correspondentes aos nove coroes dos Anjos, que consistiriam na recitação de um Pai Nosso e três Ave Maria em honra de cada um dos coros dos Anjos. posteriormente reconhecida e aprovada pelo Papa Pio IX, a 8 de Agosto de 1851, quem a enriqueceu de indulgências.
+',21);
+
+INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('Oração dos Santos Anjos','
+Nós vos Louvamos e vos bendizemos, ó Cristo Jesus,
+porque sois o centro do mundo angélico.
+Nós vos adoramos, ó Cristo Jesus, porque voltareis em
+vossa glória, com todos os vossos Anjos.
+Em vós ó Cristo Senhor, foram criadas todas as coisas
+dos céus e da terra, as visíveis e as invisíveis: Tronos,
+Dominações e Potestades. Tudo foi criado por Cristo
+e para Cristo.
+Nós vos Bendizemos, Espíritos Celestiais, servidores
+enviados ao serviço dos que herdam a Salvação.
+Nós vos Bendizemos, porque desde a criação estais a
+serviço de Deus, como Mensageiros obedientes,
+anunciando a Salvação dos seres humanos e ajudando-nos
+nos caminhos de Deus.
+Nós vos Bendizemos, amigos de Deus, porque ajudais
+misteriosamente e poderosamente a Santa Igreja.
+Convosco nós adoramos o Deus três vezes Santo, na
+Liturgia.
+Nós vos bendizemos porque ajudais a vencer o maligno
+que luta contra o Plano de Deus.
+Anjos Santos e Benditos, obedientes à voz do Senhor,
+protegei à todos nós e à tudo que temos. Cercai as
+nossas casas, o nosso trabalho e as nossas vidas com
+a vossa bondosa proteção, e que um dia com a vossa
+ajuda, possamos chegar ao Reino Eterno, onde
+adoraremos convosco a Santíssima Trindade.
+Com Maria, nossa Mãe, Rainha dos Anjos e dos
+Santos. Amém!
+',22);
+
+INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('Súplicas ardentes aos Santos Anjos','
+Deus Uno e Trino, Omnipotente e Eterno!
+Antes de recorrermos aos Vossos servos, os Santos Anjos, prostramo-nos na Vossa presença e Vos adoramos: Pai, Filho e Espírito Santo.
+-Bendito e louvado sejais por toda a eternidade!
+<br/>
+Deus Santo, Deus Forte, Deus Imortal, que tudo quanto por Vós foi criado Vos adore, Vos ame e permaneça no Vosso serviço!
+<br/>
+E Vós, Maria, Rainha de todos os Anjos, aceitai benignamente as súplicas que dirigimos aos Vossos servos, apresentai-as ao Altíssimo – Vós que sois medianeira de todas as graças e a omnipotência suplicante – a fim de obtermos graças, salvação e auxílio. Ámen.
+<br/>
+Sacratíssimo Coração de Jesus, guardai e defendei a minha alma e as da minha família!
+Sacratíssimo Coração de Jesus, guardai e defendei a minha alma e as da minha família!
+Sacratíssimo Coração de Jesus, guardai e defendei a minha alma e as da minha família!
+<br/>
+Poderosos Santos Anjos, que por Deus nos fostes concedidos para nossa protecção e auxílio, em Nome da Santíssima Trindade nós vos suplicamos:
+-Vinde depressa, socorrei-nos!
+<br/>
+Nós vos suplicamos em Nome do Preciosíssimo Sangue de Nosso Senhor Jesus Cristo: 
+-Vinde depressa, socorrei-nos!
+<br/>
+Nós vos suplicamos pelo poderosíssimo Nome de Jesus;
+-Vinde depressa, socorrei-nos!
+<br/>
+Nós vos suplicamos por todas as Chagas de Nosso Senhor Jesus Cristo:
+-Vinde depressa, socorrei-nos!
+<br/>
+Nós vos suplicamos por todos os martírios de Nosso Senhor Jesus Cristo:
+-Vinde depressa, socorrei-nos!
+<br/>
+Nós vos suplicamos pela Palavra Santa de Deus:
+-Vinde depressa, socorrei-nos!
+<br/>
+Nós vos suplicamos pelo Coração de Nosso Senhor Jesus Cristo:
+-Vinde depressa, socorrei-nos!
+<br/>
+Nós vos suplicamos em nome do amor que Deus tem por nós, pobres:
+-Vinde depressa, socorrei-nos!
+<br/>
+Nós vos suplicamos em nome da fidelidade de Deus por nós, pobres:
+-Vinde depressa, socorrei-nos!
+<br/>
+Nós vos suplicamos em nome da misericórdia de Deus por nós, pobres:
+-Vinde depressa, socorrei-nos!
+<br/>
+Nós vos suplicamos em nome de Maria, Mãe de Deus e nossa Mãe:
+-Vinde depressa, socorrei-nos!
+<br/>
+Nós vos suplicamos em nome de Maria Rainha do Céu e da Terra:
+-Vinde depressa, socorrei-nos!
+<br/>
+Nós vos suplicamos em nome de Maria, vossa Rainha e Senhora:
+-Vinde depressa, socorrei-nos!
+<br/>
+Nós vos suplicamos pela vossa própria bem-aventurança:
+-Vinde depressa, socorrei-nos!
+<br/>
+Nós vos suplicamos pela vossa própria fidelidade
+-Vinde depressa, socorrei-nos!
+<br/>
+Nós vos suplicamos pela vossa luta na defesa do Reino de Deus:
+-Vinde depressa, socorrei-nos!
+<br/>
+Nós vos suplicamos:
+Protegei-nos com o vosso escudo!
+<br/>
+Nós vos suplicamos
+-Iluminai-nos com a vossa luz!
+<br/>
+Nós vos suplicamos:
+-Salvai-nos sob o manto protector de Maria!
+<br/>
+Nós vos suplicamos: 
+-Guardai-nos no coração de Maria!
+<br/>
+Nós vos suplicamos:
+-Confiai-nos às mãos de Maria!
+<br/>
+Nós vos suplicamos: 
+-Mostrai-nos o caminho que conduz à porta da vida: o 
+Coração aberto de Nosso Senhor!
+<br/>
+Nós vos suplicamos: 
+-Guiai-nos com segurança à casa do Pai Celestial:
+<br/>
+Todos vós, nove coros dos espíritos bem-aventurados:
+-Vinde depressa, socorrei-nos!
+<br/>
+Anjos da vida:
+-Vinde depressa, socorrei-nos!
+<br/>
+Anjos do Verbo de Deus:
+-Vinde depressa, socorrei-nos!
+<br/>
+Anjos do amor:
+-Vinde depressa, socorrei-nos!
+<br/>
+Nossos companheiros especiais e enviados por Deus:
+-Vinde depressa, socorrei-nos!
+<br/>
+Insistentemente vos suplicamos:
+-Vinde depressa, socorrei-nos!
+<br/>
+Porque o Sangue Preciosíssimo de Nosso Senhor e Rei clama que venhais em auxilio a nós, pobres:
+-Insistentemente suplicamos: vinde depressa, socorrei-nos!
+<br/>
+Porque o Coração de Nosso Senhor e Rei clama que venhais em auxilio a nós, pobres:
+-Insistentemente suplicamos: vinde depressa, socorrei-nos!
+<br/>
+Porque o Coração Imaculado de Maria, Virgem Puríssima e Vossa Rainha, clama que venhais em auxilio a nós, pobres;
+-insistentemente suplicamos: vinde depressa, socorrei-nos! 
+<br/>
+São Miguel Arcanjo:
+Vós, príncipe dos exércitos celestes, vencedor do dragão infernal, recebestes de Deus força e poder para aniquilar, pela humanidade, a soberba do príncipe das trevas.
+Insistentemente vos suplicamos que nos alcanceis de Deus a verdadeira humildade de coração, uma fidelidade inabalável no cumprimento contínuo da vontade de Deus e uma grande fortaleza no sofrimento e na penúria. Ao comparecermos perante o tribunal de Deus socorrei-nos para que não desfaleçamos!
+<br/>
+São Gabriel Arcanjo:
+Vós, anjo da encarnação, mensageiro fiel de Deus, abri os nossos ouvidos para que possam captar até as mais suaves sugestões e apelos de graça emanados do Coração amabilíssimo de Nosso Senhor. Nós vos pedimos que fiqueis sempre junto de nós para que, compreendendo bem a Palavra de Deus e Suas inspirações, saibamos obedecer-lhe, cumprindo docilmente aquilo que Deus quer de nós. Fazei que estejamos sempre disponíveis e vigilantes. Que o Senhor, quando vier, não nos encontre dormindo!
+<br/>
+São Rafael Arcanjo:
+Vós que sois lança e bálsamo do amor divino, feri o nosso coração e depositai nele um amor ardente a Deus. Que a ferida não se apague nele para que nos faça perseverar todos os dias no caminho da caridade e do amor. Que tudo vençamos pelo amor!
+<br/>
+<br/>
+Anjos poderosos:
+E nossos irmãos santos que servis diante do Trono de Deus, vinde em nosso auxílio!
+Defendei-nos de nós próprios, da nossa covardia e tibieza, do nosso egoísmo e ambição, da nossa inveja e falta de confiança, da nossa avidez na busca da abundância, do bem-estar e da estima pública!
+Desatai em nós as algemas do pecado e do apego às coisas terrenas. Tirai dos nossos olhos as vendas que nós mesmos lhes pusemos e que nos impedem de ver as necessidades do nosso próximo e a miséria do nosso ambiente porque nos fechamos numa mórbida complacência de nós mesmos!
+Cravai no nosso coração o aguilhão da santa ansiedade por Deus para que não cessemos de procurá-lO com ardor, contrição e amor!
+Contemplai em nós o Sangue do Senhor, derramado por nossa causa!
+Contemplai em nós as lágrimas de Vossa Rainha, choradas por nossa causa!
+Contemplai em nós a pobre, desbotada e arruinada imagem de Deus, comparando-a com a imagem íntegra que Deus, no princípio, por amor, imprimiu na nossa alma!
+Auxiliai-nos na luta contra o poder das trevas que, disfarçadamente, nos envolve e aflige!
+Auxiliai-nos para que nenhum de nós se perca, permitindo assim que um dia nos reunamos todos, jubilosamente, na eterna bem-aventurança! Ámen.
+<br/>
+São Miguel, assisti-nos com vossos santos anjos:
+-Ajudai-nos e rogai por nós!
+<br/>
+São Rafael, assisti-os com vossos santos anjos
+-Ajudai-nos e rogai por nós!
+<br/>
+São Gabriel, assisti-nos com vossos santos anjos:
+-Ajudai-nos e rogai por nós.
+<br/>
+Ámen.
+',23);
+INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('Ladainha de São Rafael Arcanjo','
+Senhor, tende piedade de nós.
+<br/>
+Cristo, tende piedade de nos.
+<br/>
+Senhor, tende piedade de nós.
+<br/>
+Jesus Cristo, ouvi-nos.
+<br/>
+Jesus Cristo, atendei-nos.
+<br/>
+Deus, pai celestial, criador dos espíritos celestes, tende piedade de nós.
+<br/>
+Deus Filho, Redentor do mundo, a quem os anjos desejam sempre contemplar, tende piedade de nós.
+<br/>
+Deus, Espírito Santo, felicidade dos espíritos bem-aventurados, tende piedade de nos.
+<br/>
+Santíssima Trindade, que sois um só Deus, Gloria dos Santos Anjos, tende piedade de nós.
+<br/>
+São Rafael, anjo da Saúde, rogai por nós
+<br/>
+São Rafael, um dos sete espíritos que estão sempre diante do trono de Deus, rogai por nós.
+<br/>
+São Rafael, fiel condutor de Tobias, rogai por nós.
+<br/>
+São Rafael, que afastais para longe de nós os espíritos malignos, rogai por nós.
+<br/>
+São Rafael, que levais nossas preces ao trono de Deus, rogai por nós.
+<br/>
+São Rafael, que curastes a cegueira de Tobias, rogai por nós.
+<br/>
+São Rafael, auxílio nas tribulações, rogai por nós.
+<br/>
+São Rafael, consolo nas necessidades, rogai por nós.
+<br/>
+São Rafael, que tornais felizes os Vossos devotos, rogai por nós.
+<br/>
+Jesus Cristo, felicidade dos anjos, perdoai-nos.
+<br/>
+Jesus Cristo, gloria dos espíritos celestes, ouvi-nos.
+<br/>
+Jesus Cristo, esplendor dos exércitos Celestiais, tende piedade de nós.
+<br/>
+<br/>
+Oremos:
+<br/>
+Ó Deus, que em Vossa inefável providência fizestes São Rafael o condutor fiel de Vossos filhos em suas viagens, humildemente Vos imploramos que possamos ser conduzidos por ele no caminho da salvação e experimentemos seu auxilio nas doenças da alma e do corpo.
+Por Jesus Cristo Nosso Senhor. Amém.
+',24);
+
+INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('Oração a São Rafael Arcanjo','
+Fica conosco, ó Arcanjo Rafael, chamado “Medicina de Deus”!
+<br/>
+Afastai para longe de nós as doenças do corpo, da alma e do espírito e trazei-nos saúde e toda a plenitude de vida prometida por Nosso Senhor Jesus Cristo. Amém.
+<br/>
+Glorioso Arcanjo Rafael, que dignastes tomar a aparência de um simples viajante para vos fazer o protetor do jovem Tobias.
+<br/>
+Ensinai-nos a viver sobrenaturalmente, elevando sem cessar nossas almas, acima das coisas terrestres.
+<br/>
+Vinde em nosso socorro no momento das tentações e ajudai-nos a afastar de nossas almas e de nossos trabalhos todas as influências do inferno.
+<br/>
+Ensinai-nos a viver neste espírito de fé que sabe reconhecer a misericórdia divina em todas as provações e as utilizar para a salvação de nossas almas.
+<br/>
+Obtende-nos a graça de uma inteira conformidade com a vontade divina: seja que ela nos conceda a cura dos nossos males ou que recuse o que lhe pedimos.
+<br/>
+São Rafael, guia, protetor e companheiro de Tobias, dirigi-nos no caminho da salvação, preservai-nos de todo perigo e conduzi-nos ao céu. Assim seja.
+',25);
+
+INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('Oração a São José','
+A vós, SÃO JOSÉ, recorremos em nossa tribulação, e depois de termos implorado  o auxílio de vossa SANTÍSSIMA ESPOSA e cheios de confiança, solicitamos também o vosso patrocínio. Por esse laço sagrado de caridade que vos uniu à VIRGEM IMACULADA, MÃE de DEUS, e pelo amor paternal que tivestes ao MENINO JESUS, ardentemente vos suplicamos que lanceis um olhar benigno sobre a herança que JESUS CRISTO conquistou com Seu Sangue, e nos socorrais nas nossas necessidades com o vosso auxílio e poder.
+<br/>
+Protegei, ó guarda providente da SAGRADA FAMÍLIA, o povo eleito de JESUS CRISTO. Afastai para longe de nós, ó Pai Amantíssimo, a peste, o erro e o vício que aflige o mundo. Assisti-nos do alto do Céu, ó nosso Fortíssimo Sustentáculo, na luta contra o poder das trevas, e assim, como outrora salvastes da morte a vida ameaçada do MENINO JESUS, defendei também agora a Santa IGREJA de DEUS, conta as ciladas dos seus inimigos e contra toda a adversidade.
+<br/>
+Amparai a cada um de nós com o vosso constante patrocínio, a fim de que, a vosso exemplo e sustentados com o vosso auxílio, possamos viver virtuosamente, piedosamente morrer e obter no Céu a eterna bem-aventurança. Amém.
+<br/>
+São José, rogai por nós.
+',26);
