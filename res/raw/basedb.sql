@@ -13,10 +13,10 @@ INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Ave Maria','1',1
 INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Creio','1',2);
 INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Cura Para Uma Morte Feliz','2',3);
 INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Oração de Purificação','2',4);
-INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Quaresma de São Miguel Arcanjo','2',3);
-INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Terço da Cruzada','8',8);
-INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Ladainha de Nossa Senhora','6',6);
-INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Coroa das glórias da Virgem Maria','9',9);
+INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Quaresma de São Miguel Arcanjo','2',5);
+INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Terço da Cruzada','8',6);
+INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Ladainha de Nossa Senhora','6',7);
+INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Coroa das glórias da Virgem Maria','9',8);
 INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Consagração a Nossa Senhora','9',9);
 INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Ladainha do Imaculado Coração de Maria','9',10);
 INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Ato de Consagração ao Imaculado Coração de Maria','9',11);
