@@ -46,7 +46,7 @@ INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('Cura Para Uma Mo
 Senhor Jesus, clamo a Vossa intercessão junto ao Pai, por todas as pessoas na história de minha família que morreram cedo, não amadas, não choradas, sem oração e sem amoroso enterro cristão.
 E a todos os que experimentaram mortes terríveis, dolorosas e horríveis - mortes por violência,por acidente, envenenamento, tiros, fogo, explosões, facadas, enforcamento, afogamento, atos de guerra ou morte por animais.
 Ergo agora até Vós, Senhor, meus antepassados que morreram mortes de suicídio, Senhor, cessa agora no Vosso poder † toda transmissão de tendência para mortes anormais e feias.
-Senhor, que Vosso amor misericordioso, que perdoa e cura, noa toque ternamente e que doravante todos conheçamos mortes cheias de amor e ternura; que experimentamos a transição da vida para a morte num contexto plenamente cristão.
+Senhor, que Vosso amor misericordioso, que perdoa e cura, noa toque ternamente e que doravante todos conheçamos mortes cheias de amor e ternura, que experimentamos a transição da vida para a morte num contexto plenamente cristão.
 Pai, que ninguém em minha linha de família, de agora em diante morra sem ter conhecido pessoalmente o Senhor Jesus Cristo. Amém!
 <br/>
 <b>
@@ -553,20 +553,20 @@ INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('Consagração Mo
 Oh! Sabedoria eterna e encarnada, amabilíssimo e adorável Jesus, verdadeiro Deus e verdadeiro homem, Filho único do Eterno Pai e de Maria sempre Virgem! Eu Vos adoro profundamente no seio e nos esplendores de Vosso Pai,
  durante a eternidade, e no seio virginal de Maria, Vossa digníssima Mãe, no tempo da Vossa Encarnação. Dou-Vos graças por Vos terdes aniquilado a Vós mesmo,
  tomando a forma de um escravo para libertar-me da cruel escravidão do demônio. Eu Vos louvo e glorifico por terdes querido submeter-Vos em tudo a Maria, Vossa santa Mãe,
- a fim de tornar-me, por Ela, Vosso fiel escravo. Mas eis que, ingrato e infiel como sou, não tenho cumprido as promessas e votos que tão solenemente Vos fiz no meu batismo;
+ a fim de tornar-me, por Ela, Vosso fiel escravo. Mas eis que, ingrato e infiel como sou, não tenho cumprido as promessas e votos que tão solenemente Vos fiz no meu batismo,
  não tenho cumprido os meus deveres e não mereço ser chamado Vosso filho e nem Vosso escravo. E como nada há em mim que não mereça a Vossa repulsa e a Vossa cólera,
- já não ouso aproximar-me, sozinho, da vossa santíssima e augustíssima Majestade. Recorro, pois, à intercessão e a misericórdia de Vossa Santa Mãe que me destes para Medianeira junto de Vós;
+ já não ouso aproximar-me, sozinho, da vossa santíssima e augustíssima Majestade. Recorro, pois, à intercessão e a misericórdia de Vossa Santa Mãe que me destes para Medianeira junto de Vós,
  é por intermédio dEla que espero obter de Vós a contrição e o perdão dos meus pecados, a aquisição e a conservação da Sabedoria. Eu Vos saúdo, pois, oh! Maria Imaculada,
  tabernáculo vivo da Divindade, onde a Sabedoria eterna escondida quer ser adorada pelos Anjos e pelos homens Eu Vos saúdo, oh! Rainha do céu e da terra, a cujo império está sujeito tudo o que existe abaixo de Deus. Eu Vos saúdo,
  oh! Refúgio seguro dos pecadores, cuja misericórdia a ninguém jamais faltou. Atendei aos desejos que tenho da divina Sabedoria e recebei,
  para isso, os votos e ofertas que a minha baixeza Vos apresenta. Eu, (Nome)., pecador infiel, renovo e ratifico hoje nas Vossas mãos,
  as promessas do meu batismo. Renuncio para sempre a satanás, às suas pompas e suas obras e dou-me inteiramente a Jesus Cristo, Sabedoria encarnada,
  para segui-Lo, carregando a minha cruz todos os dias da minha vida, e para Lhe ser mais fiel do que fui no passado. Escolho-Vos, hoje, oh! Maria,
- na presença de toda a corte celeste, para minha Mãe e Senhora; entrego-Vos e consagro-Vos, na qualidade de escravo, o meu corpo e a minha alma,
+ na presença de toda a corte celeste, para minha Mãe e Senhora, entrego-Vos e consagro-Vos, na qualidade de escravo, o meu corpo e a minha alma,
  os meus bens interiores e exteriores e até o próprio valor das minhas boas obras passadas
  , presentes e futuras, deixando-Vos pleno e total direito de dispor de mim e de tudo o que me pertence, sem exceção alguma,
  segundo o Vosso agrado e para maior glória de Deus, no tempo e na eternidade. Recebei, oh! Virgem benigna, esta pequena oferta da minha escravidão,
- em união e em honra da submissão que a Sabedoria eterna quis ter da Vossa maternidade; em homenagem ao poder que ambos tendes sobre este verme e miserável pecador,
+ em união e em honra da submissão que a Sabedoria eterna quis ter da Vossa maternidade em homenagem ao poder que ambos tendes sobre este verme e miserável pecador,
  e em ação de graças pelos privilégios com que a Santíssima Trindade Vos favoreceu. Prometo que, de hoje em diante, desejo, como Vosso verdadeiro escravo,
  procurar a Vossa honra e obedecer-Vos em tudo. Oh! Mãe admirável, apresentai-me ao Vosso querido Filho na qualidade de escravo eterno a fim de que,
  tendo-me resgatado por Vós, por Vós me receba. Oh! Mãe de misericórdia, concedei-me a graça de alcançar a verdadeira Sabedoria de Deus e de colocar-me,
@@ -602,7 +602,7 @@ Minha alma engrandece o Senhor, e meu espírito exulta de alegria em Deus, meu S
 Oremos
 <br/>
 Ave Maria,Filha de Deus Pai. Ave Maria Mãe de Deus Filho.Ave Maria, Esposa do Espírito Santo. Ave Maria, Templo da Saníssima Trindade. Ave Maria, Senhora minha, meu bem, meu amor. Rainha do meu  coração, Minha, vida, doçura e esperança minha, muito querida, meu caração e minha alma.
-Sou todo Vosso, e tudo o que possuo Vosso.Ó Virgem, sobre todos  bendita. Estai, pois, em minha alma, para engrandecer ao Senhor; estai em mim  o Vosso Espírito, para rejubilar em Deus. Colocai-Vos, ó Virgem Fiel, como selo sobre o meu coração, para que em Vós e por Vós seja eu achado fiel a Deus.
+Sou todo Vosso, e tudo o que possuo Vosso.Ó Virgem, sobre todos  bendita. Estai, pois, em minha alma, para engrandecer ao Senhor, estai em mim  o Vosso Espírito, para rejubilar em Deus. Colocai-Vos, ó Virgem Fiel, como selo sobre o meu coração, para que em Vós e por Vós seja eu achado fiel a Deus.
 Concedei ó Mãe de misericórdia, que me encontre no número dos que amais, ensinais, guiais, sustentais e protegeis como filhos. Dizei para que eu, por Vosso amor, despreze todas as consolações da terra e aspire somente as celestes, até, que para a glória do Pai, Jesus Cristo Vosso Filho, seja formado em mim pelo Espírito Santo, Vosso Esposo fidelíssimo, e por Vós Sua Esposa muito fiel. Assim seja.
 
 ',14);
@@ -674,7 +674,7 @@ INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('Reparação das 
 <br/>
 Oh! Maria, minha Mãe Santíssima, desejando desagravar-Vos das ofensas que o Vosso Coração Doloroso e Imaculado recebe, e em especial das blasfêmias que se dirigem contra Vós, ofereço-Vos estes pobres louvores com o fim de Vos consolar por tantos filhos ingratos que não Vos amam, e consolar o Coração Santíssimo de Jesus, Vosso Filho e Senhor nosso, a quem tanto ofendem e entristecem as injúrias feitas contra Vós.
 <br/>
-Dignai-Vos, Mãe Dulcíssima, receber este meu pobre e humilde obséquio; fazei que Vos ame e me sacrifique por Vós, cada vez mais; e olhai com olhos de misericórdia para tantos infelizes a fim de que não tardem em acolher-se, arrependidos, ao Vosso colo maternal. Amém.
+Dignai-Vos, Mãe Dulcíssima, receber este meu pobre e humilde obséquio, fazei que Vos ame e me sacrifique por Vós, cada vez mais, e olhai com olhos de misericórdia para tantos infelizes a fim de que não tardem em acolher-se, arrependidos, ao Vosso colo maternal. Amém.
 <br/>
 Bendito seja Deus!
 <br/>
@@ -704,7 +704,7 @@ Glória a Maria Santíssima, Mãe Imaculada do Filho!
 <br/>
 Glória a Maria Santíssima, Esposa Virginal do Espírito Santo!
 <br/>
-Virgem Santíssima, minha boa e terna Mãe, eu Vos amo pelos que não Vos amam; eu Vos louvo pelos que Vos blasfemam;
+Virgem Santíssima, minha boa e terna Mãe, eu Vos amo pelos que não Vos amam; eu Vos louvo pelos que Vos blasfemam,
 <br/>
 Entrego-me totalmente a Vós, pelos que não querem reconhecer-Vos por sua Mãe. Ave-Maria.
 <br/>
@@ -730,7 +730,7 @@ Ave-Maria, Pai-Nosso e glória pelas intenções do Santo Papa.
 <br/>
 Ato de desagravo ao Imaculado Coração de Maria
 <br/>
-Oh! Coração Doloroso e Imaculado de Maria, transpassado de dor pelas injúrias com que os pecadores ultrajam vosso santo nome e vossas excelsas prerrogativas; Eis prostrado aos vossos pés vosso indigno filho, que, oprimido pelo peso das próprias culpas, vem arrependido com ânimo de reparar as injúrias que, à maneira de penetrantes setas dirigem contra vós os homensousados e perversos. Desejo reparar com esse ato de amor e submissão que faço perante o vosso coração amantíssimo, todas as blasfêmias que proferem contra o vosso Augusto nome, todas as ofensas que fazem às vossas excelsas virtudes e todas as ingratidões com que os homenscorrespondem ao vosso maternal amor e inesgotável misericórdia. Aceitai, oh! Coração Imaculado, esta demonstração de meu fiel carinho e justo reconhecimento, com o firme propósito que faço de ser-vos fiel todos os dias de minha vida, de defender vossa honra quando a veja ultrajada e de propagar com entusiasmo vosso culto e vossas glórias.
+Oh! Coração Doloroso e Imaculado de Maria, transpassado de dor pelas injúrias com que os pecadores ultrajam vosso santo nome e vossas excelsas prerrogativas, Eis prostrado aos vossos pés vosso indigno filho, que, oprimido pelo peso das próprias culpas, vem arrependido com ânimo de reparar as injúrias que, à maneira de penetrantes setas dirigem contra vós os homensousados e perversos. Desejo reparar com esse ato de amor e submissão que faço perante o vosso coração amantíssimo, todas as blasfêmias que proferem contra o vosso Augusto nome, todas as ofensas que fazem às vossas excelsas virtudes e todas as ingratidões com que os homenscorrespondem ao vosso maternal amor e inesgotável misericórdia. Aceitai, oh! Coração Imaculado, esta demonstração de meu fiel carinho e justo reconhecimento, com o firme propósito que faço de ser-vos fiel todos os dias de minha vida, de defender vossa honra quando a veja ultrajada e de propagar com entusiasmo vosso culto e vossas glórias.
 Rezar três Ave-Marias em honra ao poder, sabedoria e misericórdia do puríssimo Coração de Maria, desprezado pelos homens
 
 ',16);
@@ -804,9 +804,9 @@ Louvemos de todo o coração o Senhor Deus nosso, honrando e recomendando-nos co
 Louvemos e demos graças à Trindade generosíssima, por ter adornado o glorioso Patriarca São José, mais que nenhum outro santo, com seus celestes dons divinos e carismas. Por todos os séculos dos séculos.
 Louvemos e demos graças à Trindade bondosíssima, por ter constituído o glorioso São José sobre sua família, e havê-lo instituído em nosso favor, fiel administrador de todos os seus bens. Por todos os séculos dos séculos.
 Louvado, exaltado e glorificado seja o Pai Eterno, por ter escolhido o excelso São José para que junto ao Filho de Deus, fizesse suas vezes na terra, e por lhe ter dado um coração amoroso e paternal para com o divino Filho, e supliquemos-lhe com grande fervor e profundíssima humildade, nos conceda benignamente o que tanto desejamos. Amém. Pai-Nosso, Ave-Maria, Glória
-Louvado, exaltado e glorificado seja o Filho Unigênito, por ter recebido o excelso São José por seu Pai adotivo, e infundido em seu coração um cuidado amoroso e diligente para zelar por sua vida, alimentá-lo, vesti-lo e defendê-lo; E supliquemos-lhe confiantemente nos conceda a graça de que tanto necessitamos. Amém. Pai-Nosso, Ave-Maria, Glória
-Louvado, exaltado e glorificado seja o Espírito Divino, que no egrégio São José deu à Virgem Imaculada um esposo castíssimo, muito semelhante à celeste Senhora, e fiel custódio da sua virgindade, enchendo ao mesmo tempo o coração do ilustre Patriarca de muito amor e grande estima do tesouro que lhe tinha confiado; E roguemos-lhe e até importunemo-lo humildemente e com afeto de filhos, para conseguir a graça de que tanto precisamos, que tanto desejamos, e pela qual tanto suspiramos. Amém. Pai-Nosso, Ave-Maria, Glória
-Oração:Oh! glorioso São José, a quem o Pai Eterno comunicou sua paternidade, o Filho divino honrou com esta mesma qualidade e o Espírito Santo escolheu para ser esposo de sua mesma Esposa; Eu vos felicito e vos dou mil parabéns, porque fostes levantado a tão alta dignidade e adornado de tantas graças. Mas lembrai-vos oh! glorioso Santo, que de alguma maneira também sois nosso pai, porque o sois de Jesus, nosso irmão maior. Não esqueçais ainda que sois verdadeiro esposo de nossa Mãe muita amada e por esse mesmo título também pai dos filhinhos daquele Coração Imaculado. Ora, cheios de confiança filial, erguemos hoje os olhos e os fitamos nesse vosso rosto bondosíssimo, e a Vós bradamos na presente necessidade, bem assim como os pintinhos constantemente bradam por suas mães, e ainda com muito mais razão, porque não há amor de mãe, por extremosa que seja, que iguale nem se possa comparar ao amor que Vós nos tendes. Lançai, pois, um olhar amoroso para os que assim vos contemplam, e para os que a Vós clamam do fundo de seus corações. Compadeçam-se essas entranhas, já de si tão ternas, das necessidades em que nos encontramos. Oh! Pai amado, que nossas obras digam com o nome que levais, que significa acréscimo; desempenhai dignamente o título de Padroeiro e Protetor universal, que vos dá a Igreja. Fazei conosco segundo a multidão de vossas misericórdias, e sejam as obras garantia de vossos ofícios: fazei, enfim, como quem sois. Olhai, Pai misericordiosíssimo, que não mudastes de condição, que o vosso poder estende-se a todas as nossas necessidades; eia, zelai por vossa honra. E se tudo isto não bastar, vo-lo pedimos pelo grande amor que tivestes a vossa amada Esposa e ao bom Jesus, de cuja divina presença desejamos gozar convosco, por toda a eternidade, na celeste Jerusalém. Amém.
+Louvado, exaltado e glorificado seja o Filho Unigênito, por ter recebido o excelso São José por seu Pai adotivo, e infundido em seu coração um cuidado amoroso e diligente para zelar por sua vida, alimentá-lo, vesti-lo e defendê-lo, E supliquemos-lhe confiantemente nos conceda a graça de que tanto necessitamos. Amém. Pai-Nosso, Ave-Maria, Glória
+Louvado, exaltado e glorificado seja o Espírito Divino, que no egrégio São José deu à Virgem Imaculada um esposo castíssimo, muito semelhante à celeste Senhora, e fiel custódio da sua virgindade, enchendo ao mesmo tempo o coração do ilustre Patriarca de muito amor e grande estima do tesouro que lhe tinha confiado, E roguemos-lhe e até importunemo-lo humildemente e com afeto de filhos, para conseguir a graça de que tanto precisamos, que tanto desejamos, e pela qual tanto suspiramos. Amém. Pai-Nosso, Ave-Maria, Glória
+Oração:Oh! glorioso São José, a quem o Pai Eterno comunicou sua paternidade, o Filho divino honrou com esta mesma qualidade e o Espírito Santo escolheu para ser esposo de sua mesma Esposa, Eu vos felicito e vos dou mil parabéns, porque fostes levantado a tão alta dignidade e adornado de tantas graças. Mas lembrai-vos oh! glorioso Santo, que de alguma maneira também sois nosso pai, porque o sois de Jesus, nosso irmão maior. Não esqueçais ainda que sois verdadeiro esposo de nossa Mãe muita amada e por esse mesmo título também pai dos filhinhos daquele Coração Imaculado. Ora, cheios de confiança filial, erguemos hoje os olhos e os fitamos nesse vosso rosto bondosíssimo, e a Vós bradamos na presente necessidade, bem assim como os pintinhos constantemente bradam por suas mães, e ainda com muito mais razão, porque não há amor de mãe, por extremosa que seja, que iguale nem se possa comparar ao amor que Vós nos tendes. Lançai, pois, um olhar amoroso para os que assim vos contemplam, e para os que a Vós clamam do fundo de seus corações. Compadeçam-se essas entranhas, já de si tão ternas, das necessidades em que nos encontramos. Oh! Pai amado, que nossas obras digam com o nome que levais, que significa acréscimo, desempenhai dignamente o título de Padroeiro e Protetor universal, que vos dá a Igreja. Fazei conosco segundo a multidão de vossas misericórdias, e sejam as obras garantia de vossos ofícios: fazei, enfim, como quem sois. Olhai, Pai misericordiosíssimo, que não mudastes de condição, que o vosso poder estende-se a todas as nossas necessidades, eia, zelai por vossa honra. E se tudo isto não bastar, vo-lo pedimos pelo grande amor que tivestes a vossa amada Esposa e ao bom Jesus, de cuja divina presença desejamos gozar convosco, por toda a eternidade, na celeste Jerusalém. Amém.
 ',20);
 
 INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('Rosário de São Miguel Arcanjo','
@@ -882,7 +882,7 @@ Promessas de São Miguel Arcanjo da recitação do Rosário
 <br/>
 O glorioso São Miguel Arcanjo prometeu:
 <br/>
-A quem o honrasse desta maneira antes da Sagrada Comunhão seria acompanhado à Sagrada Mesa por um Anjo de cada um dos nove Coros;
+A quem o honrasse desta maneira antes da Sagrada Comunhão seria acompanhado à Sagrada Mesa por um Anjo de cada um dos nove Coros
 A quem rezasse todos os dias essas nove saudações teria a sua assistência e a dos Santos Anjos durante a sua vida e que depois da morte livraria do Purgatório a essa pessoa e aos seus parentes.
 <br/>
 Através da recitação deste Rosário obter-se-ão ainda muitas graças nas calamidades públicas, sobretudo nas da Igreja Católica Apostólica Romana (de que São Miguel Arcanjo é o padroeiro perpétuo), e as indulgências que lhe foram atribuídas pelo Papa Pio IX.  
@@ -941,7 +941,7 @@ Poderosos Santos Anjos, que por Deus nos fostes concedidos para nossa protecçã
 Nós vos suplicamos em Nome do Preciosíssimo Sangue de Nosso Senhor Jesus Cristo: 
 -Vinde depressa, socorrei-nos!
 <br/>
-Nós vos suplicamos pelo poderosíssimo Nome de Jesus;
+Nós vos suplicamos pelo poderosíssimo Nome de Jesus
 -Vinde depressa, socorrei-nos!
 <br/>
 Nós vos suplicamos por todas as Chagas de Nosso Senhor Jesus Cristo:
@@ -1029,7 +1029,7 @@ Porque o Sangue Preciosíssimo de Nosso Senhor e Rei clama que venhais em auxili
 Porque o Coração de Nosso Senhor e Rei clama que venhais em auxilio a nós, pobres:
 -Insistentemente suplicamos: vinde depressa, socorrei-nos!
 <br/>
-Porque o Coração Imaculado de Maria, Virgem Puríssima e Vossa Rainha, clama que venhais em auxilio a nós, pobres;
+Porque o Coração Imaculado de Maria, Virgem Puríssima e Vossa Rainha, clama que venhais em auxilio a nós, pobres
 -insistentemente suplicamos: vinde depressa, socorrei-nos! 
 <br/>
 São Miguel Arcanjo:
