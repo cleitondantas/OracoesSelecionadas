@@ -31,8 +31,14 @@ public class TituloVO {
 	public void setCategoria(String categoria) {
 		this.categoria = categoria;
 	}
+
+	@Override
+	public String toString()
+	{
+		return this.idOracao+" ) "+ this.titulo;
+	}
 	
-	
+
 	
 
 }

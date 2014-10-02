@@ -64,13 +64,15 @@ public class PersistenceDao extends ActionBarActivity{
 	 */
 	public List<TituloVO> buscaTitulos(SQLiteDatabase bancoDados){
 			ArrayList<TituloVO> tituloOracoes = new ArrayList<TituloVO>();
-			cursor = bancoDados.query(TABLE_NOTES, new String[]{COLUMN_ID,COLUMN_TITLE,COLUMN_GRUPO}, null,null,null,null,null);
+		cursor = bancoDados.query(TABLE_NOTES, new String[]{COLUMN_ID,COLUMN_TITLE,COLUMN_GRUPO,COLUMN_IDORACAO}, null,null,null,null,null);
 			TituloVO titulo =null;
 			while(cursor.moveToNext()){
 				titulo = new TituloVO();
 				titulo.setId(Integer.parseInt(cursor.getString(cursor.getColumnIndex(COLUMN_ID))));
 				titulo.setCategoria(cursor.getString(cursor.getColumnIndex(COLUMN_GRUPO)));
 				titulo.setTitulo(cursor.getString(cursor.getColumnIndex(COLUMN_TITLE)));
+				titulo.setIdOracao(Integer.parseInt(cursor.getString(cursor.getColumnIndex(COLUMN_IDORACAO))));
+				
 				tituloOracoes.add(titulo);
 				
 			}
@@ -109,7 +111,9 @@ public class PersistenceDao extends ActionBarActivity{
 				oracao.setId(Integer.parseInt(cursor.getString(cursor.getColumnIndex(COLUMN_ID))));
 				oracao.setTitulo(cursor.getString(cursor.getColumnIndex(COLUMN_TITLE)));	
 				oracao.setTexto(cursor.getString(cursor.getColumnIndex(COLUMN_ORACAO)));			
-			}
+				oracao.setIdNumero(cursor.getColumnIndex(COLUMN_IDORACAO));
+				
+				}
 			bancoDados.close();
 		return oracao;
 	}

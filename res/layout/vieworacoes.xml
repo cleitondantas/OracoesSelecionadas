@@ -19,7 +19,9 @@
 			android:layout_height="wrap_content"
 			android:textAppearance="?android:attr/textAppearanceMedium"
 			android:textSize="21sp"
-			android:gravity="center"/>
+			android:gravity="center"
+			android:textIsSelectable="true"
+			android:textStyle="bold"/>
 
 		<ScrollView
 			android:id="@+id/scrollView1"
@@ -46,6 +48,7 @@
 					android:textColorLink="#361AED"
 					android:layout_marginLeft="-20dp"
 					android:layout_marginRight="-20dp"/>
+
 			</LinearLayout>
 
 		</ScrollView>
