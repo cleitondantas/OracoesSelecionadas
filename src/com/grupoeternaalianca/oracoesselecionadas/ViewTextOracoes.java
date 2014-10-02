@@ -4,11 +4,8 @@ import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.view.ViewTreeObserver.OnPreDrawListener;
 import android.widget.TextView;
-
 import com.grupoeternaalianca.oracoesselecionadas.dao.PersistenceDao;
-import com.grupoeternaalianca.oracoesselecionadas.util.TextJustifyUtils;
 import com.grupoeternaalianca.oracoesselecionadas.util.TextViewEx;
 import com.grupoeternaalianca.oracoesselecionadas.vo.OracaoVO;
 
@@ -16,7 +13,6 @@ import android.text.*;
 
 public class ViewTextOracoes extends ActionBarActivity{
 	private PersistenceDao persistenceDao = new PersistenceDao();
-	private TextView tvTextOracao=null;
 	private TextView tvTituloOracao=null;
 	private TextViewEx textViewExs=null;
 	
@@ -34,9 +30,13 @@ public class ViewTextOracoes extends ActionBarActivity{
 		
 		  textViewExs = (TextViewEx) findViewById(R.id.tvOracao);
 		  tvTituloOracao.setText(Html.fromHtml(oracao.getTitulo()));
-		  String textoOracao = oracao.getTexto().replace(".", ".<br/>").replace("!", "!<br/>");
 		  
-		  Spanned htmlTextFormt = Html.fromHtml(textoOracao);
+		  String textoOracaoFormat1 =oracao.getTexto().replace("...", "[***]");
+		  String textoOracaoFormat2 = textoOracaoFormat1.replace(".", ".<br/>");
+		  String textoOracaoFormat3 = textoOracaoFormat2.replace("[***]", "...<br/>");
+		  String textoOracaoFormat4 = textoOracaoFormat3.replace("!", "!<br/>");
+		  
+		  Spanned htmlTextFormt = Html.fromHtml(textoOracaoFormat4);
 		  
 		  textViewExs.setText(htmlTextFormt,true);
 			

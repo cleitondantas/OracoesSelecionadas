@@ -44,8 +44,8 @@
 					android:typeface="sans"
 					android:textColorHint="#0032A4"
 					android:textColorLink="#361AED"
-					android:layout_marginLeft="10dp"
-					android:layout_marginRight="10dp"/>
+					android:layout_marginLeft="-20dp"
+					android:layout_marginRight="-20dp"/>
 			</LinearLayout>
 
 		</ScrollView>
