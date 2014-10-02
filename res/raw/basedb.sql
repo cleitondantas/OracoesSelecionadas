@@ -16,13 +16,13 @@ INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Oração de Puri
 INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Quaresma de São Miguel Arcanjo','2',5);
 INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Terço da Cruzada','8',6);
 INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Ladainha de Nossa Senhora','6',7);
-INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Coroa das glórias da Virgem Maria','9',8);
+INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Ladainha Sagrada Família','6',8);
 INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Consagração a Nossa Senhora','9',9);
 INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Ladainha do Imaculado Coração de Maria','9',10);
 INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Ato de Consagração ao Imaculado Coração de Maria','9',11);
 INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Ato de Consagração aos Sagrados Corações','9',12);
 INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Consagração Monfortina ao Imaculado Coração de Maria','9',13);
-INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Ladainha Sagrada Família','6',14);
+INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Coroa das glórias da Virgem Maria','9',14);
 INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Terço das Lágrimas de Sangue de Maria Rosa Mística','8',15);
 INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Reparação das blasfêmias contra o Imaculado Coração de Maria','9',16);
 INSERT or replace INTO TITULOS (TITULO,GRUPO,IDORACAO) VALUES ('Oração a Nossa Senhora do Desterro','7',17);
@@ -293,39 +293,117 @@ Rogai por nós, santa Mãe de Deus.
 <br/>
 Para que sejamos dignos das promessas de Cristo
 ',7);
+INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('Ladainha Sagrada Família','
 
-
-INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('Coroa das Glórias da Virgem Maria','
-Creio, Pai Nosso, Ave Maria, Glória.
-Bendizemos-te Santíssima Virgem, pela Tua Imaculada Conceição! Livra-nos de todo o pecado e guarda o nosso coração para Deus. (Ave Maria).
+<br/>
+Jesus, Salvador do mundo,
+<br/>
+Jesus, Filho de Maria e irmão nosso,
+<br/>
+Jesus, tesouro e delicia da Sagrada Família,
+<br/>
+Tende piedade de nós.
+<br/>
+Santa Maria, Rainha dos céus,
+<br/>
+Santa Maria, Mãe de Jesus e nossa doce Mãe,
+<br/>
+Santa Maria, ornamento e alegria da Sagrada Família,
+<br/>
+São José, pai legal de Jesus,
+<br/>
+São José, Casto esposo de Maria,
+<br/>
+São José, guia e amparo da Sagrada Família, rogai por nós.
+<br/>
+Sagrada Família, de baixo da proteção nos temos consagrado a Deus,
+<br/>
+Sagrada Família, que temos tomado por modelo,
+<br/>
+Sagrada Família, predileta do pai celestial,
+<br/>
+Sagrada Família, conduzida pelo Espírito Santo,
+<br/>
+Sagrada Família, santificada pela presença do Filho de Deus,
+<br/>
+Sagrada Família, terror do inferno,
+<br/>
+Sagrada Família, asilo de todas as virtudes,
+<br/>
+Sagrada Família, Santuário da Divina Trindade,
+<br/>
+Sagrada Família, precioso Tabernáculo de Deus vivo,
+<br/>
+Sagrada Família, escondida e ignorada sobre a terra,
+<br/>
+Sagrada Família, pobre e laboriosa,
+<br/>
+Sagrada Família, modelo de paciência e resignação,
+<br/>
+Sagrada Família, alegria nas tribulações,
+<br/>
+Sagrada Família, venerada pelos pastores,
+<br/>
+Sagrada Família, honrada pelos Magos,
+<br/>
+Sagrada Família, por Herodes perseguida,
+<br/>
+Sagrada Família, pelos judeus depreciada,
+<br/>
+Sagrada Família, desejada pelos Patriarcas,
+<br/>
+Sagrada Família, pelos anjos respeitada,
+<br/>
+Sagrada Família, modelo de todos os Santos,
+<br/>
+Sagrada Família, ornamento da celestial Jerusalém, esteja sempre conosco.
+<br/>
+Sede-nos propicia,
+<br/>
+socorrei-nos em todos os perigos da alma e corpo,
+<br/>
+Sede nosso refúgio contra os males que nos cercam,
+<br/>
+Sede nossa força nos combates e provas,
+<br/>
+Sede nos forte muro contra os ataques do inimigo de nossa saúde,
+<br/>
+Sede nossa esperança nesta vida e nosso consolo na hora da morte,
+<br/>
+Sede eficaz protetora daqueles que Vos invocam com verdadeira confiança,
+<br/>
+Sede medianeira dos que morrem no Senhor e advogada dos pecadores perante o Soberano Jesus,
+<br/>
+Sede liberadora das almas detidas no purgatório e saúde dos que esperam em Vos,
+<br/>
+Sede sempre sustento dos débeis e ajuda dos imperfeitos,
+<br/>
+Sede sempre protetora de nossa Família e de toda a sociedade,
+<br/>
+Sede sempre espelho dos cristãos, modelo dos justos,
+<br/>
+Sede sempre consoladora dos aflitos e refúgio de vossos devotos,
+<br/>
+Sede sempre apoio e defesa dos que se tem consagrado a vosso serviço,
+<br/>
+Vos rogamos, ouvi-nos.
+<br/>
+V- Sagrada Família, sede glorificada em todos os séculos.
+<br/>
+R- Reinai para sempre em todos os corações.
 <br/>
 <br/>
-ORAÇÕES
+Oração:
 <br/>
-Bendizemos-te Santíssima Virgem, pela Tua Virgindade perpétua! Por esse mérito, conserva a nossa alma pura e casta, para nela receber Jesus e a Ti. (Ave Maria).
-Bendizemos-te Santíssima Virgem, pela Tua maternidade divina! És a Mãe Santa do Deus altíssimo. Concede-nos a graça de sermos filhos fiéis do Senhor. (Ave Maria).
-Bendizemos-te Santíssima Virgem, porque És a predileta Filha de Deus, Bendita entre todas as mulheres, e cheia de graça! Dá-nos ser sempre repletos da graça de Deus. (Ave Maria).
-Bendizemos-te Santíssima Virgem, Esposa fiel do Espírito Santo, que gerou Jesus em Ti! Concede- nos a graça de sermos renovados pelo Espírito do Senhor, e repletos dos Seus dons e frutos. (Ave Maria).
-Bendizemos-te Santíssima Virgem, pois esmagaste satanás e todas as heresias em todos os tempos! Livra-nos Mãe Santíssima, das seduções, tentações e ciladas do inimigo. (Ave Maria).
-Bendizemos-te Santíssima Virgem, pela submissão de Jesus a Ti, na terra e no céu! Concede-nos a graça da filial submissão a Deus e a ti. (Ave Maria).
-Bendizemos-te Santíssima Virgem, porque És a Medianeira de todas as Graças. És o caminho escolhido por Deus para vir a nós, e também o caminho pelo qual devemos ir a Deus. Dá-nos a graça da salvação. (Ave Maria).
-Bendizemos-te Santíssima Virgem, porque És a Mãe da igreja e nossa Mãe. Jesus entregou-Te a nós aos pés da cruz, na hora da morte. Gera-nos em Ti para Jesus, e gera Jesus em nós. (Ave Maria).
-Bendizemos-te Santíssima Virgem, pela Tua ressurreição e assunção ao céu de corpo e alma. Prepara-nos um lugar no céu junto de Jesus e de Ti. (Ave Maria).
-Bendizemos-te Santíssima Virgem, por Tua coroação no céu pela Santíssima Trindade, como rainha do céu e da terra. Queremos ser servos perpétuos de Jesus por meio de Ti. (Ave Maria).
-Bendizemos-te Santíssima Virgem, por todas as Tuas glórias e méritos, mais numerosos que as estrelas do céu. És o molde da santidade, o espelho da justiça, a sede da sabedoria, causa de nossa alegria, vaso espiritual, vaso honorífico, casa de ouro, arca da aliança, porta do céu, refúgio dos pecadores, consolação dos aflitos, auxílio dos cristãos... Dá-nos a Tua benção! (Glória, Magníficat).
+Divino Salvador, bendigo todas nossas obras, recompensai de uma maneira digna de Vós a todos os que trabalham por vossa Glória, concedei a paz e a vida eterna a nossos irmãos mortos.
 <br/>
+concedei também a vossos operários as graças que lhes são necessárias para a conversão dos pecadores, santificação dos justos e aumento de vossa cristã Família, a fim de que sejais conhecido e glorificado por todas as criaturas com Maria e José, e reinais em todos os Corações agora e sempre,
 <br/>
-Magnificat
-Minha alma engrandece o Senhor, e meu espírito exulta de alegria em Deus, meu Salvador, porque olhou para a humilhação de sua serva. Sim! Doravante as gerações todas me chamarão de bem­aventurada, pois o Todo­ poderoso fez grandes coisas em meu favor. Seu nome é santo e sua misericórdia perdura de geração em geração, para aqueles que o temem. Agiu com a força de seu braço, dispersou os homens de coração orgulhoso. Depôs poderosos de seus tronos, e a humildes exaltou. Cumulou de bens a famintos e despediu ricos de mãos vazias. Socorreu Israel, seu servo, lembrado de sua misericórdia ­conforme prometera a nossos pais ­em favor de Abraão e de sua descendência para sempre!
- <br/>
- <br/>
-Oremos
-<br/>
-Ave Maria,Filha de Deus Pai. Ave Maria Mãe de Deus Filho.Ave Maria, Esposa do Espírito Santo. Ave Maria, Templo da Saníssima Trindade. Ave Maria, Senhora minha, meu bem, meu amor. Rainha do meu  coração, Minha, vida, doçura e esperança minha, muito querida, meu caração e minha alma.
-Sou todo Vosso, e tudo o que possuo Vosso.Ó Virgem, sobre todos  bendita. Estai, pois, em minha alma, para engrandecer ao Senhor; estai em mim  o Vosso Espírito, para rejubilar em Deus. Colocai-Vos, ó Virgem Fiel, como selo sobre o meu coração, para que em Vós e por Vós seja eu achado fiel a Deus.
-Concedei ó Mãe de misericórdia, que me encontre no número dos que amais, ensinais, guiais, sustentais e protegeis como filhos. Dizei para que eu, por Vosso amor, despreze todas as consolações da terra e aspire somente as celestes, até, que para a glória do Pai, Jesus Cristo Vosso Filho, seja formado em mim pelo Espírito Santo, Vosso Esposo fidelíssimo, e por Vós Sua Esposa muito fiel. Assim seja.
+Oh! Vós que viveis e reinais com Deus Pai, em unidade do Espírito Santo, por todos os séculos. Amém.
 
 ',8);
+
+
 
 INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('Consagração a Nossa Senhora','
 Ó Senhora minha, ó minha Mãe, <br/>
@@ -497,113 +575,35 @@ Oh! Sabedoria eterna e encarnada, amabilíssimo e adorável Jesus, verdadeiro De
  Vosso Filho, que eu chegue, por Vossa intercessão e segundo o Vosso exemplo, à plenitude da Sua idade na terra e da Sua glória no Céu. Assim seja.
 ',13);
 
-INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('Ladainha Sagrada Família','
-
-<br/>
-Jesus, Salvador do mundo,
-<br/>
-Jesus, Filho de Maria e irmão nosso,
-<br/>
-Jesus, tesouro e delicia da Sagrada Família,
-<br/>
-Tende piedade de nós.
-<br/>
-Santa Maria, Rainha dos céus,
-<br/>
-Santa Maria, Mãe de Jesus e nossa doce Mãe,
-<br/>
-Santa Maria, ornamento e alegria da Sagrada Família,
-<br/>
-São José, pai legal de Jesus,
-<br/>
-São José, Casto esposo de Maria,
-<br/>
-São José, guia e amparo da Sagrada Família, rogai por nós.
-<br/>
-Sagrada Família, de baixo da proteção nos temos consagrado a Deus,
-<br/>
-Sagrada Família, que temos tomado por modelo,
-<br/>
-Sagrada Família, predileta do pai celestial,
-<br/>
-Sagrada Família, conduzida pelo Espírito Santo,
-<br/>
-Sagrada Família, santificada pela presença do Filho de Deus,
-<br/>
-Sagrada Família, terror do inferno,
-<br/>
-Sagrada Família, asilo de todas as virtudes,
-<br/>
-Sagrada Família, Santuário da Divina Trindade,
-<br/>
-Sagrada Família, precioso Tabernáculo de Deus vivo,
-<br/>
-Sagrada Família, escondida e ignorada sobre a terra,
-<br/>
-Sagrada Família, pobre e laboriosa,
-<br/>
-Sagrada Família, modelo de paciência e resignação,
-<br/>
-Sagrada Família, alegria nas tribulações,
-<br/>
-Sagrada Família, venerada pelos pastores,
-<br/>
-Sagrada Família, honrada pelos Magos,
-<br/>
-Sagrada Família, por Herodes perseguida,
-<br/>
-Sagrada Família, pelos judeus depreciada,
-<br/>
-Sagrada Família, desejada pelos Patriarcas,
-<br/>
-Sagrada Família, pelos anjos respeitada,
-<br/>
-Sagrada Família, modelo de todos os Santos,
-<br/>
-Sagrada Família, ornamento da celestial Jerusalém, esteja sempre conosco.
-<br/>
-Sede-nos propicia,
-<br/>
-socorrei-nos em todos os perigos da alma e corpo,
-<br/>
-Sede nosso refúgio contra os males que nos cercam,
-<br/>
-Sede nossa força nos combates e provas,
-<br/>
-Sede nos forte muro contra os ataques do inimigo de nossa saúde,
-<br/>
-Sede nossa esperança nesta vida e nosso consolo na hora da morte,
-<br/>
-Sede eficaz protetora daqueles que Vos invocam com verdadeira confiança,
-<br/>
-Sede medianeira dos que morrem no Senhor e advogada dos pecadores perante o Soberano Jesus,
-<br/>
-Sede liberadora das almas detidas no purgatório e saúde dos que esperam em Vos,
-<br/>
-Sede sempre sustento dos débeis e ajuda dos imperfeitos,
-<br/>
-Sede sempre protetora de nossa Família e de toda a sociedade,
-<br/>
-Sede sempre espelho dos cristãos, modelo dos justos,
-<br/>
-Sede sempre consoladora dos aflitos e refúgio de vossos devotos,
-<br/>
-Sede sempre apoio e defesa dos que se tem consagrado a vosso serviço,
-<br/>
-Vos rogamos, ouvi-nos.
-<br/>
-V- Sagrada Família, sede glorificada em todos os séculos.
-<br/>
-R- Reinai para sempre em todos os corações.
+INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('Coroa das Glórias da Virgem Maria','
+Creio, Pai Nosso, Ave Maria, Glória.
+Bendizemos-te Santíssima Virgem, pela Tua Imaculada Conceição! Livra-nos de todo o pecado e guarda o nosso coração para Deus. (Ave Maria).
 <br/>
 <br/>
-Oração:
+ORAÇÕES
 <br/>
-Divino Salvador, bendigo todas nossas obras, recompensai de uma maneira digna de Vós a todos os que trabalham por vossa Glória, concedei a paz e a vida eterna a nossos irmãos mortos.
+Bendizemos-te Santíssima Virgem, pela Tua Virgindade perpétua! Por esse mérito, conserva a nossa alma pura e casta, para nela receber Jesus e a Ti. (Ave Maria).
+Bendizemos-te Santíssima Virgem, pela Tua maternidade divina! És a Mãe Santa do Deus altíssimo. Concede-nos a graça de sermos filhos fiéis do Senhor. (Ave Maria).
+Bendizemos-te Santíssima Virgem, porque És a predileta Filha de Deus, Bendita entre todas as mulheres, e cheia de graça! Dá-nos ser sempre repletos da graça de Deus. (Ave Maria).
+Bendizemos-te Santíssima Virgem, Esposa fiel do Espírito Santo, que gerou Jesus em Ti! Concede- nos a graça de sermos renovados pelo Espírito do Senhor, e repletos dos Seus dons e frutos. (Ave Maria).
+Bendizemos-te Santíssima Virgem, pois esmagaste satanás e todas as heresias em todos os tempos! Livra-nos Mãe Santíssima, das seduções, tentações e ciladas do inimigo. (Ave Maria).
+Bendizemos-te Santíssima Virgem, pela submissão de Jesus a Ti, na terra e no céu! Concede-nos a graça da filial submissão a Deus e a ti. (Ave Maria).
+Bendizemos-te Santíssima Virgem, porque És a Medianeira de todas as Graças. És o caminho escolhido por Deus para vir a nós, e também o caminho pelo qual devemos ir a Deus. Dá-nos a graça da salvação. (Ave Maria).
+Bendizemos-te Santíssima Virgem, porque És a Mãe da igreja e nossa Mãe. Jesus entregou-Te a nós aos pés da cruz, na hora da morte. Gera-nos em Ti para Jesus, e gera Jesus em nós. (Ave Maria).
+Bendizemos-te Santíssima Virgem, pela Tua ressurreição e assunção ao céu de corpo e alma. Prepara-nos um lugar no céu junto de Jesus e de Ti. (Ave Maria).
+Bendizemos-te Santíssima Virgem, por Tua coroação no céu pela Santíssima Trindade, como rainha do céu e da terra. Queremos ser servos perpétuos de Jesus por meio de Ti. (Ave Maria).
+Bendizemos-te Santíssima Virgem, por todas as Tuas glórias e méritos, mais numerosos que as estrelas do céu. És o molde da santidade, o espelho da justiça, a sede da sabedoria, causa de nossa alegria, vaso espiritual, vaso honorífico, casa de ouro, arca da aliança, porta do céu, refúgio dos pecadores, consolação dos aflitos, auxílio dos cristãos... Dá-nos a Tua benção! (Glória, Magníficat).
 <br/>
-concedei também a vossos operários as graças que lhes são necessárias para a conversão dos pecadores, santificação dos justos e aumento de vossa cristã Família, a fim de que sejais conhecido e glorificado por todas as criaturas com Maria e José, e reinais em todos os Corações agora e sempre,
 <br/>
-Oh! Vós que viveis e reinais com Deus Pai, em unidade do Espírito Santo, por todos os séculos. Amém.
+Magnificat
+Minha alma engrandece o Senhor, e meu espírito exulta de alegria em Deus, meu Salvador, porque olhou para a humilhação de sua serva. Sim! Doravante as gerações todas me chamarão de bem­aventurada, pois o Todo­ poderoso fez grandes coisas em meu favor. Seu nome é santo e sua misericórdia perdura de geração em geração, para aqueles que o temem. Agiu com a força de seu braço, dispersou os homens de coração orgulhoso. Depôs poderosos de seus tronos, e a humildes exaltou. Cumulou de bens a famintos e despediu ricos de mãos vazias. Socorreu Israel, seu servo, lembrado de sua misericórdia ­conforme prometera a nossos pais ­em favor de Abraão e de sua descendência para sempre!
+ <br/>
+ <br/>
+Oremos
+<br/>
+Ave Maria,Filha de Deus Pai. Ave Maria Mãe de Deus Filho.Ave Maria, Esposa do Espírito Santo. Ave Maria, Templo da Saníssima Trindade. Ave Maria, Senhora minha, meu bem, meu amor. Rainha do meu  coração, Minha, vida, doçura e esperança minha, muito querida, meu caração e minha alma.
+Sou todo Vosso, e tudo o que possuo Vosso.Ó Virgem, sobre todos  bendita. Estai, pois, em minha alma, para engrandecer ao Senhor; estai em mim  o Vosso Espírito, para rejubilar em Deus. Colocai-Vos, ó Virgem Fiel, como selo sobre o meu coração, para que em Vós e por Vós seja eu achado fiel a Deus.
+Concedei ó Mãe de misericórdia, que me encontre no número dos que amais, ensinais, guiais, sustentais e protegeis como filhos. Dizei para que eu, por Vosso amor, despreze todas as consolações da terra e aspire somente as celestes, até, que para a glória do Pai, Jesus Cristo Vosso Filho, seja formado em mim pelo Espírito Santo, Vosso Esposo fidelíssimo, e por Vós Sua Esposa muito fiel. Assim seja.
 
 ',14);
 

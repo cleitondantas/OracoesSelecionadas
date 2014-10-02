@@ -42,7 +42,7 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
         
     	persistenceDao.openOrCreateDB(openDB());
     	if(! persistenceDao.verificaBancoExistente(openDB())){
-    		persistenceDao.criaConteudo(openDB(),this);
+    	       persistenceDao.criaConteudo(openDB(),this);
     		persistenceDao.buscaGrupos(openDB());
     	}
     	criaListView(null);

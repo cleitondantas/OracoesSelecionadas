@@ -119,13 +119,26 @@ public class PersistenceDao extends ActionBarActivity{
 	 * @param bd
 	 * @param context
 	 */
-	public void criaConteudo(SQLiteDatabase bd,Context context){
-		try {
-			byFile(R.raw.basedb,bd,context);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//	public void criaConteudo(SQLiteDatabase bd,Context context){
+//		try {
+//			byFile(R.raw.basedb,bd,context);
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//	}
+
+	public void criaConteudo(final SQLiteDatabase openDB,final Context context) {
+		new Thread(new Runnable() {
+			 public void run() {
+				try {
+					byFile(R.raw.basedb,openDB,context);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			 }
+		}).start();
 	}
 	
     protected void byFile(int fileID, SQLiteDatabase bd, Context context) throws IOException {
@@ -143,5 +156,6 @@ public class PersistenceDao extends ActionBarActivity{
             }
         }
     }
+
     
 }
