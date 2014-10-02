@@ -54,7 +54,7 @@ Pai, que ninguém em minha linha de família, de agora em diante morra sem ter c
 </b>
 ',3);
 
-INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('<b>Oração de Purificação</b>','
+INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('Oração de Purificação','
 Eu, em Nome de Jesus, † ordeno que saiam de mim, de minha casa, de minha família (cônjuge, filhos,etc) e dos meus amigos, todas as forças espirituais do mal que possam ter nos contaminado, e ordeno que vão se prostrar aos pés da Cruz do Senhor Jesus e os proíbo de voltar.
 Que saiam também agora, toda a fúria do inimigo e todo o dardo inflamado lançado contra nossos familiares, contra nossos bens materiais, contra nosso organismo físico, contra nossa mente ou nosso espírito.
 Neste momento, Senhor Jesus, eu me lavo com Teu Sangue preciosíssimo, e também lavo Nele todas as pessoas que comigo convivem. Teu Sangue seja para nós cobertura e proteção, e que o Divino Espírito Santo renove em cada um de nós Sua unção, Sua força e Seu poder. Pela poderosa intercessão da Virgem Maria, de seus Anjos e Santos. Amém!
@@ -295,10 +295,13 @@ Para que sejamos dignos das promessas de Cristo
 ',7);
 
 
-INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('COROA DAS GLÓRIAS DA VIRGEM MARIA','
+INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('Coroa das Glórias da Virgem Maria','
 Creio, Pai Nosso, Ave Maria, Glória.
 Bendizemos-te Santíssima Virgem, pela Tua Imaculada Conceição! Livra-nos de todo o pecado e guarda o nosso coração para Deus. (Ave Maria).
+<br/>
+<br/>
 ORAÇÕES
+<br/>
 Bendizemos-te Santíssima Virgem, pela Tua Virgindade perpétua! Por esse mérito, conserva a nossa alma pura e casta, para nela receber Jesus e a Ti. (Ave Maria).
 Bendizemos-te Santíssima Virgem, pela Tua maternidade divina! És a Mãe Santa do Deus altíssimo. Concede-nos a graça de sermos filhos fiéis do Senhor. (Ave Maria).
 Bendizemos-te Santíssima Virgem, porque És a predileta Filha de Deus, Bendita entre todas as mulheres, e cheia de graça! Dá-nos ser sempre repletos da graça de Deus. (Ave Maria).
@@ -310,10 +313,14 @@ Bendizemos-te Santíssima Virgem, porque És a Mãe da igreja e nossa Mãe. Jesu
 Bendizemos-te Santíssima Virgem, pela Tua ressurreição e assunção ao céu de corpo e alma. Prepara-nos um lugar no céu junto de Jesus e de Ti. (Ave Maria).
 Bendizemos-te Santíssima Virgem, por Tua coroação no céu pela Santíssima Trindade, como rainha do céu e da terra. Queremos ser servos perpétuos de Jesus por meio de Ti. (Ave Maria).
 Bendizemos-te Santíssima Virgem, por todas as Tuas glórias e méritos, mais numerosos que as estrelas do céu. És o molde da santidade, o espelho da justiça, a sede da sabedoria, causa de nossa alegria, vaso espiritual, vaso honorífico, casa de ouro, arca da aliança, porta do céu, refúgio dos pecadores, consolação dos aflitos, auxílio dos cristãos... Dá-nos a Tua benção! (Glória, Magníficat).
+<br/>
+<br/>
 Magnificat
 Minha alma engrandece o Senhor, e meu espírito exulta de alegria em Deus, meu Salvador, porque olhou para a humilhação de sua serva. Sim! Doravante as gerações todas me chamarão de bem­aventurada, pois o Todo­ poderoso fez grandes coisas em meu favor. Seu nome é santo e sua misericórdia perdura de geração em geração, para aqueles que o temem. Agiu com a força de seu braço, dispersou os homens de coração orgulhoso. Depôs poderosos de seus tronos, e a humildes exaltou. Cumulou de bens a famintos e despediu ricos de mãos vazias. Socorreu Israel, seu servo, lembrado de sua misericórdia ­conforme prometera a nossos pais ­em favor de Abraão e de sua descendência para sempre!
- 
+ <br/>
+ <br/>
 Oremos
+<br/>
 Ave Maria,Filha de Deus Pai. Ave Maria Mãe de Deus Filho.Ave Maria, Esposa do Espírito Santo. Ave Maria, Templo da Saníssima Trindade. Ave Maria, Senhora minha, meu bem, meu amor. Rainha do meu  coração, Minha, vida, doçura e esperança minha, muito querida, meu caração e minha alma.
 Sou todo Vosso, e tudo o que possuo Vosso.Ó Virgem, sobre todos  bendita. Estai, pois, em minha alma, para engrandecer ao Senhor; estai em mim  o Vosso Espírito, para rejubilar em Deus. Colocai-Vos, ó Virgem Fiel, como selo sobre o meu coração, para que em Vós e por Vós seja eu achado fiel a Deus.
 Concedei ó Mãe de misericórdia, que me encontre no número dos que amais, ensinais, guiais, sustentais e protegeis como filhos. Dizei para que eu, por Vosso amor, despreze todas as consolações da terra e aspire somente as celestes, até, que para a glória do Pai, Jesus Cristo Vosso Filho, seja formado em mim pelo Espírito Santo, Vosso Esposo fidelíssimo, e por Vós Sua Esposa muito fiel. Assim seja.
@@ -321,14 +328,14 @@ Concedei ó Mãe de misericórdia, que me encontre no número dos que amais, ens
 ',8);
 
 INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('Consagração a Nossa Senhora','
-Ó Senhora minha, ó minha Mãe, 
-eu me ofereço todo(a) a vós, 
-e em prova da minha devoção para convosco, 
-Vos consagro neste dia e para sempre, 
-os meus olhos, os meus ouvidos, 
-a minha boca, o meu coração e inteiramente todo o meu ser.
-E porque assim sou vosso(a), 
-ó incomparável Mãe, 
+Ó Senhora minha, ó minha Mãe, <br/>
+eu me ofereço todo(a) a vós, <br/>
+e em prova da minha devoção para convosco, <br/>
+Vos consagro neste dia e para sempre, <br/>
+os meus olhos, os meus ouvidos, <br/>
+a minha boca, o meu coração e inteiramente todo o meu ser.<br/>
+E porque assim sou vosso(a), <br/>
+ó incomparável Mãe, <br/>
 guardai-me e defendei-me como propriedade vossa.
 Lembrai-vos que vos pertenço, terna Mãe, Senhora nossa.
 Ah, guardai-me e defendei-me como coisa própria vossa.
@@ -349,50 +356,77 @@ Deus Espírito Santo,
 Santíssima Trindade, que sois um só Deus,
 <br/>
 <br/>
-Coração de Maria, concebido sem pecado, rogai por nós.
+Coração de Maria, concebido sem pecado, rogai por nós.<br/>
 Coração de Maria, cheio de graça
+<br/>
 Coração de Maria, bendito entre todos os corações
+<br/>
 Coração de Maria, sacrário da Santíssima Trindade,
+<br/>
 Coração de Maria, semelhantíssimo ao Coração de Jesus,
+<br/>
 Coração de Maria, no qual Jesus bem se compraz,
+<br/>
 Coração de Maria, abismo de humildade,
+<br/>
 Coração de Maria, trono de misericórdia,
+<br/>
 Coração de Maria, incêndio de amor divino,
+<br/>
 Coração de Maria, oceano de bondade,
+<br/>
 Coração de Maria, prodígio de pureza e de inocência,
+<br/>
 Coração de Maria, espelho de todas as perfeições divinas,
+<br/>
 Coração de Maria, no qual o Sangue de Jesus, preço de nossa redenção, foi formado,
+<br/>
 Coração de Maria, que apressastes por vossos desejos a salvação do mundo,
+<br/>
 Coração de Maria, que obtendes graças para os pecadores,
+<br/>
 Coração de Maria, que conservais fidelissimamente as palavras e as ações de Jesus,
+<br/>
 Coração de Maria, transpassado por um gládio de dor,
+<br/>
 Coração de Maria, acabrunhado de aflição durante a Paixão de Jesus Cristo,
+<br/>
 Coração de Maria, pregado à Cruz com Jesus crucificado,
+<br/>
 Coração de Maria, sepultado pela dor com Jesus morto,
+<br/>
 Coração de Maria, restituído à alegria pela Ressurreição de Jesus,
+<br/>
 Coração de Maria, inundado de inefável consolação na Ascensão de Jesus,
 Coração de Maria, cumulado de uma nova plenitude de graças na descida do Espírito Santo,
+<br/>
 Coração de Maria, consolação dos aflitos,
+<br/>
 Coração de Maria, refúgio dos pecadores,
+<br/>
 Coração de Maria, esperança e doce sustentáculo daqueles que Vos veneram,
+<br/>
 Coração de Maria, socorro dos agonizantes,
+<br/>
 Coração de Maria, alegria dos Anjos e dos Santos,
 <br/>
 <br/>
 Cordeiro de Deus, que tirais os pecados do mundo,
-R/. perdoai-nos, Senhor.
+R/ perdoai-nos, Senhor.
 <br/>
 Cordeiro de Deus, que tirais os pecados do mundo,
-R/. atendei-nos, Senhor.
+R/ atendei-nos, Senhor.
 <br/>
 Cordeiro de Deus, que tirais os pecados do mundo,
-R/. tende piedade de nós.
+R/ tende piedade de nós.
 <br/>
-V/. Maria Imaculada, mansa e humilde de coração,
-R/. fazei meu coração semelhante ao Coração de Jesus.
+V/ Maria Imaculada, mansa e humilde de coração,
+R/ fazei meu coração semelhante ao Coração de Jesus.
 <br/>
 <br/>
-Oremos. Deus clementíssimo que, para salvação dos pecadores e alívio dos desvalidos, quisestes que o Imaculado Coração da Bem-Aventurada Virgem Maria fosse idêntico em caridade e misericórdia ao Divino Coração de seu Filho Jesus Cristo, concedei-nos, a nós que celebramos esse dulcíssimo e amantíssimo Coração, a graça de - pelos méritos e intercessão da mesma Bem-aventurada Virgem - nos tornarmos conformes ao Coração de Jesus. Por Cristo Nosso Senhor. Amém.
+Oremos. 
+<br/>
+Deus clementíssimo que, para salvação dos pecadores e alívio dos desvalidos, quisestes que o Imaculado Coração da Bem-Aventurada Virgem Maria fosse idêntico em caridade e misericórdia ao Divino Coração de seu Filho Jesus Cristo, concedei-nos, a nós que celebramos esse dulcíssimo e amantíssimo Coração, a graça de - pelos méritos e intercessão da mesma Bem-aventurada Virgem - nos tornarmos conformes ao Coração de Jesus. Por Cristo Nosso Senhor. Amém.
 ',10);
 
 INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('Ato de Consagração ao Imaculado Coração de Maria','
@@ -465,230 +499,237 @@ Oh! Sabedoria eterna e encarnada, amabilíssimo e adorável Jesus, verdadeiro De
 
 INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('Ladainha Sagrada Família','
 
-
+<br/>
 Jesus, Salvador do mundo,
-
+<br/>
 Jesus, Filho de Maria e irmão nosso,
-
+<br/>
 Jesus, tesouro e delicia da Sagrada Família,
-
+<br/>
 Tende piedade de nós.
-
+<br/>
 Santa Maria, Rainha dos céus,
-
+<br/>
 Santa Maria, Mãe de Jesus e nossa doce Mãe,
-
+<br/>
 Santa Maria, ornamento e alegria da Sagrada Família,
-
+<br/>
 São José, pai legal de Jesus,
-
+<br/>
 São José, Casto esposo de Maria,
-
+<br/>
 São José, guia e amparo da Sagrada Família, rogai por nós.
-
+<br/>
 Sagrada Família, de baixo da proteção nos temos consagrado a Deus,
-
+<br/>
 Sagrada Família, que temos tomado por modelo,
-
+<br/>
 Sagrada Família, predileta do pai celestial,
-
+<br/>
 Sagrada Família, conduzida pelo Espírito Santo,
-
+<br/>
 Sagrada Família, santificada pela presença do Filho de Deus,
-
+<br/>
 Sagrada Família, terror do inferno,
-
+<br/>
 Sagrada Família, asilo de todas as virtudes,
-
+<br/>
 Sagrada Família, Santuário da Divina Trindade,
-
+<br/>
 Sagrada Família, precioso Tabernáculo de Deus vivo,
-
+<br/>
 Sagrada Família, escondida e ignorada sobre a terra,
-
+<br/>
 Sagrada Família, pobre e laboriosa,
-
+<br/>
 Sagrada Família, modelo de paciência e resignação,
-
+<br/>
 Sagrada Família, alegria nas tribulações,
-
+<br/>
 Sagrada Família, venerada pelos pastores,
-
+<br/>
 Sagrada Família, honrada pelos Magos,
-
+<br/>
 Sagrada Família, por Herodes perseguida,
-
+<br/>
 Sagrada Família, pelos judeus depreciada,
-
+<br/>
 Sagrada Família, desejada pelos Patriarcas,
-
+<br/>
 Sagrada Família, pelos anjos respeitada,
-
+<br/>
 Sagrada Família, modelo de todos os Santos,
-
+<br/>
 Sagrada Família, ornamento da celestial Jerusalém, esteja sempre conosco.
-
+<br/>
 Sede-nos propicia,
-
+<br/>
 socorrei-nos em todos os perigos da alma e corpo,
-
+<br/>
 Sede nosso refúgio contra os males que nos cercam,
-
+<br/>
 Sede nossa força nos combates e provas,
-
+<br/>
 Sede nos forte muro contra os ataques do inimigo de nossa saúde,
-
+<br/>
 Sede nossa esperança nesta vida e nosso consolo na hora da morte,
-
+<br/>
 Sede eficaz protetora daqueles que Vos invocam com verdadeira confiança,
-
+<br/>
 Sede medianeira dos que morrem no Senhor e advogada dos pecadores perante o Soberano Jesus,
-
+<br/>
 Sede liberadora das almas detidas no purgatório e saúde dos que esperam em Vos,
-
+<br/>
 Sede sempre sustento dos débeis e ajuda dos imperfeitos,
-
+<br/>
 Sede sempre protetora de nossa Família e de toda a sociedade,
-
+<br/>
 Sede sempre espelho dos cristãos, modelo dos justos,
-
+<br/>
 Sede sempre consoladora dos aflitos e refúgio de vossos devotos,
-
+<br/>
 Sede sempre apoio e defesa dos que se tem consagrado a vosso serviço,
-
+<br/>
 Vos rogamos, ouvi-nos.
-
-V. Sagrada Família, sede glorificada em todos os séculos.
-
-R. Reinai para sempre em todos os corações.
-
-Oração:Divino Salvador, bendigo todas nossas obras, recompensai de uma maneira digna de Vós a todos os que trabalham por vossa Glória, concedei a paz e a vida eterna a nossos irmãos mortos.
-
+<br/>
+V- Sagrada Família, sede glorificada em todos os séculos.
+<br/>
+R- Reinai para sempre em todos os corações.
+<br/>
+<br/>
+Oração:
+<br/>
+Divino Salvador, bendigo todas nossas obras, recompensai de uma maneira digna de Vós a todos os que trabalham por vossa Glória, concedei a paz e a vida eterna a nossos irmãos mortos.
+<br/>
 concedei também a vossos operários as graças que lhes são necessárias para a conversão dos pecadores, santificação dos justos e aumento de vossa cristã Família, a fim de que sejais conhecido e glorificado por todas as criaturas com Maria e José, e reinais em todos os Corações agora e sempre,
-
+<br/>
 Oh! Vós que viveis e reinais com Deus Pai, em unidade do Espírito Santo, por todos os séculos. Amém.
 
 ',14);
 
 INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('Terço das Lágrimas de Sangue de Maria Rosa Mística','
+<br/>
 Rezai o terço das lágrimas de sangue todos os dias e espalhai-o, para que o mundo se converta e tenha paz.
-
+<br/>
 "O inimigo foge onde ele é rezado"( Palavras da querida Mãe de Deus ).
-
-Oração:Jesus crucificado: Prostrado aos vossos pés, oferecemo-vos as lágrimas de sangue daquela que com grande amor compadecente vos acompanhou no caminho da cruz, tão doloroso.
-
+<br/>
+<br/>
+Oração:
+<br/>
+Jesus crucificado: Prostrado aos vossos pés, oferecemo-vos as lágrimas de sangue daquela que com grande amor compadecente vos acompanhou no caminho da cruz, tão doloroso.
+<br/>
 Bom mestre, fazei que tomemos a peito os ensinaimentos das lágrimas de sangue da vossa Santíssima Mãe, para que cumpramos vossa santa vontade na terra assim que sejamos dignos de glorificar-vos eternamente no céu. Amém.
-
+<br/>
 Sete mistérios: Meditar nas Sete Dores de Nossa Senhora.
-
+<br/>
 Primeira Dor:
-
+<br/>
 Apresentação de meu Filho no templo.
-
+<br/>
 Segunda Dor:
 
 A fuga para o Egito.
-
+<br/>
 Terceira Dor:
 
 Perda do Menino Jesus.
-
+<br/>
 Quarta Dor:
 
 Doloroso encontro no caminho do Calvário.
-
+<br/>
 Quinta Dor:
 
 Aos pés da Cruz.
-
+<br/>
 Sexta Dor:
 
 Uma lança atravessa o Coração de Jesus.
-
+<br/>
 Sétima Dor:
-
+<br/>
 Jesus é sepultado.
-
+<br/>
 Nas contas grandes:
-
+<br/>
 Oh! Jesus, olhai para as lágrimas de sangue daquela que mais Vos amou no mundo e Vos ama mais intensamente no céu.
-
+<br/>
 Em vez da Ave-Maria, reza-se sete vezes:
-
+<br/>
 Oh! Jesus, atendei às nossas súplicas: em virtude das lágrimas de sangue da Vossa Mãe Santíssima.
-
+<br/>
 No final do terço reza-se três vezes:
-
+<br/>
 Oh! Jesus, olhai para as lágrimas de sangue daquela que mais Vos amou no mundo e Vos ama mais intensamente no céu.
-
+<br/>
 Oh! Maria, Mãe do amor, das dores e da misericórdia, nós vos pedimos, uni as vossas súplicas com as nossas, para que Jesus, Vosso Divino Filho, a quem nós nos dirigimos, atenda os nossos pedidos, em nome das Vossas lágrimas de sangue, concedendo-nos com as graças pedidas a coroa da vida eterna. Amém.
-
+<br/>
 As Vossas lágrimas de sangue, oh! Mãe Dolorosa, fazem fracassar a soberania do inferno!
-
+<br/>
 Por vossa maNossa Senhoraidão divina, oh! Jesus algemado, preservai o mundo da catástrofe eminente!
 ',15);
 
 INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('Reparação das blasfêmias contra o Imaculado Coração de Maria','
 
-
+<br/>
 Oh! Maria, minha Mãe Santíssima, desejando desagravar-Vos das ofensas que o Vosso Coração Doloroso e Imaculado recebe, e em especial das blasfêmias que se dirigem contra Vós, ofereço-Vos estes pobres louvores com o fim de Vos consolar por tantos filhos ingratos que não Vos amam, e consolar o Coração Santíssimo de Jesus, Vosso Filho e Senhor nosso, a quem tanto ofendem e entristecem as injúrias feitas contra Vós.
-
+<br/>
 Dignai-Vos, Mãe Dulcíssima, receber este meu pobre e humilde obséquio; fazei que Vos ame e me sacrifique por Vós, cada vez mais; e olhai com olhos de misericórdia para tantos infelizes a fim de que não tardem em acolher-se, arrependidos, ao Vosso colo maternal. Amém.
-
+<br/>
 Bendito seja Deus!
-
+<br/>
 Bendita a excelsa Mãe de Deus, Maria Santíssima!
-
+<br/>
 Bendita a Sua Santa e Imaculada Conceição!
-
+<br/>
 Bendita a Sua gloriosa Assunção!
-
+<br/>
 Bendito seja o Nome de Maria, Virgem e Mãe!
-
+<br/>
 Bendito o Seu Imaculado e Doloroso Coração!
-
+<br/>
 Bendita a Sua Pureza Virginal!
-
+<br/>
 Bendita a Sua Divina Maternidade!
-
+<br/>
 Bendita a Sua Mediação Universal!
-
+<br/>
 Benditas as Suas Lágrimas e as Suas Dores!
-
+<br/>
 Benditas as graças com que o Senhor A coroou Rainha dos Céus e da Terra!
-
+<br/>
 Glória a Maria Santíssima, Filha Primogênita do Pai!
-
+<br/>
 Glória a Maria Santíssima, Mãe Imaculada do Filho!
-
+<br/>
 Glória a Maria Santíssima, Esposa Virginal do Espírito Santo!
-
+<br/>
 Virgem Santíssima, minha boa e terna Mãe, eu Vos amo pelos que não Vos amam; eu Vos louvo pelos que Vos blasfemam;
-
+<br/>
 Entrego-me totalmente a Vós, pelos que não querem reconhecer-Vos por sua Mãe. Ave-Maria.
-
+<br/>
 Oh! Maria concebida sem pecado, rogai por nós que recorremos a Vós.
-
+<br/>
 Coração Imaculado de Maria, sede a nossa salvação!
-
+<br/>
 Ato de Reparação ao Imaculado Coração de Maria
-
+<br/>
 Oh! Imaculado Coração de Maria, traspassado de dor pelas injúrias com que os pecadores ultrajam vosso Santíssimo nome e vossas excelsas prerrogativas! Aqui tendes, prostrado a vossos pés, um indigno filho vosso que, agoniado pelo peso de suas próprias culpas, vem arrependido e choroso, e com animo de ressarcir as injúrias que, a modo de penetrantes flechas, dirigem contra Vós homens insolentes e malvados. Desejo reparar, com este ato de amor e Consagração que faço diante de vosso amantíssimo Coração, todas as blasfêmias que se lançam contra vosso augusto nome, todos os agravos que se inferem a vossas excelsas prerrogativas e todas as ingratidões com que os homenscorrespondem a vosso maternal amor e inesgotável misericórdia. Aceitai,Oh! Coração Imaculado!, esta pequena demonstração de meu filial carinho e justo reconhecimento, junto com o firme propósito que faço de ser-vos fiel daqui em adiante, de sair para defender vossa honra quando a veja ultrajada e de propagar vosso culto e vossas glórias. Concedei-me, Oh! Coração amabilíssimo!, que viva e cresça incessantemente em vosso santo amor, até ve-lo consumado na glória. Amém.
-
+<br/>
 Rezar três Ave-Marias em honra do poder, sabedoria e misericórdia do Imaculado Coração de Maria, menosprezado pelos homens
-
+<br/>
 Terminar com as seguintes jaculatórias:
-
+<br/>
 Oh! Coração Imaculado de Maria, compadecei-vos de nós!
-
+<br/>
 Refúgio dos pecadores, rogai por nós.
-
+<br/>
 Oh! doce Coração de Maria, sede a minha salvação!
-
+<br/>
 Ave-Maria, Pai-Nosso e glória pelas intenções do Santo Papa.
-
+<br/>
 Ato de desagravo ao Imaculado Coração de Maria
-
+<br/>
 Oh! Coração Doloroso e Imaculado de Maria, transpassado de dor pelas injúrias com que os pecadores ultrajam vosso santo nome e vossas excelsas prerrogativas; Eis prostrado aos vossos pés vosso indigno filho, que, oprimido pelo peso das próprias culpas, vem arrependido com ânimo de reparar as injúrias que, à maneira de penetrantes setas dirigem contra vós os homensousados e perversos. Desejo reparar com esse ato de amor e submissão que faço perante o vosso coração amantíssimo, todas as blasfêmias que proferem contra o vosso Augusto nome, todas as ofensas que fazem às vossas excelsas virtudes e todas as ingratidões com que os homenscorrespondem ao vosso maternal amor e inesgotável misericórdia. Aceitai, oh! Coração Imaculado, esta demonstração de meu fiel carinho e justo reconhecimento, com o firme propósito que faço de ser-vos fiel todos os dias de minha vida, de defender vossa honra quando a veja ultrajada e de propagar com entusiasmo vosso culto e vossas glórias.
 Rezar três Ave-Marias em honra ao poder, sabedoria e misericórdia do puríssimo Coração de Maria, desprezado pelos homens
 
