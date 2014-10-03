@@ -406,14 +406,14 @@ Oh! Vós que viveis e reinais com Deus Pai, em unidade do Espírito Santo, por t
 
 
 INSERT or replace INTO ORACAO (TITULO,ORACAO,IDORACAO) VALUES ('Consagração a Nossa Senhora','
-Ó Senhora minha, ó minha Mãe, <br/>
-eu me ofereço todo(a) a vós, <br/>
-e em prova da minha devoção para convosco, <br/>
-Vos consagro neste dia e para sempre, <br/>
-os meus olhos, os meus ouvidos, <br/>
-a minha boca, o meu coração e inteiramente todo o meu ser.<br/>
-E porque assim sou vosso(a), <br/>
-ó incomparável Mãe, <br/>
+Ó Senhora minha, ó minha Mãe,
+eu me ofereço todo(a) a vós,
+e em prova da minha devoção para convosco,
+Vos consagro neste dia e para sempre, 
+os meus olhos, os meus ouvidos,
+a minha boca, o meu coração e inteiramente todo o meu ser.
+E porque assim sou vosso , 
+ó incomparável Mãe, 
 guardai-me e defendei-me como propriedade vossa.
 Lembrai-vos que vos pertenço, terna Mãe, Senhora nossa.
 Ah, guardai-me e defendei-me como coisa própria vossa.
