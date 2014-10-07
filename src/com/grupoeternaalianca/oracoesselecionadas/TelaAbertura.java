@@ -24,7 +24,6 @@ public class TelaAbertura extends Activity{
   	       persistenceDao.criaConteudo(persistenceDao.openDB(cont),cont);
   	       persistenceDao.buscaGrupos(persistenceDao.openDB(cont));
     	}	
-
 	    new Handler().postDelayed(new Runnable() {
 			@Override
 			public void run() {
