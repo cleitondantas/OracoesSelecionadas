@@ -3,7 +3,6 @@ package com.grupoeternaalianca.oracoesselecionadas;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.*;
-import android.database.sqlite.*;
 import android.os.*;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -23,9 +22,9 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
     private NavigationDrawerFragment mNavigationDrawerFragment;
     private CharSequence mTitle;
 	
-	private PersistenceDao persistenceDao = new PersistenceDao();
-	public static SQLiteDatabase bancoDados = null;
-	private static final String DATABASE_NAME = "ORACOES_SELECIONADAS_DB";
+	private PersistenceDao persistenceDao = new PersistenceDao(this);
+	
+	
 	private boolean controlaList =false;
 	private ListView listView;
 	private ArrayAdapter<TituloVO> ad;
@@ -39,12 +38,6 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
         getActionBar().setDisplayShowTitleEnabled(true);
         mNavigationDrawerFragment = (NavigationDrawerFragment) getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);   
         mNavigationDrawerFragment.setUp(  R.id.navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout));
-        
-    	persistenceDao.openOrCreateDB(openDB());
-    	if(! persistenceDao.verificaBancoExistente(openDB())){
-    	       persistenceDao.criaConteudo(openDB(),this);
-    		persistenceDao.buscaGrupos(openDB());
-    	}
     	criaListView(null);
 		
 		listView.setOnItemClickListener(new OnItemClickListener(){
@@ -58,16 +51,12 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
 				}
 			});
     }
-
 	private void criaListView(String numeroGrupo) {
-		
 		itens.clear();
-		if(numeroGrupo == null || numeroGrupo.equalsIgnoreCase("0")){
-			for (TituloVO titulos : persistenceDao.buscaTitulos(openDB())){
-				itens.add(titulos);
-			}
-		}else{
-			for (TituloVO titulos : persistenceDao.buscaTitulos(openDB())){
+		for (TituloVO titulos : persistenceDao.buscaTitulos(persistenceDao.openDB(this))){
+			if(numeroGrupo == null || numeroGrupo.equalsIgnoreCase("0")){
+					itens.add(titulos);
+			}else{
 				if(titulos.getCategoria().equalsIgnoreCase(numeroGrupo)){
 					itens.add(titulos);
 				}
@@ -101,17 +90,6 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
         }
         return super.onOptionsItemSelected(item);
     }
-
-    
-	public SQLiteDatabase openDB(){
-		try{
-			bancoDados = openOrCreateDatabase(DATABASE_NAME, MODE_WORLD_READABLE, null);
-		}catch (Exception e){
-			Toast.makeText(MainActivity.this, (CharSequence) e, Toast.LENGTH_LONG).show();
-		}
-		return bancoDados;
-	}
-
     @Override
     public void onNavigationDrawerItemSelected(int position) {
     	if(controlaList){
@@ -184,4 +162,6 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
             ((MainActivity) activity).onSectionAttached( getArguments().getInt(ARG_SECTION_NUMBER));
         }
     }
+
+
 }

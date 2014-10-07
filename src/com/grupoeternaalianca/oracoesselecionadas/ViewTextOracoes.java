@@ -12,7 +12,7 @@ import com.grupoeternaalianca.oracoesselecionadas.vo.OracaoVO;
 import android.text.*;
 
 public class ViewTextOracoes extends ActionBarActivity{
-	private PersistenceDao persistenceDao = new PersistenceDao();
+	private PersistenceDao persistenceDao = new PersistenceDao(this);
 	private TextView tvTituloOracao=null;
 	private TextViewEx textViewExs=null;
 	

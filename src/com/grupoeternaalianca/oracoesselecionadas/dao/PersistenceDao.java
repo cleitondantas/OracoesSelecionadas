@@ -14,10 +14,10 @@ import com.grupoeternaalianca.oracoesselecionadas.vo.TituloVO;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.support.v7.app.ActionBarActivity;
-
-
-public class PersistenceDao extends ActionBarActivity{
+import android.database.sqlite.SQLiteOpenHelper;
+;
+public class PersistenceDao extends SQLiteOpenHelper{
+	public static final String DATABASE_NAME = "ORACOES_SELECIONADAS_DB";
 	private static final String COLUMN_ID = "ID";
 	private static final String TABLE_NOTES = "TITULOS";
 	private static final String TABLE_ORACAO = "ORACAO";
@@ -29,22 +29,27 @@ public class PersistenceDao extends ActionBarActivity{
 	private static final String COLUMN_GRUPO = "GRUPO";
 	private static final String COLUMN_ORACAO = "ORACAO";
 	private static final String COLUMN_IDORACAO = "IDORACAO";
+	
+	public static final String SCRIPT_DELECAO_TABELA_ORACAO =  "DROP TABLE IF EXISTS " + TABLE_ORACAO;
+	public static final String SCRIPT_DELECAO_TABELA_TITULO =  "DROP TABLE IF EXISTS " + TABLE_NOTES;
+	public static final String SCRIPT_DELECAO_TABELA_GRUPO =  "DROP TABLE IF EXISTS " + TABLE_GRUPO;
+	
 	private Cursor cursor;
+	private static PersistenceDao instance;
+	private static final int VERSAO =1;
+	public static SQLiteDatabase bancoDados = null;
 	
-	/**
-	 * Cria o banco de dados se não existe
-	 * @param bancoDados
-	 */
-	public void openOrCreateDB(SQLiteDatabase bancoDados){
-			String sql = "CREATE TABLE IF NOT EXISTS " + TABLE_NOTES + "(" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_TITLE + " TEXT, " + COLUMN_GRUPO + " TEXT, " + COLUMN_IDORACAO + " INTEGER);";
-			bancoDados.execSQL(sql);
-			String sql2 = "CREATE TABLE IF NOT EXISTS " + TABLE_ORACAO + "(" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_TITLE + " TEXT, " + COLUMN_ORACAO + " TEXT, " + COLUMN_IDORACAO + " INTEGER);";
-			bancoDados.execSQL(sql2);
-			String sql3 = "CREATE TABLE IF NOT EXISTS " + TABLE_GRUPO + "(" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_TITULO + " TEXT, "+COLUMN_IDGRUPO + " INTEGER);";
-			bancoDados.execSQL(sql3);
-			bancoDados.close();
+	public PersistenceDao(Context context) {
+		super(context, DATABASE_NAME, null, VERSAO);
+		// TODO Auto-generated constructor stub
 	}
-	
+
+	public static PersistenceDao getInstance(Context context) {
+		if(instance == null)
+			instance = new PersistenceDao(context);
+		return instance;
+	}
+
 	/**
 	 * Verifica a existencia do banco de dados
 	 * 
@@ -123,15 +128,6 @@ public class PersistenceDao extends ActionBarActivity{
 	 * @param bd
 	 * @param context
 	 */
-//	public void criaConteudo(SQLiteDatabase bd,Context context){
-//		try {
-//			byFile(R.raw.basedb,bd,context);
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//	}
-
 	public void criaConteudo(final SQLiteDatabase openDB,final Context context) {
 		new Thread(new Runnable() {
 			 public void run() {
@@ -160,6 +156,46 @@ public class PersistenceDao extends ActionBarActivity{
             }
         }
     }
+	
+	/**
+	 * Cria o banco de dados se não existe
+	 * @param bancoDados
+	 */
+	@Override
+	public void onCreate(SQLiteDatabase bancoDados) {
+		String sql = "CREATE TABLE IF NOT EXISTS " + TABLE_NOTES + "(" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_TITLE + " TEXT, " + COLUMN_GRUPO + " TEXT, " + COLUMN_IDORACAO + " INTEGER);";
+		bancoDados.execSQL(sql);
+		String sql2 = "CREATE TABLE IF NOT EXISTS " + TABLE_ORACAO + "(" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_TITLE + " TEXT, " + COLUMN_ORACAO + " TEXT, " + COLUMN_IDORACAO + " INTEGER);";
+		bancoDados.execSQL(sql2);
+		String sql3 = "CREATE TABLE IF NOT EXISTS " + TABLE_GRUPO + "(" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_TITULO + " TEXT, "+COLUMN_IDGRUPO + " INTEGER);";
+		bancoDados.execSQL(sql3);
+		bancoDados.close();
+		
+	}
 
+	@Override
+	public void onUpgrade(SQLiteDatabase bancoDados, int oldVersion, int newVersion) {
+		bancoDados.execSQL(SCRIPT_DELECAO_TABELA_GRUPO);
+		bancoDados.execSQL(SCRIPT_DELECAO_TABELA_ORACAO);
+		bancoDados.execSQL(SCRIPT_DELECAO_TABELA_TITULO);
+		onCreate(bancoDados);
+	}
+	
+	public SQLiteDatabase openDB(){
+		if(bancoDados!=null &&  bancoDados.isOpen()){
+			bancoDados = getWritableDatabase();
+		}
+		return bancoDados;
+	}	
     
+	public SQLiteDatabase openDB(Context context){
+		try{
+
+			bancoDados = context.openOrCreateDatabase(PersistenceDao.DATABASE_NAME, context.MODE_WORLD_READABLE, null);
+		
+		}catch (Exception e){
+
+		}
+		return bancoDados;
+	}
 }
