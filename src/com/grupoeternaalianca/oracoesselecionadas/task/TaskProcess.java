@@ -20,6 +20,7 @@ private ProgressDialog progress;
 		progress.show();
 	}
 	
+	
 	@Override
 	protected Object doInBackground(PersistenceDao... params) {
 		PersistenceDao persistenceDao  = params[0];
