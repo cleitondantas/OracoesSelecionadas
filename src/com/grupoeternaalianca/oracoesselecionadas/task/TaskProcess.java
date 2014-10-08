@@ -9,7 +9,6 @@ import android.os.AsyncTask;
 public class TaskProcess extends AsyncTask<PersistenceDao,String,Object>{
 private Context context;
 private ProgressDialog progress;
-
 	public TaskProcess(Context context) {
 		this.context = context;
 	}
@@ -34,5 +33,4 @@ private ProgressDialog progress;
 		progress.setMessage("Carregado !");
 		progress.dismiss();
 	}
-	
 }
