@@ -39,14 +39,11 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
         mNavigationDrawerFragment = (NavigationDrawerFragment) getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);   
         mNavigationDrawerFragment.setUp(  R.id.navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout));
     	criaListView(null);
-		
 		listView.setOnItemClickListener(new OnItemClickListener(){
 				@Override
 				public void onItemClick(AdapterView<?> p1, View p2, int p3, long p4){
-					
 					TituloVO titulo = (TituloVO)listView.getAdapter().getItem(p3);
 					Toast.makeText(MainActivity.this,titulo.getIdOracao()+" "+titulo.getTitulo(), Toast.LENGTH_LONG).show();
-					
 					chamaTelaTextOracao(titulo.getIdOracao());
 				}
 			});

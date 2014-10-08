@@ -45,13 +45,11 @@ public class PersistenceDao extends SQLiteOpenHelper{
 		openDB(context);
 		contextStatic =context;
 	}
-
 	public static PersistenceDao getInstance(Context context) {
 		if(instance == null)
 			instance = new PersistenceDao(context);
 		return instance;
 	}
-
 	/**
 	 * Verifica a existencia do banco de dados
 	 * 
@@ -112,7 +110,6 @@ public class PersistenceDao extends SQLiteOpenHelper{
 	public OracaoVO buscaOracao(SQLiteDatabase bancoDados,String idOracao){
 			cursor = bancoDados.query(TABLE_ORACAO, new String[]{COLUMN_ID,COLUMN_TITLE,COLUMN_ORACAO,COLUMN_IDORACAO},"IDORACAO = "+idOracao ,null,null,null,null);
 			OracaoVO oracao = new OracaoVO();
-			
 			while(cursor.moveToNext()){
 				oracao = new OracaoVO();
 				oracao.setId(Integer.parseInt(cursor.getString(cursor.getColumnIndex(COLUMN_ID))));
