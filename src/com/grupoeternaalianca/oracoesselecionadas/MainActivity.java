@@ -36,6 +36,7 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getActionBar().setDisplayShowTitleEnabled(true);
+		
         mNavigationDrawerFragment = (NavigationDrawerFragment) getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);   
         mNavigationDrawerFragment.setUp(  R.id.navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout));
     	criaListView(null);
