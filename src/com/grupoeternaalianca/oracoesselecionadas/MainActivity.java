@@ -53,7 +53,7 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
     }
 	private void criaListView(String numeroGrupo) {
 		itens.clear();
-		for (TituloVO titulos : persistenceDao.buscaTitulos(persistenceDao.openDB(this))){
+		for (TituloVO titulos : persistenceDao.buscaTitulos(persistenceDao.openDB())){
 			if(numeroGrupo == null || numeroGrupo.equalsIgnoreCase("0")){
 					itens.add(titulos);
 			}else{

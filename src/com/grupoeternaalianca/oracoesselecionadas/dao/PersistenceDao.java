@@ -15,6 +15,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 ;
 public class PersistenceDao extends SQLiteOpenHelper{
 	public static final String DATABASE_NAME = "ORACOES_SELECIONADAS_DB";
@@ -38,10 +39,11 @@ public class PersistenceDao extends SQLiteOpenHelper{
 	private static PersistenceDao instance;
 	private static final int VERSAO =1;
 	public static SQLiteDatabase bancoDados = null;
-	
+	private static Context contextStatic;
 	public PersistenceDao(Context context) {
 		super(context, DATABASE_NAME, null, VERSAO);
-		// TODO Auto-generated constructor stub
+		openDB(context);
+		contextStatic =context;
 	}
 
 	public static PersistenceDao getInstance(Context context) {
@@ -128,22 +130,18 @@ public class PersistenceDao extends SQLiteOpenHelper{
 	 * @param bd
 	 * @param context
 	 */
-	public void criaConteudo(final SQLiteDatabase openDB,final Context context) {
-		new Thread(new Runnable() {
-			 public void run() {
-				try {
-					byFile(R.raw.basedb,openDB,context);
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			 }
-		}).start();
+	public void criaConteudo(final SQLiteDatabase openDB) {
+		try {
+			byFile(R.raw.basedb,openDB);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
-    protected void byFile(int fileID, SQLiteDatabase bd, Context context) throws IOException {
+    protected void byFile(int fileID, SQLiteDatabase bd) throws IOException {
         StringBuilder sql = new StringBuilder();
-        BufferedReader br = new BufferedReader(new InputStreamReader(context.getResources().openRawResource(fileID)));
+        BufferedReader br = new BufferedReader(new InputStreamReader(contextStatic.getResources().openRawResource(fileID)));
         String line;
         while ((line = br.readLine()) != null) {
             line = line.trim();
@@ -170,7 +168,6 @@ public class PersistenceDao extends SQLiteOpenHelper{
 		String sql3 = "CREATE TABLE IF NOT EXISTS " + TABLE_GRUPO + "(" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_TITULO + " TEXT, "+COLUMN_IDGRUPO + " INTEGER);";
 		bancoDados.execSQL(sql3);
 		bancoDados.close();
-		
 	}
 
 	@Override
@@ -182,19 +179,17 @@ public class PersistenceDao extends SQLiteOpenHelper{
 	}
 	
 	public SQLiteDatabase openDB(){
-		if(bancoDados!=null &&  bancoDados.isOpen()){
-			bancoDados = getWritableDatabase();
+		try{
+			bancoDados = contextStatic.openOrCreateDatabase(PersistenceDao.DATABASE_NAME, Context.MODE_WORLD_READABLE, null);
+		}catch (Exception e){
 		}
 		return bancoDados;
 	}	
     
 	public SQLiteDatabase openDB(Context context){
 		try{
-
-			bancoDados = context.openOrCreateDatabase(PersistenceDao.DATABASE_NAME, context.MODE_WORLD_READABLE, null);
-		
+			bancoDados = context.openOrCreateDatabase(PersistenceDao.DATABASE_NAME, Context.MODE_WORLD_READABLE, null);
 		}catch (Exception e){
-
 		}
 		return bancoDados;
 	}
