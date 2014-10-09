@@ -4,7 +4,10 @@ import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.TextView;
+
 import com.grupoeternaalianca.oracoesselecionadas.dao.PersistenceDao;
 import com.grupoeternaalianca.oracoesselecionadas.util.TextViewEx;
 import com.grupoeternaalianca.oracoesselecionadas.vo.OracaoVO;
@@ -48,6 +51,23 @@ public class ViewTextOracoes extends ActionBarActivity{
 			}
 			return bancoDados;
 		}
-
-	 
+		
+	    @Override
+	    public boolean onCreateOptionsMenu(Menu menu){
+	        getMenuInflater().inflate(R.menu.main, menu);
+	        return true;
+	    }
+	    @Override
+	    public boolean onOptionsItemSelected(MenuItem item){
+	        int id = item.getItemId();
+	        if (id == R.id.action_settings){
+	        	redirectConfiguracoes();
+	            return true;
+	        }
+	        return super.onOptionsItemSelected(item);
+	    }
+	    private void redirectConfiguracoes(){
+	    	Intent intent = new Intent(this, Configuracoes_activity.class);
+	    	 startActivity(intent);
+	    }
 }

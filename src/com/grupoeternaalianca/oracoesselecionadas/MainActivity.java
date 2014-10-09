@@ -84,6 +84,7 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
     public boolean onOptionsItemSelected(MenuItem item){
         int id = item.getItemId();
         if (id == R.id.action_settings){
+        	redirectConfiguracoes();
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -118,6 +119,11 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
         actionBar.setDisplayShowTitleEnabled(true);
         actionBar.setTitle(mTitle);
+    }
+    
+    private void redirectConfiguracoes(){
+    	Intent intent = new Intent(this, Settings.class);
+    	 startActivity(intent);
     }
     
 //-----------------------------------------------------Classe     PlaceholderFragment

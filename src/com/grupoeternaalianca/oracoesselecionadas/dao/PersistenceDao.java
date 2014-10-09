@@ -2,6 +2,7 @@ package com.grupoeternaalianca.oracoesselecionadas.dao;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,8 +16,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
-;
 public class PersistenceDao extends SQLiteOpenHelper{
 	public static final String DATABASE_NAME = "ORACOES_SELECIONADAS_DB";
 	private static final String COLUMN_ID = "ID";
@@ -135,6 +134,19 @@ public class PersistenceDao extends SQLiteOpenHelper{
 			e.printStackTrace();
 		}
 	}
+	/**
+	 * Metodo Cria o conteudo do banco de dados apartir das linas do arquivo de SQL com InputStrem	
+	 * @param InputStream
+	 * @param SQLiteDatabase
+	 */
+	public void criaConteudo(InputStream input,final SQLiteDatabase openDB) {
+		try {
+			byFile(input,openDB);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 	
     protected void byFile(int fileID, SQLiteDatabase bd) throws IOException {
         StringBuilder sql = new StringBuilder();
@@ -151,7 +163,21 @@ public class PersistenceDao extends SQLiteOpenHelper{
             }
         }
     }
-	
+    protected void byFile(InputStream input, SQLiteDatabase bd) throws IOException {
+        StringBuilder sql = new StringBuilder();
+        BufferedReader br = new BufferedReader(new InputStreamReader(input));
+        String line;
+        while ((line = br.readLine()) != null) {
+            line = line.trim();
+            if (line.length() > 0) {
+                sql.append(line);
+                if (line.endsWith(";")) {
+                    bd.execSQL(sql.toString());
+                    sql.delete(0, sql.length());
+                }
+            }
+        }
+    }
 	/**
 	 * Cria o banco de dados se não existe
 	 * @param bancoDados
