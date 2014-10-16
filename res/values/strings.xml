@@ -16,6 +16,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="title_buscar">Buscar</string>
+     <string name="title_favorito">Favorito</string>
     <string name="action_settings">Configurações</string>
     <string name="title_activity_tela_abertura">Orações Selecionadas</string>
     <string name="hello_world">Hello world!</string>

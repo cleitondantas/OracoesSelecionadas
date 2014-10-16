@@ -1,27 +1,41 @@
 package com.grupoeternaalianca.oracoesselecionadas;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.content.*;
-import android.os.*;
+import android.app.SearchManager;
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.*;
-import android.view.*;
-import android.widget.*;
-import android.widget.AdapterView.*;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.SearchView;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.grupoeternaalianca.oracoesselecionadas.dao.PersistenceDao;
-import com.grupoeternaalianca.oracoesselecionadas.vo.*;
-
-import java.util.*;
+import com.grupoeternaalianca.oracoesselecionadas.vo.GrupoVO;
+import com.grupoeternaalianca.oracoesselecionadas.vo.TituloVO;
 
  @SuppressLint("ShowToast")
-public class MainActivity extends ActionBarActivity implements NavigationDrawerFragment.NavigationDrawerCallbacks{
+public class MainActivity extends ActionBarActivity implements NavigationDrawerFragment.NavigationDrawerCallbacks,SearchView.OnQueryTextListener {
     private NavigationDrawerFragment mNavigationDrawerFragment;
     private CharSequence mTitle;
-	
+    private SearchView mSearchView;
 	private PersistenceDao persistenceDao = new PersistenceDao(this);
 	
 	
@@ -39,6 +53,8 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
 		
         mNavigationDrawerFragment = (NavigationDrawerFragment) getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);   
         mNavigationDrawerFragment.setUp(  R.id.navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout));
+        
+        
     	criaListView(null);
 		listView.setOnItemClickListener(new OnItemClickListener(){
 				@Override
@@ -60,7 +76,7 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
 				}
 			}
 		}
-        listView = (ListView)findViewById(R.id.listView1);
+        listView = (ListView)findViewById(R.id.oracoesListView);
 		ad = new ArrayAdapter<TituloVO>(this, R.layout.small, R.id.small, itens);
 		listView.setAdapter(ad);
 
@@ -77,6 +93,9 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.main, menu);
+        MenuItem searchItem = menu.findItem(R.id.action_search);
+        mSearchView = (SearchView) MenuItemCompat.getActionView(searchItem);
+        mSearchView.setOnQueryTextListener(this);
         return true;
     }
 
@@ -125,7 +144,21 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
     	Intent intent = new Intent(this, Settings.class);
     	 startActivity(intent);
     }
-    
+
+	@Override
+	public boolean onQueryTextChange(String text) {
+		return false;
+	}
+	@Override
+	public boolean onQueryTextSubmit(String text) {
+		Intent intent = new Intent(this, SearchResultsActivity.class);
+		intent.putExtra(SearchManager.QUERY, text);
+   	 	startActivity(intent);
+		
+		return false;
+	}
+
+
 //-----------------------------------------------------Classe     PlaceholderFragment
     /**
      * A placeholder fragment containing a simple view.
@@ -166,6 +199,5 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
             ((MainActivity) activity).onSectionAttached( getArguments().getInt(ARG_SECTION_NUMBER));
         }
     }
-
 
 }

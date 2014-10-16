@@ -1,7 +1,6 @@
 package com.grupoeternaalianca.oracoesselecionadas;
 
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -18,17 +17,15 @@ public class ViewTextOracoes extends ActionBarActivity{
 	private PersistenceDao persistenceDao = new PersistenceDao(this);
 	private TextView tvTituloOracao=null;
 	private TextViewEx textViewExs=null;
-	
-	public static SQLiteDatabase bancoDados = null;
-	private static final String DATABASE_NAME = "ORACOES_SELECIONADAS_DB";
 	 @Override
 	    protected void onCreate(Bundle savedInstanceState) {
 		 super.onCreate(savedInstanceState);
 		 setContentView(R.layout.vieworacoes);
+		 
 		  Intent intent = getIntent();
 		  Bundle extras = intent.getExtras();
 		  OracaoVO oracao = new OracaoVO();
-		  oracao = persistenceDao.buscaOracao(openDB(),String.valueOf(extras.getInt("idOracao")));
+		  oracao = persistenceDao.buscaOracao(persistenceDao.openDB(),String.valueOf(extras.getInt("idOracao")));
 		  tvTituloOracao = (TextView) findViewById(R.id.tvTitulo);
 		
 		  textViewExs = (TextViewEx) findViewById(R.id.tvOracao);
@@ -41,29 +38,29 @@ public class ViewTextOracoes extends ActionBarActivity{
 		  
 		  Spanned htmlTextFormt = Html.fromHtml(textoOracaoFormat4);
 		  
-		  textViewExs.setText(htmlTextFormt,true);
-			
+		  textViewExs.setText(htmlTextFormt,true);	
 	 }
-		public SQLiteDatabase openDB(){
-			try{
-				bancoDados = openOrCreateDatabase(DATABASE_NAME, MODE_WORLD_READABLE, null);
-			}catch (Exception e){
-			}
-			return bancoDados;
-		}
 		
 	    @Override
 	    public boolean onCreateOptionsMenu(Menu menu){
-	        getMenuInflater().inflate(R.menu.main, menu);
+	    
+	        getMenuInflater().inflate(R.menu.menuationbarfivoritos, menu);
+	    	menu.findItem(R.id.action_favorite).setIcon(R.drawable.ic_action_not_important);
 	        return true;
 	    }
 	    @Override
 	    public boolean onOptionsItemSelected(MenuItem item){
+	    	
 	        int id = item.getItemId();
 	        if (id == R.id.action_settings){
 	        	redirectConfiguracoes();
 	            return true;
 	        }
+	        if(id == R.id.action_favorite){
+	        	item.setIcon(R.drawable.ic_action_important);
+	        }
+	        
+	        
 	        return super.onOptionsItemSelected(item);
 	    }
 	    private void redirectConfiguracoes(){

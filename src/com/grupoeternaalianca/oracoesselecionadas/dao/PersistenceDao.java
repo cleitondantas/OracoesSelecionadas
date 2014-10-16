@@ -85,6 +85,28 @@ public class PersistenceDao extends SQLiteOpenHelper{
 	}
 	
 	/**
+	 * Metodo Busca os titulos e Lista para ler na view
+	 */
+	public List<TituloVO> buscaTitulosPorNome(SQLiteDatabase bancoDados,String query){
+			ArrayList<TituloVO> tituloOracoes = new ArrayList<TituloVO>();
+	
+		cursor = bancoDados.query(TABLE_NOTES, new String[]{COLUMN_ID,COLUMN_TITLE,COLUMN_GRUPO,COLUMN_IDORACAO},COLUMN_TITLE+" LIKE ?",new String[]{"%" +query+"%"},null,null,null,null);
+			TituloVO titulo =null;
+			while(cursor.moveToNext()){
+				titulo = new TituloVO();
+				titulo.setId(Integer.parseInt(cursor.getString(cursor.getColumnIndex(COLUMN_ID))));
+				titulo.setCategoria(cursor.getString(cursor.getColumnIndex(COLUMN_GRUPO)));
+				titulo.setTitulo(cursor.getString(cursor.getColumnIndex(COLUMN_TITLE)));
+				titulo.setIdOracao(Integer.parseInt(cursor.getString(cursor.getColumnIndex(COLUMN_IDORACAO))));
+				
+				tituloOracoes.add(titulo);
+				
+			}
+			bancoDados.close();
+		return tituloOracoes;
+	}
+	
+	/**
 	 * Metodo Busca os Grupos
 	 */
 	public List<GrupoVO> buscaGrupos(SQLiteDatabase bancoDados){

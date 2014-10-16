@@ -33,14 +33,12 @@ private PersistenceDao persistenceDao;
 		
 		try {
 			Log.i("DEBUG","Iniciado");
-			URL url = new URL(urls[0]);
-			progress.setMessage("Abrindo Connecxao");
+			URL url = new URL("http://www.grupoeternaalianca.com/arquivos/basedb.sql");
 			publishProgress("Abrindo Connecxao");
 			URLConnection conec = url.openConnection();
-			progress.setMessage("Iniciado Download");
 			InputStream input  = conec.getInputStream();
-			progress.setMessage("Gravando Dados");
 			Log.i("DEBUG","Iniciado Gravacao");
+			persistenceDao.onUpgrade(persistenceDao.openDB(), 1,2);
 			persistenceDao.criaConteudo(input,persistenceDao.openDB());	
 			Log.i("DEBUG","Persistidos");
 		} catch (IOException e) {

@@ -230,7 +230,7 @@ public class NavigationDrawerFragment extends Fragment {
         if (mDrawerToggle.onOptionsItemSelected(item)) {
             return true;
         }
-        if (item.getItemId() == R.id.buscar) {
+        if (item.getItemId() == R.id.action_search) {
         	getActionBar().setDisplayShowTitleEnabled(false);
 
             return true;

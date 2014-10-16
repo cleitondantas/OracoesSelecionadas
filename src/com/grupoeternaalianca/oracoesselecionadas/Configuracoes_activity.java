@@ -11,7 +11,7 @@ import android.widget.Button;
 
 public class Configuracoes_activity extends ActionBarActivity {
 	Button btAtualizaDados;
-	private String urlDownload = "http://192.168.1.100:8080/oracoesselecionadas/basedb.sql";
+	private String urlDownload = "http://www.grupoeternaalianca.com/arquivos/basedb.sql";
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
