@@ -30,7 +30,8 @@
         </activity>
         
               <!-- Search results activity -->
-        <activity android:name=".SearchResultsActivity" >
+        <activity android:name=".SearchResultsActivity"  android:noHistory="true">
+            
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
