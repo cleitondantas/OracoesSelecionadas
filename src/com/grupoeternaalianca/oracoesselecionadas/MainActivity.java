@@ -3,6 +3,7 @@ package com.grupoeternaalianca.oracoesselecionadas;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.R.integer;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.SearchManager;
@@ -68,11 +69,18 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
 	private void criaListView(String numeroGrupo) {
 		itens.clear();
 		for (TituloVO titulos : persistenceDao.buscaTitulos(persistenceDao.openDB())){
-			if(numeroGrupo == null || numeroGrupo.equalsIgnoreCase("0")){
+			if(numeroGrupo!=null && numeroGrupo.equalsIgnoreCase("-1")){
+				List<Integer> numerosOracaoesFavoritas =	persistenceDao.buscaTodosFavoritos(persistenceDao.openDB());
+				if(numerosOracaoesFavoritas.contains(titulos.getIdOracao())){
 					itens.add(titulos);
+				}
 			}else{
-				if(titulos.getCategoria().equalsIgnoreCase(numeroGrupo)){
-					itens.add(titulos);
+				if(numeroGrupo == null || numeroGrupo.equalsIgnoreCase("0")){
+						itens.add(titulos);
+				}else{
+					if(titulos.getCategoria().equalsIgnoreCase(numeroGrupo)){
+						itens.add(titulos);
+					}
 				}
 			}
 		}
@@ -111,7 +119,7 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
     @Override
     public void onNavigationDrawerItemSelected(int position) {
     	if(controlaList){
-    		criaListView(String.valueOf(position));
+    		criaListView(String.valueOf(position-1));
     	}else{
     		controlaList=true;
     	}

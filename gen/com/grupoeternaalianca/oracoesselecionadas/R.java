@@ -1285,26 +1285,27 @@ containing a value of this type.
         /**  Description of a share target (both in the list of such or the default share button) in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] 
          */
         public static final int abc_shareactionprovider_share_with_application=0x7f0c000b;
-        public static final int action_settings=0x7f0c001d;
+        public static final int action_settings=0x7f0c001e;
         public static final int app_name=0x7f0c000d;
-        public static final int hello_world=0x7f0c001f;
-        public static final int navigation_drawer_close=0x7f0c001a;
-        public static final int navigation_drawer_open=0x7f0c0019;
-        public static final int opcoes=0x7f0c0018;
-        public static final int title_activity_settings=0x7f0c0020;
-        public static final int title_activity_tela_abertura=0x7f0c001e;
-        public static final int title_buscar=0x7f0c001b;
-        public static final int title_favorito=0x7f0c001c;
-        public static final int title_section1=0x7f0c000e;
-        public static final int title_section10=0x7f0c0017;
-        public static final int title_section2=0x7f0c000f;
-        public static final int title_section3=0x7f0c0010;
-        public static final int title_section4=0x7f0c0011;
-        public static final int title_section5=0x7f0c0012;
-        public static final int title_section6=0x7f0c0013;
-        public static final int title_section7=0x7f0c0014;
-        public static final int title_section8=0x7f0c0015;
-        public static final int title_section9=0x7f0c0016;
+        public static final int hello_world=0x7f0c0020;
+        public static final int navigation_drawer_close=0x7f0c001b;
+        public static final int navigation_drawer_open=0x7f0c001a;
+        public static final int opcoes=0x7f0c0019;
+        public static final int title_activity_settings=0x7f0c0021;
+        public static final int title_activity_tela_abertura=0x7f0c001f;
+        public static final int title_buscar=0x7f0c001c;
+        public static final int title_favorito=0x7f0c001d;
+        public static final int title_section0=0x7f0c000e;
+        public static final int title_section1=0x7f0c000f;
+        public static final int title_section10=0x7f0c0018;
+        public static final int title_section2=0x7f0c0010;
+        public static final int title_section3=0x7f0c0011;
+        public static final int title_section4=0x7f0c0012;
+        public static final int title_section5=0x7f0c0013;
+        public static final int title_section6=0x7f0c0014;
+        public static final int title_section7=0x7f0c0015;
+        public static final int title_section8=0x7f0c0016;
+        public static final int title_section9=0x7f0c0017;
     }
     public static final class style {
         /** 

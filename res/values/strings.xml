@@ -2,6 +2,7 @@
 <resources>
 
     <string name="app_name">Orações Selecionadas</string>
+    <string name="title_section0">Favoritos</string>
     <string name="title_section1">Todas Orações</string>
     <string name="title_section2">Comuns</string>
     <string name="title_section3">Cura</string>

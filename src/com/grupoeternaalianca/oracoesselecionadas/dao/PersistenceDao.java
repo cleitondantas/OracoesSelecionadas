@@ -18,11 +18,13 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 public class PersistenceDao extends SQLiteOpenHelper{
 	public static final String DATABASE_NAME = "ORACOES_SELECIONADAS_DB";
-	private static final String COLUMN_ID = "ID";
 	private static final String TABLE_NOTES = "TITULOS";
 	private static final String TABLE_ORACAO = "ORACAO";
 	private static final String TABLE_GRUPO = "GRUPO";
+	private static final String TABLE_FAVORITOS = "FAVORITOS";
 	
+	private static final String COLUMN_ID = "ID";
+	private static final String COLUMN_IDTITULO = "IDTITULO";
 	private static final String COLUMN_IDGRUPO = "IDGRUPO";
 	private static final String COLUMN_TITULO = "TITULO";
 	private static final String COLUMN_TITLE = "TITULO";
@@ -136,11 +138,49 @@ public class PersistenceDao extends SQLiteOpenHelper{
 				oracao.setId(Integer.parseInt(cursor.getString(cursor.getColumnIndex(COLUMN_ID))));
 				oracao.setTitulo(cursor.getString(cursor.getColumnIndex(COLUMN_TITLE)));	
 				oracao.setTexto(cursor.getString(cursor.getColumnIndex(COLUMN_ORACAO)));			
-				oracao.setIdNumero(cursor.getColumnIndex(COLUMN_IDORACAO));
+				oracao.setIdNumero(cursor.getInt(cursor.getColumnIndex(COLUMN_IDORACAO)));
 				
 				}
 			bancoDados.close();
 		return oracao;
+	}
+	
+	/**
+	 * Método que persiste o numero da oracao que deseja que seja favoritado
+	 * @param bancoDados
+	 * @param numero
+	 */
+	public void salvarFavorito(SQLiteDatabase bancoDados,int numero){
+		String query = "INSERT or replace INTO "+TABLE_FAVORITOS+" ("+COLUMN_IDORACAO+") VALUES ("+numero+");";
+		bancoDados.execSQL(query);
+	}
+	/**
+	 * Busca o favorito por id de oracao retornando se existe eu nao
+	 * @param numero
+	 * @return
+	 */
+	public boolean buscaFavoritoPorIdOracao(SQLiteDatabase bancoDados,int numero){
+		cursor = bancoDados.query(TABLE_FAVORITOS, new String[]{COLUMN_IDORACAO},"IDORACAO = "+numero  ,null,null,null,null);
+		return cursor.getCount()>0;
+	}
+	
+	/**
+	 * Busca o favorito por id de oracao retornando se existe eu nao
+	 * @param numero
+	 * @return
+	 */
+	public List<Integer> buscaTodosFavoritos(SQLiteDatabase bancoDados){
+		List<Integer> registrosFavoritos = new ArrayList<Integer>();
+		cursor = bancoDados.query(TABLE_FAVORITOS, new String[]{COLUMN_IDORACAO},null,null,null,null,null);
+		while(cursor.moveToNext()){
+			registrosFavoritos.add(cursor.getInt(cursor.getColumnIndex(COLUMN_IDORACAO)));
+		}
+		return registrosFavoritos;
+	}
+	
+	
+	public boolean deletaFavoritoPorIdOracao(SQLiteDatabase bancoDados,int numero){
+		return bancoDados.delete(TABLE_FAVORITOS, "IDORACAO = "+numero ,null)>0;
 	}
 	
 	/**
@@ -212,6 +252,8 @@ public class PersistenceDao extends SQLiteOpenHelper{
 		bancoDados.execSQL(sql2);
 		String sql3 = "CREATE TABLE IF NOT EXISTS " + TABLE_GRUPO + "(" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_TITULO + " TEXT, "+COLUMN_IDGRUPO + " INTEGER);";
 		bancoDados.execSQL(sql3);
+		String sql4 = "CREATE TABLE IF NOT EXISTS " + TABLE_FAVORITOS + "(" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "+ COLUMN_IDORACAO + " INTEGER);";
+		bancoDados.execSQL(sql4);
 		bancoDados.close();
 	}
 
