@@ -30,6 +30,8 @@ import android.widget.Toast;
 import com.grupoeternaalianca.oracoesselecionadas.dao.PersistenceDao;
 import com.grupoeternaalianca.oracoesselecionadas.vo.GrupoVO;
 import com.grupoeternaalianca.oracoesselecionadas.vo.TituloVO;
+import android.app.*;
+import android.content.*;
 
  @SuppressLint("ShowToast")
 public class MainActivity extends ActionBarActivity implements NavigationDrawerFragment.NavigationDrawerCallbacks,SearchView.OnQueryTextListener {
@@ -164,8 +166,34 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
 		
 		return false;
 	}
+    @Override
+    public void onBackPressed() {
+	getActionBar().setDisplayShowTitleEnabled(true);
+	getActionBar().setTitle(R.string.app_name);
+	//exitOrMenu(" Gostaria de sair do App?");
+    }
+    public void exitOrMenu(String texto) {
+	
+	AlertDialog.Builder mensagem = new AlertDialog.Builder(MainActivity.this);
+	mensagem.setMessage(texto);
+	mensagem.setNegativeButton("Não",
+	    new DialogInterface.OnClickListener() {
+		@Override
+		public void onClick(DialogInterface dialog, int which) {
+		    
+		}
+	    });
 
+	mensagem.setPositiveButton("sim",new DialogInterface.OnClickListener() {
+		@Override
+		public void onClick(DialogInterface dialog, int which) {
+		    finish();
+		}
+	    });
 
+	mensagem.setIcon(R.drawable.ic_launcher);
+	mensagem.show();
+    }
 //-----------------------------------------------------Classe     PlaceholderFragment
     /**
      * A placeholder fragment containing a simple view.

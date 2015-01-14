@@ -46,7 +46,7 @@ public class ViewTextOracoes extends ActionBarActivity{
 		
 	    @Override
 	    public boolean onCreateOptionsMenu(Menu menu){
-	        getMenuInflater().inflate(R.menu.menuationbarfivoritos, menu);
+	       getMenuInflater().inflate(R.menu.menuationbarfivoritos, menu);
 	        favoritado = persistenceDao.buscaFavoritoPorIdOracao(persistenceDao.openDB(), numeroOracao);
 			 if(favoritado){
 				 menu.findItem(R.id.action_favorite).setIcon(R.drawable.ic_action_important);
@@ -59,10 +59,7 @@ public class ViewTextOracoes extends ActionBarActivity{
 	    @Override
 	    public boolean onOptionsItemSelected(MenuItem item){
 	        int id = item.getItemId();
-	        if (id == R.id.action_settings){
-	        	redirectConfiguracoes();
-	            return true;
-	        }
+	        
 	        if(id == R.id.action_favorite){
 	        	if(favoritado){
 	        		item.setIcon(R.drawable.ic_action_not_important);
@@ -78,11 +75,6 @@ public class ViewTextOracoes extends ActionBarActivity{
 	
 	        }
 	        
-	        
 	        return super.onOptionsItemSelected(item);
-	    }
-	    private void redirectConfiguracoes(){
-	    	Intent intent = new Intent(this, Configuracoes_activity.class);
-	    	 startActivity(intent);
 	    }
 }

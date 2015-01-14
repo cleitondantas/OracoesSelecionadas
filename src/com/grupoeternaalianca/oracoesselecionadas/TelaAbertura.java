@@ -22,11 +22,11 @@ public class TelaAbertura extends Activity{
 	    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
     	persistenceDao.onCreate(persistenceDao.openDB());
     	if(!persistenceDao.verificaBancoExistente(persistenceDao.openDB())){
-    		TIMESLEAP=12000;
+    		TIMESLEAP=6000;
     	    TaskProcess taskPross = new TaskProcess(this);
     	    taskPross.execute(persistenceDao);
 	    }else{
-	    	TIMESLEAP =3000;
+	    	TIMESLEAP =1500;
 	    }
 	    new Handler().postDelayed(new Runnable() {
 			@Override
