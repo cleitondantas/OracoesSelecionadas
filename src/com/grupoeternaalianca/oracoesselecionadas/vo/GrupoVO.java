@@ -26,7 +26,11 @@ public class GrupoVO {
 		this.idgrupo = idgrupo;
 	}
 
-	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return titulo;
+	}
 	
 	
 	

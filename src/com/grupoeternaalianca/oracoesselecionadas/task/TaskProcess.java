@@ -21,7 +21,8 @@ private ProgressDialog progress;
 	@Override
 	protected Object doInBackground(PersistenceDao... params) {
 		PersistenceDao persistenceDao  = params[0];
-		persistenceDao.criaConteudo(persistenceDao.openDB());
+//		persistenceDao.criaConteudo(persistenceDao.openDB());
+		persistenceDao.copiaBanco(PersistenceDao.DATABASE_NAME);
 		return null;
 	}
 	@Override

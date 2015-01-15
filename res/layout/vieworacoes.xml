@@ -41,11 +41,8 @@
 					android:textSize="19sp"
 					android:shadowRadius="1.0"
 					android:shadowColor="#8A8A8A"
-					android:textColorHighlight="#3F91EC"
-					android:textIsSelectable="true"
 					android:typeface="sans"
-					android:textColorHint="#0032A4"
-					android:textColorLink="#361AED"
+					android:textIsSelectable="true"
 					android:layout_marginLeft="0dp"
 					android:layout_marginRight="0dp"/>
 
