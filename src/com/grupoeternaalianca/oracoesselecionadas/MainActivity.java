@@ -44,6 +44,7 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
 	public List<GrupoVO> grupovoList = null;
 	public static String listaTitulo[];
 	private MenuItem searchItem; 
+	private int qtdOracoes;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -62,19 +63,21 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
 				chamaTelaTextOracao(titulo.getIdOracao());
 			}
 		});
+		
 	}
 
 	private void criaListView(String numeroGrupo) {
 		itens.clear();
-		for (TituloVO titulos : persistenceDao.buscaTitulos(persistenceDao.openDB())) {
+		for (TituloVO titulos : persistenceDao.buscaTitulos(persistenceDao.openDB(this))) {
 			if (numeroGrupo != null && numeroGrupo.equalsIgnoreCase("-1")) {
-				List<Integer> numerosOracaoesFavoritas = persistenceDao.buscaTodosFavoritos(persistenceDao.openDB());
+				List<Integer> numerosOracaoesFavoritas = persistenceDao.buscaTodosFavoritos(persistenceDao.openDB(this));
 				if (numerosOracaoesFavoritas.contains(titulos.getIdOracao())) {
 					itens.add(titulos);
 				}
 			} else {
 				if (numeroGrupo == null || numeroGrupo.equalsIgnoreCase("0")) {
 					itens.add(titulos);
+					qtdOracoes = itens.size();
 				} else {
 					if (titulos.getCategoria().equalsIgnoreCase(numeroGrupo)) {
 						itens.add(titulos);
@@ -85,7 +88,7 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
 		listView = (ListView) findViewById(R.id.oracoesListView);
 		ad = new ArrayAdapter<TituloVO>(this, R.layout.small, R.id.small, itens);
 		listView.setAdapter(ad);
-
+		
 	}
 
 	public void chamaTelaTextOracao(int idOracao) {
@@ -156,16 +159,17 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
 
 		return false;
 	}
-
 	@Override
 	public void onBackPressed() {
+		if(qtdOracoes==itens.size()){
+			super.onBackPressed();
+		}
+		
 		criaListView("0");
 		mSearchView.onActionViewCollapsed();
 		mSearchView.setQuery("", false);
 		mSearchView.clearFocus();
-        getActionBar().setDisplayShowTitleEnabled(true);
-        getActionBar().setTitle(R.string.app_name);
-		exitOrMenu(getString(R.string.exitApp));
+		
 	}
 
 	public void exitOrMenu(String texto) {
