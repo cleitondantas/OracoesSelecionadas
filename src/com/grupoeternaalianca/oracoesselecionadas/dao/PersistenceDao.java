@@ -1,21 +1,22 @@
 package com.grupoeternaalianca.oracoesselecionadas.dao;
 
 import java.io.BufferedReader;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.grupoeternaalianca.oracoesselecionadas.R;
-import com.grupoeternaalianca.oracoesselecionadas.vo.GrupoVO;
-import com.grupoeternaalianca.oracoesselecionadas.vo.OracaoVO;
-import com.grupoeternaalianca.oracoesselecionadas.vo.TituloVO;
-
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import com.grupoeternaalianca.oracoesselecionadas.R;
+import com.grupoeternaalianca.oracoesselecionadas.vo.GrupoVO;
+import com.grupoeternaalianca.oracoesselecionadas.vo.OracaoVO;
+import com.grupoeternaalianca.oracoesselecionadas.vo.TituloVO;
 public class PersistenceDao extends SQLiteOpenHelper{
 	public static final String DATABASE_NAME = "ORACOES_SELECIONADAS_DB";
 	private static final String TABLE_NOTES = "TITULOS";
@@ -24,7 +25,6 @@ public class PersistenceDao extends SQLiteOpenHelper{
 	private static final String TABLE_FAVORITOS = "FAVORITOS";
 	
 	private static final String COLUMN_ID = "ID";
-	private static final String COLUMN_IDTITULO = "IDTITULO";
 	private static final String COLUMN_IDGRUPO = "IDGRUPO";
 	private static final String COLUMN_TITULO = "TITULO";
 	private static final String COLUMN_TITLE = "TITULO";
@@ -113,7 +113,7 @@ public class PersistenceDao extends SQLiteOpenHelper{
 	 */
 	public List<GrupoVO> buscaGrupos(SQLiteDatabase bancoDados){
 			ArrayList<GrupoVO> grupoVOs = new ArrayList<GrupoVO>();
-			cursor = bancoDados.query(TABLE_NOTES, new String[]{COLUMN_ID,COLUMN_TITULO,COLUMN_IDGRUPO}, null,null,null,null,null);
+			cursor = bancoDados.query(TABLE_GRUPO, new String[]{COLUMN_ID,COLUMN_TITULO,COLUMN_IDGRUPO}, null,null,null,null,null);
 			GrupoVO grupovo =null;
 			while(cursor.moveToNext()){
 				grupovo = new GrupoVO();
@@ -280,4 +280,25 @@ public class PersistenceDao extends SQLiteOpenHelper{
 		}
 		return bancoDados;
 	}
+	
+	
+	public void copiaBanco(String dataBaseName) {
+		FileOutputStream fos = null;
+		InputStream is = null;
+		try {
+			// Abre o arquivo que deve estar na pasta assets
+			is = contextStatic.getAssets().open(dataBaseName);
+			// Abre o arquivo do banco vazio ele fica em:
+			// /data/data/nome.do.pacote.da.app/databases
+			fos = new FileOutputStream(contextStatic.getDatabasePath(dataBaseName));
+			byte[] buffer = new byte[1024];
+			int read;
+			while ((read = is.read(buffer)) > 0) {
+				fos.write(buffer, 0, read);
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
 }

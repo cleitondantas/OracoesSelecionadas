@@ -22,5 +22,5 @@
     <string name="title_activity_tela_abertura">Orações Selecionadas</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_settings">Configurações</string>
-
+	<string name="exitApp"> Gostaria de sair do App?</string>
 </resources>
