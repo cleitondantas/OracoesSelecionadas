@@ -24,6 +24,8 @@ public class ViewTextOracoes extends ActionBarActivity{
 	    protected void onCreate(Bundle savedInstanceState) {
 		 super.onCreate(savedInstanceState);
 		 setContentView(R.layout.vieworacoes);
+		 getActionBar().setDisplayHomeAsUpEnabled(true);
+		 
 		 
 		  Intent intent = getIntent();
 		  Bundle extras = intent.getExtras();
@@ -42,12 +44,21 @@ public class ViewTextOracoes extends ActionBarActivity{
 		  Spanned htmlTextFormt = Html.fromHtml(textoOracaoFormat4);
 		  
 		  textViewExs.setText(htmlTextFormt,true);	
-	 }
+	    
+		  }
+
+	    @Override
+	    public boolean onPrepareOptionsMenu(Menu menu){
+		return super.onPrepareOptionsMenu(menu);
+	    }
+	 
+	 
 		
 	    @Override
 	    public boolean onCreateOptionsMenu(Menu menu){
 	       getMenuInflater().inflate(R.menu.menuationbarfivoritos, menu);
-	        favoritado = persistenceDao.buscaFavoritoPorIdOracao(persistenceDao.openDB(), numeroOracao);
+		menu.removeItem(R.id.action_settings);
+	       favoritado = persistenceDao.buscaFavoritoPorIdOracao(persistenceDao.openDB(), numeroOracao);
 			 if(favoritado){
 				 menu.findItem(R.id.action_favorite).setIcon(R.drawable.ic_action_important);
 			 }else{
@@ -60,9 +71,14 @@ public class ViewTextOracoes extends ActionBarActivity{
 	    public boolean onOptionsItemSelected(MenuItem item){
 	        int id = item.getItemId();
  	        if (id == R.id.action_settings){
- 	    
+		    item.setVisible(false);
  	            return true;
  	        }
+		if(id == android.R.id.home){
+		    super.onBackPressed();
+		    return true;
+		}
+		
 	        if(id == R.id.action_favorite){
 	        	if(favoritado){
 	        		item.setIcon(R.drawable.ic_action_not_important);
@@ -80,4 +96,5 @@ public class ViewTextOracoes extends ActionBarActivity{
 	        
 	        return super.onOptionsItemSelected(item);
 	    }
+	    
 }

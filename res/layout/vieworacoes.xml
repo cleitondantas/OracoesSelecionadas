@@ -43,8 +43,8 @@
 					android:shadowColor="#8A8A8A"
 					android:typeface="sans"
 					android:textIsSelectable="true"
-					android:layout_marginLeft="0dp"
-					android:layout_marginRight="0dp"/>
+					android:layout_marginLeft="5dp"
+					android:layout_marginRight="5dp"/>
 
 			</LinearLayout>
 
