@@ -7,7 +7,8 @@
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="15" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -15,7 +16,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.grupoeternaalianca.oracoesselecionadas.TelaAbertura"
+            android:name=".TelaAbertura"
             android:label="@string/title_activity_tela_abertura"
             android:noHistory="true" >
             <intent-filter>
@@ -24,34 +25,38 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-         <activity
-            android:name="com.grupoeternaalianca.oracoesselecionadas.MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:label="@string/app_name" >
         </activity>
-        
-              <!-- Search results activity -->
-        <activity android:name=".SearchResultsActivity"  android:noHistory="true">
-            
+
+        <!-- Search results activity -->
+        <activity
+            android:name=".SearchResultsActivity"
+            android:noHistory="true" >
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
- 
+
             <meta-data
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
         </activity>
-        
         <activity
-            android:name="com.grupoeternaalianca.oracoesselecionadas.ViewTextOracoes"
+            android:name=".ViewTextOracoes"
             android:label="@string/app_name" >
         </activity>
         <activity
-            android:name="com.grupoeternaalianca.oracoesselecionadas.Configuracoes_activity"
+            android:name=".Configuracoes_activity"
             android:label="@string/action_settings" >
         </activity>
         <activity
-            android:name="com.grupoeternaalianca.oracoesselecionadas.Settings"
+            android:name=".Settings"
             android:label="@string/title_activity_settings" >
+        </activity>
+        <activity
+            android:name=".SubListaOracoes"
+            android:label="@string/title_activity_sub_lista_oracoes" >
         </activity>
     </application>
 

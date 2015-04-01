@@ -58,9 +58,13 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
 		listView.setOnItemClickListener(new OnItemClickListener() {
 			@Override
 			public void onItemClick(AdapterView<?> p1, View p2, int p3, long p4) {
-				TituloVO titulo = (TituloVO) listView.getAdapter().getItem(p3);
-				Toast.makeText(MainActivity.this, titulo.getIdOracao() + " " + titulo.getTitulo(), Toast.LENGTH_LONG).show();
-				chamaTelaTextOracao(titulo.getIdOracao());
+				if(p3 <= 2){
+					redirectSubListaOracoes();
+				}else{
+					TituloVO titulo = (TituloVO) listView.getAdapter().getItem(p3);
+					Toast.makeText(MainActivity.this, titulo.getIdOracao() + " " + titulo.getTitulo(), Toast.LENGTH_LONG).show();
+					chamaTelaTextOracao(titulo.getIdOracao());
+				}
 			}
 		});
 		
@@ -140,7 +144,10 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
 		actionBar.setTitle(mTitle);
 	
 	}
-
+	private void redirectSubListaOracoes() {
+		Intent intent = new Intent(this, SubListaOracoes.class);
+		startActivity(intent);
+	}
 	private void redirectConfiguracoes() {
 		Intent intent = new Intent(this, Settings.class);
 		startActivity(intent);
