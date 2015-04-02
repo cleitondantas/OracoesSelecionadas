@@ -31,6 +31,7 @@ public class PersistenceDao extends SQLiteOpenHelper{
 	private static final String COLUMN_GRUPO = "GRUPO";
 	private static final String COLUMN_ORACAO = "ORACAO";
 	private static final String COLUMN_IDORACAO = "IDORACAO";
+	private static final String COLUMN_IDSUB_LISTA = "IDSUB_LISTA";
 	
 	public static final String SCRIPT_DELECAO_TABELA_ORACAO =  "DROP TABLE IF EXISTS " + TABLE_ORACAO;
 	public static final String SCRIPT_DELECAO_TABELA_TITULO =  "DROP TABLE IF EXISTS " + TABLE_NOTES;
@@ -70,7 +71,7 @@ public class PersistenceDao extends SQLiteOpenHelper{
 	 */
 	public List<TituloVO> buscaTitulos(SQLiteDatabase bancoDados){
 			ArrayList<TituloVO> tituloOracoes = new ArrayList<TituloVO>();
-		cursor = bancoDados.query(TABLE_NOTES, new String[]{COLUMN_ID,COLUMN_TITLE,COLUMN_GRUPO,COLUMN_IDORACAO}, null,null,null,null,null);
+		cursor = bancoDados.query(TABLE_NOTES, new String[]{COLUMN_ID,COLUMN_TITLE,COLUMN_GRUPO,COLUMN_IDORACAO,COLUMN_IDSUB_LISTA}, null,null,null,null,null);
 			TituloVO titulo =null;
 			while(cursor.moveToNext()){
 				titulo = new TituloVO();
@@ -78,7 +79,7 @@ public class PersistenceDao extends SQLiteOpenHelper{
 				titulo.setCategoria(cursor.getString(cursor.getColumnIndex(COLUMN_GRUPO)));
 				titulo.setTitulo(cursor.getString(cursor.getColumnIndex(COLUMN_TITLE)));
 				titulo.setIdOracao(Integer.parseInt(cursor.getString(cursor.getColumnIndex(COLUMN_IDORACAO))));
-				
+				titulo.setIdSubOracao(Integer.parseInt(cursor.getString(cursor.getColumnIndex(COLUMN_IDSUB_LISTA))));
 				tituloOracoes.add(titulo);
 				
 			}
@@ -92,7 +93,7 @@ public class PersistenceDao extends SQLiteOpenHelper{
 	public List<TituloVO> buscaTitulosPorNome(SQLiteDatabase bancoDados,String query){
 			ArrayList<TituloVO> tituloOracoes = new ArrayList<TituloVO>();
 	
-		cursor = bancoDados.query(TABLE_NOTES, new String[]{COLUMN_ID,COLUMN_TITLE,COLUMN_GRUPO,COLUMN_IDORACAO},COLUMN_TITLE+" LIKE ?",new String[]{"%" +query+"%"},null,null,null,null);
+		cursor = bancoDados.query(TABLE_NOTES, new String[]{COLUMN_ID,COLUMN_TITLE,COLUMN_GRUPO,COLUMN_IDORACAO,COLUMN_IDSUB_LISTA},COLUMN_TITLE+" LIKE ?",new String[]{"%" +query+"%"},null,null,null,null);
 			TituloVO titulo =null;
 			while(cursor.moveToNext()){
 				titulo = new TituloVO();
@@ -100,9 +101,30 @@ public class PersistenceDao extends SQLiteOpenHelper{
 				titulo.setCategoria(cursor.getString(cursor.getColumnIndex(COLUMN_GRUPO)));
 				titulo.setTitulo(cursor.getString(cursor.getColumnIndex(COLUMN_TITLE)));
 				titulo.setIdOracao(Integer.parseInt(cursor.getString(cursor.getColumnIndex(COLUMN_IDORACAO))));
-				
+				titulo.setIdSubOracao(Integer.parseInt(cursor.getString(cursor.getColumnIndex(COLUMN_IDSUB_LISTA))));
 				tituloOracoes.add(titulo);
 				
+			}
+			bancoDados.close();
+		return tituloOracoes;
+	}
+	
+	
+	/**
+	 * Metodo Busca os titulos e Lista para ler na view
+	 */
+	public List<TituloVO> buscaSubTitulosPorSubId(SQLiteDatabase bancoDados,int idSubLista){
+			ArrayList<TituloVO> tituloOracoes = new ArrayList<TituloVO>();
+			cursor = bancoDados.query(TABLE_NOTES, new String[]{COLUMN_ID,COLUMN_TITLE,COLUMN_GRUPO,COLUMN_IDORACAO,COLUMN_IDSUB_LISTA},COLUMN_IDSUB_LISTA+" = "+idSubLista,null,null,null,null,null);
+			TituloVO titulo =null;
+			while(cursor.moveToNext()){
+				titulo = new TituloVO();
+				titulo.setId(Integer.parseInt(cursor.getString(cursor.getColumnIndex(COLUMN_ID))));
+				titulo.setCategoria(cursor.getString(cursor.getColumnIndex(COLUMN_GRUPO)));
+				titulo.setTitulo(cursor.getString(cursor.getColumnIndex(COLUMN_TITLE)));
+				titulo.setIdOracao(Integer.parseInt(cursor.getString(cursor.getColumnIndex(COLUMN_IDORACAO))));
+				titulo.setIdSubOracao(Integer.parseInt(cursor.getString(cursor.getColumnIndex(COLUMN_IDSUB_LISTA))));
+				tituloOracoes.add(titulo);
 			}
 			bancoDados.close();
 		return tituloOracoes;
@@ -240,13 +262,14 @@ public class PersistenceDao extends SQLiteOpenHelper{
             }
         }
     }
+    
 	/**
 	 * Cria o banco de dados se não existe
 	 * @param bancoDados
 	 */
 	@Override
 	public void onCreate(SQLiteDatabase bancoDados) {
-		String sql = "CREATE TABLE IF NOT EXISTS " + TABLE_NOTES + "(" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_TITLE + " TEXT, " + COLUMN_GRUPO + " TEXT, " + COLUMN_IDORACAO + " INTEGER);";
+		String sql = "CREATE TABLE IF NOT EXISTS " + TABLE_NOTES + "(" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_TITLE + " TEXT, " + COLUMN_GRUPO + " TEXT, " + COLUMN_IDORACAO + " INTEGER"+ COLUMN_IDSUB_LISTA + " INTEGER);";
 		bancoDados.execSQL(sql);
 		String sql2 = "CREATE TABLE IF NOT EXISTS " + TABLE_ORACAO + "(" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_TITLE + " TEXT, " + COLUMN_ORACAO + " TEXT, " + COLUMN_IDORACAO + " INTEGER);";
 		bancoDados.execSQL(sql2);

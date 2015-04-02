@@ -58,10 +58,10 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
 		listView.setOnItemClickListener(new OnItemClickListener() {
 			@Override
 			public void onItemClick(AdapterView<?> p1, View p2, int p3, long p4) {
-				if(p3 <= 2){
-					redirectSubListaOracoes();
-				}else{
 					TituloVO titulo = (TituloVO) listView.getAdapter().getItem(p3);
+					if(titulo.getIdSubOracao()>0){
+						redirectSubListaOracoes(titulo.getIdSubOracao());
+					}else{
 					Toast.makeText(MainActivity.this, titulo.getIdOracao() + " " + titulo.getTitulo(), Toast.LENGTH_LONG).show();
 					chamaTelaTextOracao(titulo.getIdOracao());
 				}
@@ -103,6 +103,14 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
 		startActivity(intent);
 	}
 
+	private void redirectSubListaOracoes(int idSubListTitle) {
+		Intent intent = new Intent(this, SubListaOracoes.class);
+		Bundle dados = new Bundle();
+		dados.putInt("idListTitile",idSubListTitle);
+		intent.putExtras(dados);
+		startActivity(intent);
+	}
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.main, menu);
@@ -144,10 +152,7 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
 		actionBar.setTitle(mTitle);
 	
 	}
-	private void redirectSubListaOracoes() {
-		Intent intent = new Intent(this, SubListaOracoes.class);
-		startActivity(intent);
-	}
+
 	private void redirectConfiguracoes() {
 		Intent intent = new Intent(this, Settings.class);
 		startActivity(intent);
