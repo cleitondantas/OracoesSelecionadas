@@ -5,7 +5,7 @@ public class TituloVO {
 	private String titulo;
 	private String categoria;
 	private int idOracao;
-	private int idSubOracao;
+	private int idSubTitulo;
 	
 	public int getIdOracao() {
 		return idOracao;
@@ -31,16 +31,17 @@ public class TituloVO {
 	public void setCategoria(String categoria) {
 		this.categoria = categoria;
 	}
-	public int getIdSubOracao() {
-		return idSubOracao;
-	}
-	public void setIdSubOracao(int idSubOracao) {
-		this.idSubOracao = idSubOracao;
-	}
+
 	@Override
 	public String toString()
 	{
 		return this.idOracao+" ) "+ this.titulo;
+	}
+	public int getIdSubTitulo() {
+		return idSubTitulo;
+	}
+	public void setIdSubTitulo(int idSubTitulo) {
+		this.idSubTitulo = idSubTitulo;
 	}
 	
 

@@ -59,8 +59,8 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
 			@Override
 			public void onItemClick(AdapterView<?> p1, View p2, int p3, long p4) {
 					TituloVO titulo = (TituloVO) listView.getAdapter().getItem(p3);
-					if(titulo.getIdSubOracao()>0){
-						redirectSubListaOracoes(titulo.getIdSubOracao());
+					if(titulo.getIdSubTitulo()>0){
+						redirectSubListaOracoes(titulo.getIdSubTitulo());
 					}else{
 					Toast.makeText(MainActivity.this, titulo.getIdOracao() + " " + titulo.getTitulo(), Toast.LENGTH_LONG).show();
 					chamaTelaTextOracao(titulo.getIdOracao());

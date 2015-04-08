@@ -7,8 +7,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.grupoeternaalianca.oracoesselecionadas.dao.PersistenceDao;
 import com.grupoeternaalianca.oracoesselecionadas.vo.TituloVO;
@@ -27,8 +31,24 @@ public class SubListaOracoes extends Activity {
 		Bundle extras = intent.getExtras();
 		List<TituloVO> subTitlesList = persistenceDao.buscaSubTitulosPorSubId(persistenceDao.openDB(this), extras.getInt("idListTitile"));
 		criaListView(subTitlesList);
+		listView.setOnItemClickListener(new OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> p1, View p2, int p3, long p4) {
+					TituloVO titulo = (TituloVO) listView.getAdapter().getItem(p3);
+					Toast.makeText(SubListaOracoes.this, titulo.getIdOracao() + " " + titulo.getTitulo(), Toast.LENGTH_LONG).show();
+					chamaTelaTextOracao(titulo.getIdOracao());
+			}
+		});
 	}
-
+	
+	public void chamaTelaTextOracao(int idOracao) {
+		Intent intent = new Intent(this, ViewTextOracoes.class);
+		Bundle dados = new Bundle();
+		dados.putInt("idOracao", idOracao);
+		intent.putExtras(dados);
+		startActivity(intent);
+	}
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
