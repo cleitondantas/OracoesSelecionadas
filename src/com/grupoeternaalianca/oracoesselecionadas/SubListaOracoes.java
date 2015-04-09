@@ -29,6 +29,7 @@ public class SubListaOracoes extends Activity {
 		
 		Intent intent = getIntent();
 		Bundle extras = intent.getExtras();
+		getActionBar().setTitle(extras.getString("titulo"));
 		List<TituloVO> subTitlesList = persistenceDao.buscaSubTitulosPorSubId(persistenceDao.openDB(this), extras.getInt("idListTitile"));
 		criaListView(subTitlesList);
 		listView.setOnItemClickListener(new OnItemClickListener() {
