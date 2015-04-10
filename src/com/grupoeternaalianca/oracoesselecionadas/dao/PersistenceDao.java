@@ -81,7 +81,6 @@ public class PersistenceDao extends SQLiteOpenHelper{
 				titulo.setIdOracao(Integer.parseInt(cursor.getString(cursor.getColumnIndex(COLUMN_IDORACAO))));
 				titulo.setIdSubTitulo(Integer.parseInt(cursor.getString(cursor.getColumnIndex(COLUMN_IDSUB_LISTA))));
 				tituloOracoes.add(titulo);
-				
 			}
 			bancoDados.close();
 		return tituloOracoes;
