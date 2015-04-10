@@ -15,7 +15,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class Settings extends ActionBarActivity {
+public class SettingsActivity extends ActionBarActivity {
 	Button btAtualizaDados;
 	private String urlDownload = "http://192.168.1.100:8080/oracoesselecionadas/basedb.sql";
 	@Override

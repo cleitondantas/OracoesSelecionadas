@@ -45,7 +45,7 @@ public class SearchResultsActivity extends Activity {
 		});  
     }
 	public void chamaTelaTextOracao(int idOracao){
-		Intent intent = new Intent(this, ViewTextOracoes.class);
+		Intent intent = new Intent(this, VisualizarOracoesActivity.class);
 		 Bundle dados = new Bundle();
 		 dados.putInt("idOracao", idOracao);
 		 intent.putExtras(dados);
@@ -81,7 +81,7 @@ public class SearchResultsActivity extends Activity {
     public boolean onOptionsItemSelected(MenuItem item){
         int id = item.getItemId();
         if (id == android.R.id.home){
-        	Intent intent = new Intent(this, MainActivity.class);
+        	Intent intent = new Intent(this, PrincipalActivity.class);
     		startActivity(intent);
             return true;
         }

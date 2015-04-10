@@ -31,7 +31,7 @@ import android.widget.Toast;
 import com.grupoeternaalianca.oracoesselecionadas.dao.PersistenceDao;
 import com.grupoeternaalianca.oracoesselecionadas.vo.TituloVO;
 
-public class MainActivity extends ActionBarActivity implements NavigationDrawerFragment.NavigationDrawerCallbacks, SearchView.OnQueryTextListener {
+public class PrincipalActivity extends ActionBarActivity implements NavigationDrawerFragment.NavigationDrawerCallbacks, SearchView.OnQueryTextListener {
 	private NavigationDrawerFragment mNavigationDrawerFragment;
 	private SearchView mSearchView;
 	private PersistenceDao persistenceDao = new PersistenceDao(this);
@@ -59,7 +59,7 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
 					if(titulo.getIdSubTitulo()>0){
 						redirectSubListaOracoes(titulo.getIdSubTitulo(),titulo.getTitulo());
 					}else{
-					Toast.makeText(MainActivity.this, titulo.getIdOracao() + " " + titulo.getTitulo(), Toast.LENGTH_LONG).show();
+					Toast.makeText(PrincipalActivity.this, titulo.getIdOracao() + " " + titulo.getTitulo(), Toast.LENGTH_LONG).show();
 					chamaTelaTextOracao(titulo.getIdOracao());
 				}
 			}
@@ -93,7 +93,7 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
 	}
 
 	public void chamaTelaTextOracao(int idOracao) {
-		Intent intent = new Intent(this, ViewTextOracoes.class);
+		Intent intent = new Intent(this, VisualizarOracoesActivity.class);
 		Bundle dados = new Bundle();
 		dados.putInt("idOracao", idOracao);
 		intent.putExtras(dados);
@@ -101,7 +101,7 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
 	}
 
 	private void redirectSubListaOracoes(int idSubListTitle,String titulo) {
-		Intent intent = new Intent(this, SubListaOracoes.class);
+		Intent intent = new Intent(this, SubListaActivity.class);
 		Bundle dados = new Bundle();
 		dados.putInt("idListTitile",idSubListTitle);
 		dados.putString("titulo",titulo);
@@ -152,7 +152,7 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
 	}
 
 	private void redirectConfiguracoes() {
-		Intent intent = new Intent(this, Settings.class);
+		Intent intent = new Intent(this, SettingsActivity.class);
 		startActivity(intent);
 	}
 
@@ -184,7 +184,7 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
 
 	public void exitOrMenu(String texto) {
 
-		AlertDialog.Builder mensagem = new AlertDialog.Builder(MainActivity.this);
+		AlertDialog.Builder mensagem = new AlertDialog.Builder(PrincipalActivity.this);
 		mensagem.setMessage(texto);
 		mensagem.setNegativeButton("Não", new DialogInterface.OnClickListener() {
 			@Override
@@ -241,7 +241,7 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
 		@Override
 		public void onAttach(Activity activity) {
 			super.onAttach(activity);
-			((MainActivity) activity).onSectionAttached(getArguments().getInt(ARG_SECTION_NUMBER));
+			((PrincipalActivity) activity).onSectionAttached(getArguments().getInt(ARG_SECTION_NUMBER));
 		}
 	}
 

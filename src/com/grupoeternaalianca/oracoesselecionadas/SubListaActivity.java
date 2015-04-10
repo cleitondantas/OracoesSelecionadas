@@ -18,7 +18,7 @@ import android.widget.Toast;
 import com.grupoeternaalianca.oracoesselecionadas.dao.PersistenceDao;
 import com.grupoeternaalianca.oracoesselecionadas.vo.TituloVO;
 
-public class SubListaOracoes extends Activity {
+public class SubListaActivity extends Activity {
 	private ListView listView;
 	private PersistenceDao persistenceDao = new PersistenceDao(this);
 	private ArrayAdapter<TituloVO> arrayAdapter;
@@ -43,7 +43,7 @@ public class SubListaOracoes extends Activity {
 	}
 	
 	public void chamaTelaTextOracao(int idOracao) {
-		Intent intent = new Intent(this, ViewTextOracoes.class);
+		Intent intent = new Intent(this, VisualizarOracoesActivity.class);
 		Bundle dados = new Bundle();
 		dados.putInt("idOracao", idOracao);
 		intent.putExtras(dados);

@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-public class Configuracoes_activity extends ActionBarActivity {
+public class ConfiguracoesActivity extends ActionBarActivity {
 	Button btAtualizaDados;
 	private String urlDownload = "http://www.grupoeternaalianca.com/arquivos/basedb.sql";
     @Override

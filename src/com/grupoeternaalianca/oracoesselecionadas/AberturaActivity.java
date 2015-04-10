@@ -11,7 +11,7 @@ import android.os.Bundle;
 import android.os.Handler;
 
 
-public class TelaAbertura extends Activity{
+public class AberturaActivity extends Activity{
 	private PersistenceDao persistenceDao = new PersistenceDao(this);
 	public static SQLiteDatabase bancoDados = null;
 	private Integer TIMESLEAP;
@@ -33,9 +33,9 @@ public class TelaAbertura extends Activity{
 	    new Handler().postDelayed(new Runnable() {
 			@Override
 			public void run() {
-				Intent minhaintent = new Intent(TelaAbertura.this,MainActivity.class);
-				TelaAbertura.this.startActivity(minhaintent);
-				TelaAbertura.this.finish();
+				Intent minhaintent = new Intent(AberturaActivity.this,PrincipalActivity.class);
+				AberturaActivity.this.startActivity(minhaintent);
+				AberturaActivity.this.finish();
 			}
 		},TIMESLEAP);
 
