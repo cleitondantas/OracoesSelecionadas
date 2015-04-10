@@ -1,5 +1,6 @@
 package com.grupoeternaalianca.oracoesselecionadas;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
@@ -36,7 +37,6 @@ public class SubListaOracoes extends Activity {
 			@Override
 			public void onItemClick(AdapterView<?> p1, View p2, int p3, long p4) {
 					TituloVO titulo = (TituloVO) listView.getAdapter().getItem(p3);
-					Toast.makeText(SubListaOracoes.this, titulo.getIdOracao() + " " + titulo.getTitulo(), Toast.LENGTH_LONG).show();
 					chamaTelaTextOracao(titulo.getIdOracao());
 			}
 		});
@@ -66,12 +66,28 @@ public class SubListaOracoes extends Activity {
 		if (id == R.id.action_settings) {
 			return true;
 		}
+		if(id == android.R.id.home){
+		    super.onBackPressed();
+		    return true;
+		}
 		return super.onOptionsItemSelected(item);
 	}
-	
+
 	private void criaListView(List<TituloVO>  subTitlesList) {
 		listView = (ListView) findViewById(R.id.listViewSubListaOracoes);
-		arrayAdapter = new ArrayAdapter<TituloVO>(this, R.layout.small, R.id.small, subTitlesList);
+		List<TituloVO> tituloList = new ArrayList<TituloVO>();
+		
+		for (final TituloVO titulo : subTitlesList) {
+			TituloVO tituloVO = new TituloVO(titulo){
+				@Override 
+				public String toString(){
+					return titulo.getTitulo();
+				};
+			};
+			tituloList.add(tituloVO);
+		}
+
+		arrayAdapter = new ArrayAdapter<TituloVO>(this, R.layout.small, R.id.small, tituloList);
 		listView.setAdapter(arrayAdapter);
 	}
 }

@@ -29,7 +29,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.grupoeternaalianca.oracoesselecionadas.dao.PersistenceDao;
-import com.grupoeternaalianca.oracoesselecionadas.vo.GrupoVO;
 import com.grupoeternaalianca.oracoesselecionadas.vo.TituloVO;
 
 public class MainActivity extends ActionBarActivity implements NavigationDrawerFragment.NavigationDrawerCallbacks, SearchView.OnQueryTextListener {
@@ -41,8 +40,6 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
 	private ListView listView;
 	private ArrayAdapter<TituloVO> ad;
 	private List<TituloVO> itens = new ArrayList<TituloVO>();
-	public List<GrupoVO> grupovoList = null;
-	public static String listaTitulo[];
 	private MenuItem searchItem; 
 	private int qtdOracoes;
 	@Override

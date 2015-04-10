@@ -6,7 +6,17 @@ public class TituloVO {
 	private String categoria;
 	private int idOracao;
 	private int idSubTitulo;
-	
+	public TituloVO() {
+		// TODO Auto-generated constructor stub
+	}
+	public TituloVO(TituloVO tituloVO) {
+	setCategoria(tituloVO.getCategoria());
+	setId(tituloVO.getId());
+	setIdOracao(tituloVO.getIdOracao());
+	setIdSubTitulo(tituloVO.getIdSubTitulo());
+	setTitulo(tituloVO.getTitulo());
+	}
+
 	public int getIdOracao() {
 		return idOracao;
 	}
