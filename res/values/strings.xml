@@ -24,5 +24,8 @@
     <string name="title_activity_settings">Configurações</string>
     <string name="exitApp"> Gostaria de sair do App?</string>
     <string name="title_activity_sub_lista_oracoes">SubListaOracoes</string>
-
+    <string name="removido_favoritos">Removido dos favoritos</string>
+	<string name="adicionado_favoritos">Adicionado dos favoritos</string>
+	<string name="nao">Não</string>
+	<string name="sim">Sim</string>
 </resources>

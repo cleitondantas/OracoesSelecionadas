@@ -1289,12 +1289,16 @@ containing a value of this type.
          */
         public static final int abc_shareactionprovider_share_with_application=0x7f0c000b;
         public static final int action_settings=0x7f0c001e;
+        public static final int adicionado_favoritos=0x7f0c0025;
         public static final int app_name=0x7f0c000d;
         public static final int exitApp=0x7f0c0022;
         public static final int hello_world=0x7f0c0020;
+        public static final int nao=0x7f0c0026;
         public static final int navigation_drawer_close=0x7f0c001b;
         public static final int navigation_drawer_open=0x7f0c001a;
         public static final int opcoes=0x7f0c0019;
+        public static final int removido_favoritos=0x7f0c0024;
+        public static final int sim=0x7f0c0027;
         public static final int title_activity_settings=0x7f0c0021;
         public static final int title_activity_sub_lista_oracoes=0x7f0c0023;
         public static final int title_activity_tela_abertura=0x7f0c001f;

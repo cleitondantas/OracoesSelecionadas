@@ -15,6 +15,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.grupoeternaalianca.oracoesselecionadas.dao.PersistenceDao;
+import com.grupoeternaalianca.oracoesselecionadas.vo.Constantes;
 import com.grupoeternaalianca.oracoesselecionadas.vo.TituloVO;
 
 public class SubListaActivity extends Activity {
@@ -29,8 +30,8 @@ public class SubListaActivity extends Activity {
 		
 		Intent intent = getIntent();
 		Bundle extras = intent.getExtras();
-		getActionBar().setTitle(extras.getString("titulo"));
-		List<TituloVO> subTitlesList = persistenceDao.buscaSubTitulosPorSubId(persistenceDao.openDB(this), extras.getInt("idListTitile"));
+		getActionBar().setTitle(extras.getString(Constantes.TITULO));
+		List<TituloVO> subTitlesList = persistenceDao.buscaSubTitulosPorSubId(persistenceDao.openDB(this), extras.getInt(Constantes.IDLISTATITULOS));
 		criaListView(subTitlesList);
 		listView.setOnItemClickListener(new OnItemClickListener() {
 			@Override
@@ -44,7 +45,7 @@ public class SubListaActivity extends Activity {
 	public void chamaTelaTextOracao(int idOracao) {
 		Intent intent = new Intent(this, VisualizarOracoesActivity.class);
 		Bundle dados = new Bundle();
-		dados.putInt("idOracao", idOracao);
+		dados.putInt(Constantes.IDORACAO, idOracao);
 		intent.putExtras(dados);
 		startActivity(intent);
 	}

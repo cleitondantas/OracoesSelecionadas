@@ -29,6 +29,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.grupoeternaalianca.oracoesselecionadas.dao.PersistenceDao;
+import com.grupoeternaalianca.oracoesselecionadas.vo.Constantes;
 import com.grupoeternaalianca.oracoesselecionadas.vo.TituloVO;
 
 public class PrincipalActivity extends ActionBarActivity implements NavigationDrawerFragment.NavigationDrawerCallbacks, SearchView.OnQueryTextListener {
@@ -95,7 +96,7 @@ public class PrincipalActivity extends ActionBarActivity implements NavigationDr
 	public void chamaTelaTextOracao(int idOracao) {
 		Intent intent = new Intent(this, VisualizarOracoesActivity.class);
 		Bundle dados = new Bundle();
-		dados.putInt("idOracao", idOracao);
+		dados.putInt(Constantes.IDORACAO, idOracao);
 		intent.putExtras(dados);
 		startActivity(intent);
 	}
@@ -103,8 +104,8 @@ public class PrincipalActivity extends ActionBarActivity implements NavigationDr
 	private void redirectSubListaOracoes(int idSubListTitle,String titulo) {
 		Intent intent = new Intent(this, SubListaActivity.class);
 		Bundle dados = new Bundle();
-		dados.putInt("idListTitile",idSubListTitle);
-		dados.putString("titulo",titulo);
+		dados.putInt(Constantes.IDLISTATITULOS,idSubListTitle);
+		dados.putString(Constantes.TITULO,titulo);
 		intent.putExtras(dados);
 		startActivity(intent);
 	}
@@ -186,14 +187,14 @@ public class PrincipalActivity extends ActionBarActivity implements NavigationDr
 
 		AlertDialog.Builder mensagem = new AlertDialog.Builder(PrincipalActivity.this);
 		mensagem.setMessage(texto);
-		mensagem.setNegativeButton("Não", new DialogInterface.OnClickListener() {
+		mensagem.setNegativeButton(R.string.nao, new DialogInterface.OnClickListener() {
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
 		
 			}
 		});
 
-		mensagem.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+		mensagem.setPositiveButton(R.string.sim, new DialogInterface.OnClickListener() {
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
 				finish();

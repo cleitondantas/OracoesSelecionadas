@@ -1,8 +1,9 @@
 package com.grupoeternaalianca.oracoesselecionadas;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.text.Html;
+import android.text.Spanned;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
@@ -10,9 +11,8 @@ import android.widget.Toast;
 
 import com.grupoeternaalianca.oracoesselecionadas.dao.PersistenceDao;
 import com.grupoeternaalianca.oracoesselecionadas.util.TextViewEx;
+import com.grupoeternaalianca.oracoesselecionadas.vo.Constantes;
 import com.grupoeternaalianca.oracoesselecionadas.vo.OracaoVO;
-
-import android.text.*;
 
 public class VisualizarOracoesActivity extends ActionBarActivity{
 	private PersistenceDao persistenceDao = new PersistenceDao(this);
@@ -20,17 +20,14 @@ public class VisualizarOracoesActivity extends ActionBarActivity{
 	private TextViewEx textViewExs=null;
 	private boolean favoritado;
 	private int numeroOracao=0;
+	private OracaoVO oracao = new OracaoVO();
 	 @Override
 	    protected void onCreate(Bundle savedInstanceState) {
 		 super.onCreate(savedInstanceState);
 		 setContentView(R.layout.vieworacoes);
 		 getActionBar().setDisplayHomeAsUpEnabled(true);
-		 
-		 
-		  Intent intent = getIntent();
-		  Bundle extras = intent.getExtras();
-		  OracaoVO oracao = new OracaoVO();
-		  oracao = persistenceDao.buscaOracao(persistenceDao.openDB(),String.valueOf(extras.getInt("idOracao")));
+
+		  oracao = persistenceDao.buscaOracao(persistenceDao.openDB(),String.valueOf(getIntent().getExtras().getInt(Constantes.IDORACAO)));
 		  numeroOracao = oracao.getIdNumero();
 		  tvTituloOracao = (TextView) findViewById(R.id.tvTitulo);
 		  textViewExs = (TextViewEx) findViewById(R.id.tvOracao);
@@ -40,9 +37,7 @@ public class VisualizarOracoesActivity extends ActionBarActivity{
 		  String textoOracaoFormat2 = textoOracaoFormat1.replace(".", ".<br/>");
 		  String textoOracaoFormat3 = textoOracaoFormat2.replace("[***]", "...<br/>");
 		  String textoOracaoFormat4 = textoOracaoFormat3.replace("!", "!<br/>");
-		  
 		  Spanned htmlTextFormt = Html.fromHtml(textoOracaoFormat4);
-		  
 		  textViewExs.setText(htmlTextFormt,true);	
 	    
 		  }
@@ -52,8 +47,6 @@ public class VisualizarOracoesActivity extends ActionBarActivity{
 		return super.onPrepareOptionsMenu(menu);
 	    }
 	 
-	 
-		
 	    @Override
 	    public boolean onCreateOptionsMenu(Menu menu){
 	       getMenuInflater().inflate(R.menu.menuationbarfivoritos, menu);
@@ -78,17 +71,16 @@ public class VisualizarOracoesActivity extends ActionBarActivity{
 		    super.onBackPressed();
 		    return true;
 		}
-		
 	        if(id == R.id.action_favorite){
 	        	if(favoritado){
 	        		item.setIcon(R.drawable.ic_action_not_important);
 	        		persistenceDao.deletaFavoritoPorIdOracao(persistenceDao.openDB(), numeroOracao);
-	        		Toast.makeText(this,"Removido dos favoritos", Toast.LENGTH_LONG).show();
+	        		Toast.makeText(this,R.string.removido_favoritos, Toast.LENGTH_LONG).show();
 	        		favoritado=false;
 	        	}else{
 	        		item.setIcon(R.drawable.ic_action_important);
 	        		persistenceDao.salvarFavorito(persistenceDao.openDB(), numeroOracao);
-	        		Toast.makeText(this,"Adicionado aos favoritos", Toast.LENGTH_LONG).show();
+	        		Toast.makeText(this,R.string.adicionado_favoritos, Toast.LENGTH_LONG).show();
 	        		favoritado=true;
 	        	}
 	
