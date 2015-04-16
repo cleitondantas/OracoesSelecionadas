@@ -1,9 +1,6 @@
 package com.grupoeternaalianca.oracoesselecionadas.task;
-import com.grupoeternaalianca.oracoesselecionadas.dao.PersistenceDao;
-
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
 
@@ -11,6 +8,8 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
+
+import com.grupoeternaalianca.oracoesselecionadas.dao.PersistenceDao;
 public class TaskDownloadDataBase extends AsyncTask<String, Object, String> {
 private ProgressDialog progress;
 private Context context;
