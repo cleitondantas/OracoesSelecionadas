@@ -45,7 +45,7 @@ public class TituloVO {
 	@Override
 	public String toString()
 	{
-		return this.idOracao+" ) "+ this.titulo;
+		return this.titulo;
 	}
 	public int getIdSubTitulo() {
 		return idSubTitulo;

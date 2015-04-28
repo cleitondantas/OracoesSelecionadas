@@ -65,7 +65,6 @@ public class PrincipalActivity extends ActionBarActivity implements NavigationDr
 				}
 			}
 		});
-		
 	}
 
 	private void criaListView(String numeroGrupo) {
