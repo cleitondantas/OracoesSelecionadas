@@ -16,7 +16,7 @@ public class ConfiguracoesActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.id.configuracoesActivity);
-        btAtualizaDados = (Button) findViewById(R.id.btAtualizaOracoes);
+//        btAtualizaDados = (Button) findViewById(R.id.btAtualizaOracoes);
         btAtualizaDados.setOnClickListener(new OnClickListener() {
 			
 			@Override
