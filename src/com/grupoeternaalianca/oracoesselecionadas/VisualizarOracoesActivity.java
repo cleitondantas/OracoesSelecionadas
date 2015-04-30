@@ -37,7 +37,8 @@ public class VisualizarOracoesActivity extends ActionBarActivity{
 		  String textoOracaoFormat2 = textoOracaoFormat1.replace(".", ".<br/>");
 		  String textoOracaoFormat3 = textoOracaoFormat2.replace("[***]", "...<br/>");
 		  String textoOracaoFormat4 = textoOracaoFormat3.replace("!", "!<br/>");
-		  Spanned htmlTextFormt = Html.fromHtml(textoOracaoFormat4);
+		  String textoOracaoFormat5 = textoOracaoFormat4.replace("\n", "<br/>");
+		  Spanned htmlTextFormt = Html.fromHtml(textoOracaoFormat5);
 		  textViewExs.setText(htmlTextFormt,true);	
 	    
 		  }
