@@ -8,6 +8,7 @@ import android.app.AlertDialog;
 import android.app.SearchManager;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -39,6 +40,7 @@ public class PrincipalActivity extends ActionBarActivity implements NavigationDr
 
 	private boolean controlaList = false;
 	private ListView listView;
+	private int sizeTexto;
 	private ArrayAdapter<TituloVO> ad;
 	private List<TituloVO> itens = new ArrayList<TituloVO>();
 	private MenuItem searchItem; 
@@ -48,7 +50,7 @@ public class PrincipalActivity extends ActionBarActivity implements NavigationDr
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		getActionBar().setDisplayShowTitleEnabled(true);
-
+		sharedPreferences();
 		mNavigationDrawerFragment = (NavigationDrawerFragment) getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
 		mNavigationDrawerFragment.setUp(R.id.navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout));
 
@@ -87,7 +89,7 @@ public class PrincipalActivity extends ActionBarActivity implements NavigationDr
 			}
 		}
 		listView = (ListView) findViewById(R.id.oracoesListView);
-		ad = new ArrayAdapter<TituloVO>(this, R.layout.small, R.id.small, itens);
+		ad = new ArrayAdapter<TituloVO>(this, Constantes.getLayoutFontSize(sizeTexto), Constantes.getIdFontSize(sizeTexto), itens);
 		listView.setAdapter(ad);
 		
 	}
@@ -203,7 +205,10 @@ public class PrincipalActivity extends ActionBarActivity implements NavigationDr
 		mensagem.setIcon(R.drawable.ic_launcher);
 		mensagem.show();
 	}
-
+	public void sharedPreferences(){
+		SharedPreferences settings = getSharedPreferences("Preferences", 0);
+		sizeTexto = settings.getInt("fontSizeTexto", 2);
+	}
 	// -----------------------------------------------------Classe
 	// PlaceholderFragment
 	/**

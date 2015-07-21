@@ -40,7 +40,7 @@ public class VisualizarOracoesActivity extends ActionBarActivity{
 		  String textoOracaoFormat5 = textoOracaoFormat4.replace("\n", "<br/>");
 		  Spanned htmlTextFormt = Html.fromHtml(textoOracaoFormat5);
 		  textViewExs.setText(htmlTextFormt,true);	
-	    
+		  
 		  }
 
 	    @Override

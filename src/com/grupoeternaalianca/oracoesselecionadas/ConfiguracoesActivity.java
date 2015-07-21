@@ -10,20 +10,20 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 public class ConfiguracoesActivity extends ActionBarActivity {
-	Button btAtualizaDados;
+//	Button btAtualizaDados;
 	private String urlDownload = "http://www.grupoeternaalianca.com/arquivos/basedb.sql";
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.id.configuracoesActivity);
-//        btAtualizaDados = (Button) findViewById(R.id.btAtualizaOracoes);
-        btAtualizaDados.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				realizaAtualizacao(v.getContext());
-			}
-		});
+//       btAtualizaDados = (Button) findViewById(R.id.btAtualizaOracoes);
+//        btAtualizaDados.setOnClickListener(new OnClickListener() {
+//			
+//			@Override
+//			public void onClick(View v) {
+//				realizaAtualizacao(v.getContext());
+//			}
+//		});
 
     }
     

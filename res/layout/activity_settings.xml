@@ -5,12 +5,13 @@
     android:layout_height="match_parent"
     tools:context="com.grupoeternaalianca.oracoesselecionadas.SettingsActivity"
     tools:ignore="MergeRootFrame" >
-
+<!-- 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/buttonFonte"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Atualizar Orações" />
-
+        android:text="Tamanho da Fonte" />
+	 -->
+    
 </FrameLayout>
 

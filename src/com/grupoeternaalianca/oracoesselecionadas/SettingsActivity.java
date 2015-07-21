@@ -5,6 +5,7 @@ import com.grupoeternaalianca.oracoesselecionadas.task.TaskDownloadDataBase;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v4.app.Fragment;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -13,10 +14,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.PopupWindow;
 import android.widget.Toast;
 
 public class SettingsActivity extends ActionBarActivity {
-	Button btAtualizaDados;
+	private Button btAtualizaDados;
+	private PopupWindow mpopup;
+	private int fontSizeTexto=0;
+	private int fontSizeTitulo=0;
 	private String urlDownload = "http://192.168.1.100:8080/oracoesselecionadas/basedb.sql";
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -28,14 +33,14 @@ public class SettingsActivity extends ActionBarActivity {
 		}
 		
 		
-	    btAtualizaDados = (Button) findViewById(R.id.button1);
-	    btAtualizaDados.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				realizaAtualizacao(v.getContext());
-			}
-		});
+//	    btAtualizaDados = (Button) findViewById(R.id.button1);
+//	    btAtualizaDados.setOnClickListener(new OnClickListener() {
+//			
+//			@Override
+//			public void onClick(View v) {
+//				realizaAtualizacao(v.getContext());
+//			}
+//		});
 
 	}
     
@@ -45,7 +50,13 @@ public class SettingsActivity extends ActionBarActivity {
 		Toast.makeText(this,"Operação Realizada", Toast.LENGTH_LONG).show();
     }
 
-	
+    public void salvarPref(){
+        SharedPreferences settings = getSharedPreferences("Preferences", 0);
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putInt("fontSizeTexto", fontSizeTexto);
+        editor.putInt("fontSizeTitulo", fontSizeTitulo);
+        editor.commit();
+ 	}
 	
 	
 	@Override
@@ -77,10 +88,8 @@ public class SettingsActivity extends ActionBarActivity {
 		}
 
 		@Override
-		public View onCreateView(LayoutInflater inflater, ViewGroup container,
-				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(R.layout.fragment_settings,
-					container, false);
+		public View onCreateView(LayoutInflater inflater, ViewGroup container,	Bundle savedInstanceState) {
+			View rootView = inflater.inflate(R.layout.fragment_settings,	container, false);
 			return rootView;
 		}
 	}
