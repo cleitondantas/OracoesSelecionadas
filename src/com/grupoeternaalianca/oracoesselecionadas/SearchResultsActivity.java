@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.grupoeternaalianca.oracoesselecionadas.dao.PersistenceDao;
+import com.grupoeternaalianca.oracoesselecionadas.vo.Constantes;
 import com.grupoeternaalianca.oracoesselecionadas.vo.TituloVO;
 
 import android.app.Activity;
@@ -47,7 +48,7 @@ public class SearchResultsActivity extends Activity {
 	public void chamaTelaTextOracao(int idOracao){
 		Intent intent = new Intent(this, VisualizarOracoesActivity.class);
 		 Bundle dados = new Bundle();
-		 dados.putInt("idOracao", idOracao);
+		 dados.putInt(Constantes.IDORACAO, idOracao);
 		 intent.putExtras(dados);
 		 startActivity(intent);
 	}
