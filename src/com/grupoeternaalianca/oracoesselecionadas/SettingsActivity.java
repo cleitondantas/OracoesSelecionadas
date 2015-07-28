@@ -1,28 +1,29 @@
 package com.grupoeternaalianca.oracoesselecionadas;
 
-import com.grupoeternaalianca.oracoesselecionadas.task.TaskDownloadDataBase;
-
-import android.support.v7.app.ActionBarActivity;
-import android.support.v4.app.Fragment;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.PopupWindow;
+import android.widget.SeekBar;
+import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.Toast;
 
+import com.grupoeternaalianca.oracoesselecionadas.task.TaskDownloadDataBase;
+
 public class SettingsActivity extends ActionBarActivity {
-	private Button btAtualizaDados;
-	private PopupWindow mpopup;
+	
 	private int fontSizeTexto=0;
 	private int fontSizeTitulo=0;
+
 	private String urlDownload = "http://192.168.1.100:8080/oracoesselecionadas/basedb.sql";
+	
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -31,19 +32,58 @@ public class SettingsActivity extends ActionBarActivity {
 		if (savedInstanceState == null) {
 			getSupportFragmentManager().beginTransaction().add(R.id.container, new PlaceholderFragment()).commit();
 		}
+		final  SeekBar sbSizeFont = (SeekBar)findViewById(R.id.seekBar);
+		final  SeekBar sbSizeFontTitle = (SeekBar)findViewById(R.id.seekBarTitle);
+		sbSizeFont.setMax(4);
+		sbSizeFontTitle.setMax(4);
+		fontSizeTitulo = getSettingPrefFontText("fontSizeTitulo");
+		fontSizeTexto = getSettingPrefFontText("fontSizeTexto");
+		sbSizeFont.setProgress(fontSizeTexto);
+		sbSizeFontTitle.setProgress(fontSizeTitulo);
 		
+		sbSizeFontTitle.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
+			
+			@Override
+			public void onStopTrackingTouch(SeekBar seekBar) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void onStartTrackingTouch(SeekBar seekBar) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void onProgressChanged(SeekBar seekBar, int progress,boolean fromUser) {
+				fontSizeTitulo = progress;
+				salvarPref();
+			}
+		});
 		
-//	    btAtualizaDados = (Button) findViewById(R.id.button1);
-//	    btAtualizaDados.setOnClickListener(new OnClickListener() {
-//			
-//			@Override
-//			public void onClick(View v) {
-//				realizaAtualizacao(v.getContext());
-//			}
-//		});
-
+		sbSizeFont.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
+			
+			@Override
+			public void onStopTrackingTouch(SeekBar seekBar) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void onStartTrackingTouch(SeekBar seekBar) {
+				// TODO Auto-generated method stub
+				
+			}
+		
+			@Override
+			public void onProgressChanged(SeekBar seekBar, int progress,boolean fromUser) {
+				fontSizeTexto = progress;
+				salvarPref();
+			}
+		});
 	}
-    
+
     private void realizaAtualizacao(Context context){
 		TaskDownloadDataBase taskDownload = new TaskDownloadDataBase(context);
 		taskDownload.execute(urlDownload);
@@ -51,17 +91,21 @@ public class SettingsActivity extends ActionBarActivity {
     }
 
     public void salvarPref(){
-        SharedPreferences settings = getSharedPreferences("Preferences", 0);
+    	SharedPreferences settings = getSharedPreferences("Preferences", 0);
         SharedPreferences.Editor editor = settings.edit();
         editor.putInt("fontSizeTexto", fontSizeTexto);
         editor.putInt("fontSizeTitulo", fontSizeTitulo);
         editor.commit();
  	}
+    
+    public int getSettingPrefFontText(String key){
+    SharedPreferences settings = getSharedPreferences("Preferences", 0);
+    	return settings.getInt(key, 1);
+    }
 	
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.settings, menu);
 		return true;

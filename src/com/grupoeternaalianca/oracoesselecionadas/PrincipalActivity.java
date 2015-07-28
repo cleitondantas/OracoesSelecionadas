@@ -46,6 +46,7 @@ public class PrincipalActivity extends ActionBarActivity implements NavigationDr
 	private List<TituloVO> itens = new ArrayList<TituloVO>();
 	private MenuItem searchItem; 
 	private int qtdOracoes;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -209,7 +210,7 @@ public class PrincipalActivity extends ActionBarActivity implements NavigationDr
 	}
 	public void sharedPreferences(){
 		SharedPreferences settings = getSharedPreferences("Preferences", 0);
-		sizeTexto = settings.getInt("fontSizeTexto", 2);
+		sizeTexto = settings.getInt("fontSizeTexto", 1);
 	}
 	// -----------------------------------------------------Classe
 	// PlaceholderFragment
