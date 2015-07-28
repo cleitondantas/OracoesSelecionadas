@@ -56,7 +56,7 @@ public class PrincipalActivity extends ActionBarActivity implements NavigationDr
         getActionBar().setDisplayShowTitleEnabled(true);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         pref = new Preferences(this);
-        sizeTextoTitulos = pref.getFontSize(Constantes.fontSizeTitulo, 0);
+        sizeTextoTitulos = pref.getFontSize(Constantes.fontSizeTitulo, 1);
 
         mNavigationDrawerFragment = (NavigationDrawerFragment) getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
         mNavigationDrawerFragment.setUp(R.id.navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout));

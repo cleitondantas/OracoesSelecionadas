@@ -35,8 +35,9 @@ public class SettingsActivity extends ActionBarActivity {
 		}
 		final  SeekBar sbSizeFont = (SeekBar)findViewById(R.id.seekBar);
 		final  SeekBar sbSizeFontTitle = (SeekBar)findViewById(R.id.seekBarTitle);
+		sbSizeFontTitle.setMax(2);
 		sbSizeFont.setMax(6);
-		sbSizeFontTitle.setMax(4);
+
 		fontSizeTitulo = getSettingPrefFontText(Constantes.fontSizeTitulo);
 		fontSizeTexto = getSettingPrefFontText(Constantes.fontSizeTexto);
 		sbSizeFont.setProgress(fontSizeTexto);
