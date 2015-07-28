@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.grupoeternaalianca.oracoesselecionadas.dao.PersistenceDao;
+import com.grupoeternaalianca.oracoesselecionadas.util.Preferences;
 import com.grupoeternaalianca.oracoesselecionadas.util.TextViewEx;
 import com.grupoeternaalianca.oracoesselecionadas.vo.Constantes;
 import com.grupoeternaalianca.oracoesselecionadas.vo.OracaoVO;
@@ -20,13 +21,15 @@ public class VisualizarOracoesActivity extends ActionBarActivity{
 	private TextViewEx textViewExs=null;
 	private boolean favoritado;
 	private int numeroOracao=0;
+	private Preferences pref ;
+
 	private OracaoVO oracao = new OracaoVO();
 	 @Override
 	    protected void onCreate(Bundle savedInstanceState) {
 		 super.onCreate(savedInstanceState);
 		 setContentView(R.layout.vieworacoes);
 		 getActionBar().setDisplayHomeAsUpEnabled(true);
-
+		  pref = new Preferences(this);
 		  oracao = persistenceDao.buscaOracao(persistenceDao.openDB(),String.valueOf(getIntent().getExtras().getInt(Constantes.IDORACAO)));
 		  numeroOracao = oracao.getIdNumero();
 		  tvTituloOracao = (TextView) findViewById(R.id.tvTitulo);
@@ -39,8 +42,8 @@ public class VisualizarOracoesActivity extends ActionBarActivity{
 		  String textoOracaoFormat4 = textoOracaoFormat3.replace("!", "!<br/>");
 		  String textoOracaoFormat5 = textoOracaoFormat4.replace("\n", "<br/>");
 		  Spanned htmlTextFormt = Html.fromHtml(textoOracaoFormat5);
-		  textViewExs.setText(htmlTextFormt,true);	
-		  
+		  textViewExs.setText(htmlTextFormt, true);
+		 textViewExs.setTextSize((5*(pref.getFontSize(Constantes.fontSizeTexto,4))));
 		  }
 
 	    @Override
@@ -51,7 +54,7 @@ public class VisualizarOracoesActivity extends ActionBarActivity{
 	    @Override
 	    public boolean onCreateOptionsMenu(Menu menu){
 	       getMenuInflater().inflate(R.menu.menuationbarfivoritos, menu);
-		menu.removeItem(R.id.action_settings);
+			menu.removeItem(R.id.action_settings);
 	       favoritado = persistenceDao.buscaFavoritoPorIdOracao(persistenceDao.openDB(), numeroOracao);
 			 if(favoritado){
 				 menu.findItem(R.id.action_favorite).setIcon(R.drawable.ic_action_important);

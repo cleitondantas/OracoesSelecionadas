@@ -15,6 +15,7 @@ import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.Toast;
 
 import com.grupoeternaalianca.oracoesselecionadas.task.TaskDownloadDataBase;
+import com.grupoeternaalianca.oracoesselecionadas.vo.Constantes;
 
 public class SettingsActivity extends ActionBarActivity {
 	
@@ -34,10 +35,10 @@ public class SettingsActivity extends ActionBarActivity {
 		}
 		final  SeekBar sbSizeFont = (SeekBar)findViewById(R.id.seekBar);
 		final  SeekBar sbSizeFontTitle = (SeekBar)findViewById(R.id.seekBarTitle);
-		sbSizeFont.setMax(4);
+		sbSizeFont.setMax(6);
 		sbSizeFontTitle.setMax(4);
-		fontSizeTitulo = getSettingPrefFontText("fontSizeTitulo");
-		fontSizeTexto = getSettingPrefFontText("fontSizeTexto");
+		fontSizeTitulo = getSettingPrefFontText(Constantes.fontSizeTitulo);
+		fontSizeTexto = getSettingPrefFontText(Constantes.fontSizeTexto);
 		sbSizeFont.setProgress(fontSizeTexto);
 		sbSizeFontTitle.setProgress(fontSizeTitulo);
 		
@@ -93,8 +94,8 @@ public class SettingsActivity extends ActionBarActivity {
     public void salvarPref(){
     	SharedPreferences settings = getSharedPreferences("Preferences", 0);
         SharedPreferences.Editor editor = settings.edit();
-        editor.putInt("fontSizeTexto", fontSizeTexto);
-        editor.putInt("fontSizeTitulo", fontSizeTitulo);
+        editor.putInt(Constantes.fontSizeTexto, fontSizeTexto);
+        editor.putInt(Constantes.fontSizeTitulo, fontSizeTitulo);
         editor.commit();
  	}
     

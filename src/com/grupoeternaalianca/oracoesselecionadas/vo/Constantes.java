@@ -7,6 +7,8 @@ public class Constantes {
 	public static final String IDORACAO = "IDORACAO";
 	public static final String IDLISTATITULOS = "IDLISTATITULOS";
 	public static final String TITULO = "TITULO";
+	public static final String fontSizeTitulo ="fontSizeTitulo";
+	public static final String fontSizeTexto ="fontSizeTexto";
 
 	public static int getLayoutFontSize(int size) {
 		switch (size) {
